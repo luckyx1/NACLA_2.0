@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>NACLA</title>
+  <title> NACLA </title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<h1>First experiement with erb</h1>
-	<p>Addition:
-		<%=1 + 1%>
-	</p>
+	<h1 style=text-align:center> NACLA 2.0 </h1>
+<div id="header">
+        <div id="page-nav" class="rfloat">
+            <a id="login" class="lfloat" href="/login">login</a>
+            <form id="search-form" class="rfloat" action="search.py" method="get">
+                <input id="searchbox" type="text" name="q" placeholder="search"/>
+            </form>
+        </div>
+</div>
 
 <%= yield %>
 
