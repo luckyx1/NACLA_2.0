@@ -1,8 +1,14 @@
 // Place all the styles related to the CoursePacks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#header {
-	display: inline-block;
-	background-color: #015367;
-	overflow: hidden;
+
+
+
+
+#container {
+	width: 500px;
 }
+
+
+
+
