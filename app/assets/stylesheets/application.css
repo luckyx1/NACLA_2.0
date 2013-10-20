@@ -12,28 +12,32 @@
  *= require_tree .
  */
 #container {
-	width: 1000px;
+	width: 100%;
 }
 
 #header {
 	background-color:#FFA500;
 	height: 100px;
+	width: 100%;
+	top: 0px;
+	margin-top: 0px;
 }
 h1 {
+	margin-top: 10px;
 	margin-bottom: 0;
 	text-align:center;
 }
 #side_bar {
 	background-color:#FFD700;
 	height:800px;
-	width:100px;
+	width:10%;
 	float:left;
 }
 #content {
 	background-color:#EEEEEE;
 	height:800px;
-	width:900px;
-	float:left;
+	width:90%;
+	float:right;
 }
 #footer {
 	background-color:#FFA500;
