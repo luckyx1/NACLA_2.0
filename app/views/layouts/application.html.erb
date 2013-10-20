@@ -8,17 +8,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<h1 style=text-align:center> NACLA 2.0 </h1>
-<div id="header">
-        <div id="page-nav" class="rfloat">
-            <a id="login" class="lfloat" href="/login">login</a>
-            <form id="search-form" class="rfloat" action="search.py" method="get">
-                <input id="searchbox" type="text" name="q" placeholder="search"/>
-            </form>
-        </div>
-</div>
+       <div id="container">
+			<div id="header">
+				<h1>NACLA 2.0 </h1>
+			</div>
+			<div id="side_bar">
+				<b>Menu</b>
+			</div>
+			<div id="content">
+				<%= yield %>
+			</div>
+			<div id="footer">
+				Copywrite NACLA 2.0
+			</div>
+		</div>
 
-<%= yield %>
 
 </body>
 </html>
