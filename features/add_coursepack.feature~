@@ -1,0 +1,17 @@
+Feature: I want to add coursepacks
+
+ As NACLA
+ So we can provide prebundled coursepacks to users
+ I want to make available particular coursepacks to users
+
+Background: articles have been added to the database
+
+ And I am on the article/coursepack search page
+
+Scenario: add prebundled coursepacks
+	When I am logged in as NACLA
+	And I follow the "add a coursepack" page
+	Then I should see the regular "add a coursepack" page
+	And I should see an option to publicise coursepacks
+	And I should see an option to set price of coursepacks
+	But regular users should not 
