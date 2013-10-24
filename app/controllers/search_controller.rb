@@ -1,14 +1,14 @@
 class SearchController < ApplicationController
 
 	def index
-		@count = Document.count
-		@search_categories = Document.search_categories
-		@documents = nil
+		@count = Article.count
+		@search_categories = Article.search_categories
+		@articles = nil
 
 		if params[:commit] == "List All"
-			@documents = Document.all
+			@articles = Article.all
 		elsif params[:q] and params[:category]
-			@documents = Document.where(params[:category] => params[:q])
+			@articles = Article.where(params[:category] + ' LIKE ?', "%#{params[:q]}%")
 		end
 
 	end

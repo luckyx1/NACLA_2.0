@@ -1,7 +1,6 @@
-<h1>Search for documents</h1>
+<h1>Search for articles</h1>
 
-<p> <%= params %> </p>
-Documents in database: <%= @count %>
+Articles in database: <%= @count %>
 
 <%= form_tag("/search", method: "get") do %>
 	<p>
@@ -32,14 +31,14 @@ Documents in database: <%= @count %>
 		<font color='red'>
 			<b><%= "Please select a search category." %></b>
 		</font>
-	<% elsif params[:q] and (@documents.nil? or @documents.count == 0)%>
-		<b><%= "No documents found." %></b>
-	<% elsif @documents %>
-		<b><%= @documents.count.to_s + " document(s) found." %></b>
+	<% elsif params[:q] and (@articles.nil? or @articles.count == 0)%>
+		<b><%= "No articles found." %></b>
+	<% elsif @articles %>
+		<b><%= @articles.count.to_s + " article(s) found." %></b>
 
 		<h2>Results:</h2>
 
-		<table id="documents">
+		<table id="articles">
 		  <thead>
 		    <tr>
 		      <th> Title </th>
@@ -49,12 +48,12 @@ Documents in database: <%= @count %>
 		    <tr>
 		  </thead>
 		  <tbody>
-		    <% @documents.each do |document| %>
+		    <% @articles.each do |article| %>
 		      <tr>
-		        <td> <%= document.title %> </td>
-		        <td> <%= document.description %> </td>
-		        <td> <%= document.publication_date %> </td>
-		        <td> <%= document.tags %> </td>
+		        <td> <%= article.title %> </td>
+		        <td> <%= article.description %> </td>
+		        <td> <%= article.publication_date %> </td>
+		        <td> <%= article.tags %> </td>
 		        <td> <%= button_tag("Add to coursepack") %> </td>
 		      </tr>
 		    <% end %>
