@@ -7,10 +7,10 @@ Feature: I want to search the archives
 Background: documents exists in the database
 
 	Given the following exists in the database:
-	| title											| description																| published_date	| tags
-	| Brazilian Colonialism			|	Colonialism of Brazil between 1800-1900		|	20-Sep-2010			| Brazil,colonialism
-	| Modern Politics of Chile	|	The political climate of modern day Chile	| 2-Apr-2011			| republic,election 
-	|	Drug Cartels, Mexico			| The history of drug cartels in Mexico			| 14-Dec-2003			|	drugs,war
+	| title                    | description                               | publication_date | tags                |
+	| Brazilian Colonialism    | Colonialism of Brazil between 1800-1900   | 20-Sep-2010      | Brazil, colonialism |
+	| Modern Politics of Chile | The political climate of modern day Chile | 2-Apr-2011       | republic, election  |
+	| Drug Cartels, Mexico     | The history of drug cartels in Mexico     | 14-Dec-2003      | drugs, war          |
 
 	And I am on the coursepack search page
 

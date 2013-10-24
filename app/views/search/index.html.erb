@@ -1,0 +1,23 @@
+<h1>Search for documents</h1>
+
+<p> Params: <%= params %> </p>
+Documents in database: <%= @count %>
+
+<%= form_tag("/search", method: "get") do %>
+	<p>
+	  <%= label_tag(:q, "Search for:") %>
+	  <%= text_field_tag(:q) %>
+	  <%= submit_tag("Search") %>
+	</p>
+	<p>
+		Category:
+		<% @search_categories.each do |category| %>
+			<%= radio_button_tag('category', category, (params[:category] == category ? true : false)) %>
+			<%= category %>
+		<% end %>
+	</p>
+
+<% end %>
+
+
+

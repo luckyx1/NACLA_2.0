@@ -1,6 +1,6 @@
 NACLA::Application.routes.draw do
   resources :course_packs
-
+  match '/search' => 'search#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
