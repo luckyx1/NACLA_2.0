@@ -8,7 +8,7 @@ class SearchController < ApplicationController
 		if params[:commit] == "List All"
 			@articles = Article.all
 		elsif params[:q] and params[:category]
-			@articles = Article.where(params[:category] + ' LIKE ?', "%#{params[:q]}%")
+			@articles = view_context.search_articles(params[:category], params[:q])
 		end
 
 	end
