@@ -1,5 +1,10 @@
 NACLA::Application.routes.draw do
-  resources :course_packs
+  get "comments/show"
+  get "comments/add"
+  get "comments/delete"
+  get "comments/" => "comments#index"
+  post "comments/add"
+
   match '/search' => 'search#index'
 
   # The priority is based upon order of creation:

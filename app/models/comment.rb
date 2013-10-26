@@ -1,4 +1,3 @@
-class Article < ActiveRecord::Base
-  attr_accessible :comment, :user, :creationdate, :private
-
+class Comment < ActiveRecord::Base
+  attr_accessor :comment, :user, :privacy, :postdate, :article
 end
