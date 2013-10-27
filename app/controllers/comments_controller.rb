@@ -9,7 +9,13 @@ class CommentsController < ApplicationController
   		datetime = DateTime.current()
   		article = params[:article]
   		if article != "" and username !="" and commentstring != ""
-	  		newcomment = Comment.new
+  			newcommentSpecs = Hash.new
+  			newcommentSpecs[:user] = username
+  			newcommentSpecs[:comment] = commentstring
+  			newcommentSpecs[:privacy] = "false"
+  			newcommentSpecs[:postdate] = datetime
+  			newcommentSpecs[:article] = article
+	  		newcomment = Comment.new(newcommentSpecs)
 	  		newcomment.comment = commentstring
 	  		newcomment.user = username
 	  		newcomment.privacy = false

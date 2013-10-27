@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(:version => 20131026060428) do
   create_table "comments", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text "comment"
+    t.string "user"
+    t.string "privacy"
+    t.datetime "postdate"
+    t.string "article"
   end
 
   create_table "course_packs", :force => true do |t|
