@@ -6,7 +6,7 @@ Feature: create a coursepack
 
 Background: documents exists in the database
 
-  Given the following documents exits:
+  Given the following documents exist:
   | title                    | description                               | published_date |
   | Brazilian Colonialism    | Colonialism of Brazil between 1800-1900   | 10-Jan-2004    |
   | Modern Politics of Chile | The political climate of modern day Chile | 5-Nov-1998     |
