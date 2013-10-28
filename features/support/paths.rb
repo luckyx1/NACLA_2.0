@@ -18,6 +18,8 @@ module NavigationHelpers
 
     when /^the coursepack search page$/
       '/search'
+    when /^And I am on the new coursepack page$/
+      '/search/new'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
