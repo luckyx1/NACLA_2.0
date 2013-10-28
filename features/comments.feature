@@ -4,21 +4,76 @@ Feature: Add comments
 	So that I can comment on articles
 	I want to be able to add or delete comments
 
-	Background: documents exists in the database
+	Background: comments existing in the databse
 
-	Given the following documents exits:
-	| title                    | description                               | published_date |
-	| Brazilian Colonialism    | Colonialism of Brazil between 1800-1900   | 10-Jan-2004    |
+	Given the following comments exits:
+	| comment 				| user 			| privacy 	| postdate 		| article 					|
+	| This is awesome |	student1	|	false   	| 1-Jan-2000 	| Spanish Culture   |
 
-	And I am on the new comments page:
+	And I am on the comments front page
 
-	Scenario: Add a comment
-		When I fill in all the entries
-		And I press the submit button
-		Then a new comment should be created
+Scenario: Add a comment successfully
+	When I press "Add Comment"
+	And I fill in "comment" with "Even more awesome"
+	And I fill in "article" with "History of Panama"
+	And I fill in "username" with "student2"
+	And I press "Add Comment"
+	Then I should see "Your comment was added successfully."
 
-	Scenario: Delete a comment
-		When I am on the delete comments page
-		When I fill in all the entries
-		And I press the submit button
-		A comment should be deleted
+Scenario: Add a comment without entering a comment
+	When I press "Add Comment"
+	And I fill in "article" with "History of Panama"
+	And I fill in "username" with "student2"
+	And I press "Add Comment"
+	Then I should see "the comment field was left blank"
+
+Scenario: Add a comment without entering an article url
+	When I press "Add Comment"
+	And I fill in "comment" with "Even more awesome"
+	And I fill in "username" with "student2"
+	And I press "Add Comment"
+	Then I should see "the article url field was left blank"
+
+Scenario: Add a comment without entering a username
+	When I press "Add Comment"
+	And I fill in "comment" with "Even more awesome"
+	And I fill in "article" with "History of Panama"
+	And I press "Add Comment"
+	Then I should see "the username field was left blank"
+
+Scenario: Delete a comment successfully
+	When I press "Delete Comment"
+	And I fill in "comment" with "This is awesome"
+	And I fill in "article" with "Spanish Culture"
+	And I fill in "username" with "student1"
+	And I press "Delete Comment"
+	Then I should see "Your comment was deleted successfully."
+
+Scenario: Delete a comment without entering a comment
+	When I press "Delete Comment"
+	And I fill in "article" with "Spanish Culture"
+	And I fill in "username" with "student1"
+	And I press "Delete Comment"
+	Then I should see "the comment field was left blank"
+
+Scenario: Delete a comment without entering an article url
+	When I press "Delete Comment"
+	And I fill in "comment" with "This is awesome"
+	And I fill in "username" with "student1"
+	And I press "Delete Comment"
+	Then I should see "the article url field was left blank"
+
+Scenario: Delete a comment without entering a username
+	When I press "Delete Comment"
+	And I fill in "comment" with "This is awesome"
+	And I fill in "article" with "Spanish Culture"
+	And I press "Delete Comment"
+	Then I should see "the username field was left blank"
+
+Scenario: Delete a comment that does not exist in the database
+	When I press "Delete Comment"
+	And I fill in "comment" with "This is not awesome"
+	And I fill in "article" with "American Culture"
+	And I fill in "username" with "student3"
+	And I press "Delete Comment"
+	Then I should see "This comment does not exist."

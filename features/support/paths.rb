@@ -19,6 +19,9 @@ module NavigationHelpers
     when /^the coursepack search page$/
       '/search'
 
+    when /^the comments front page$/
+      '/comments'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

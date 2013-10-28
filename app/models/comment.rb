@@ -1,3 +1,3 @@
 class Comment < ActiveRecord::Base
-  attr_accessor :comment, :user, :privacy, :postdate, :article
+  attr_accessible :comment, :user, :privacy, :postdate, :article
 end

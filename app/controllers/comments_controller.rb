@@ -21,6 +21,7 @@ class CommentsController < ApplicationController
 	  		newcomment.privacy = false
 	  		newcomment.article = article
 	  		newcomment.postdate = datetime
+	  		newcomment.save
 	  		@status = "Your comment was added successfully."
 	  	else
 	  		error = ""
@@ -61,8 +62,12 @@ class CommentsController < ApplicationController
   		article = params[:article]
   		if article != "" and username !="" and commentstring != ""
 	  		@comment = Comment.find(:first, :conditions => {:user => username, :comment => commentstring, :article => article})
-		    @comment.destroy
-	  		@status = "Your comment was deleted successfully."
+		    if @comment
+		    	@comment.destroy
+	  			@status = "Your comment was deleted successfully."
+	  		else
+	  			@status = "This comment does not exist."
+	  		end
 	  	else
 	  		error = ""
 	  		count = 0

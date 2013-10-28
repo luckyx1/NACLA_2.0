@@ -4,8 +4,12 @@ NACLA::Application.routes.draw do
   get "comments/delete"
   get "comments/" => "comments#index"
   post "comments/add"
+  post "comments/delete" => "comments#delete"
+
 
   match '/search' => 'search#index'
+
+  resources :course_packs
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
