@@ -21,6 +21,9 @@ module NavigationHelpers
     when /^And I am on the new coursepack page$/
       '/search/new'
 
+    when /^the comments front page$/
+      '/comments'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
