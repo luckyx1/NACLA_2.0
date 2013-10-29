@@ -1,6 +1,7 @@
 class CoursePacksController < ApplicationController
   # GET /course_packs
   # GET /course_packs.json
+
   def index
     @course_packs = CoursePack.all
 
@@ -27,13 +28,20 @@ class CoursePacksController < ApplicationController
     @course_pack = CoursePack.new
     @count = Article.count
     @search_categories = Article.search_categories
-    @articles = nil
-
-    if params[:selected_articles]
-
-    end
     @selected_articles = []
-
+    if params[:selected_articles]
+      params[:selected_articles].each do |id|
+        @selected_articles << Article.find(id)
+      end
+    end
+    if not params[:articles].nil?
+      @articles = Article.all
+    else
+      @articles = []
+    end
+    if params[:new_article]
+     @selected_articles << Article.find(params[:new_article])
+    end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @course_pack }
@@ -87,5 +95,13 @@ class CoursePacksController < ApplicationController
       format.html { redirect_to course_packs_url }
       format.json { head :no_content }
     end
+  end
+
+  def list_all
+    redirect_to new_course_pack_path(articles:'all', selected_articles:params[:selected_articles])
+  end
+
+  def add_article
+    redirect_to new_course_pack_path(selected_articles:params[:selected_articles],new_article:params[:new_article])
   end
 end

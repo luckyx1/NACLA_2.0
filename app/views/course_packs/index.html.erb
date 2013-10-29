@@ -8,6 +8,8 @@
   </tr>
 
 <% @course_packs.each do |course_pack| %>
+  Title: <%= course_pack.title %><br/>
+  Summary: <%= course_pack.summary %><br/>
   <tr>
     <td><%= link_to 'Show', course_pack %></td>
     <td><%= link_to 'Edit', edit_course_pack_path(course_pack) %></td>

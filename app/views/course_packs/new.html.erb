@@ -1,14 +1,18 @@
 <h1>New course_pack</h1>
 
-<%= form_tag("/create") %>
-    Title: <%= text_field_tag :title %> <br/>
-    Summary: <%= text_area_tag :summary %><br/>
+<%= form_for :course_pack, url:'create' do |c| %>
+<%= c.submit %>
+    Title: <%= c.text_field :title %> <br/>
+    Summary: <%= c.text_area :summary %><br/>
     Articles: <br/>
     <% @selected_articles.each do |article| %>
-        <%= article %> <br/>
+        <%= article.title %> <br/>
     <%end %>
 
-    <script> </script>
 
+    <%= render 'add_article' %>
+
+
+   <%end %>
 
 <%= link_to 'Back', course_packs_path %>
