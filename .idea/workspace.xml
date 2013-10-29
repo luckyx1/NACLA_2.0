@@ -2,13 +2,136 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/.gitkeep" afterPath="$PROJECT_DIR$/app/mailers/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/.gitkeep" afterPath="$PROJECT_DIR$/app/models/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/.gitkeep" afterPath="$PROJECT_DIR$/lib/assets/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/.gitkeep" afterPath="$PROJECT_DIR$/lib/tasks/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/.gitkeep" afterPath="$PROJECT_DIR$/log/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/.gitkeep" afterPath="$PROJECT_DIR$/test/fixtures/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/.gitkeep" afterPath="$PROJECT_DIR$/test/functional/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/.gitkeep" afterPath="$PROJECT_DIR$/test/integration/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/.gitkeep" afterPath="$PROJECT_DIR$/test/unit/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/.gitkeep" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/.gitkeep" afterPath="$PROJECT_DIR$/vendor/plugins/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/rails.png" afterPath="$PROJECT_DIR$/app/assets/images/rails.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb" afterPath="$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131024025345_create_documents.rb" afterPath="$PROJECT_DIR$/db/migrate/20131024025345_create_documents.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131024212257_create_articles.rb" afterPath="$PROJECT_DIR$/db/migrate/20131024212257_create_articles.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131026060428_create_comments.rb" afterPath="$PROJECT_DIR$/db/migrate/20131026060428_create_comments.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/NACLA_2.0.iml" afterPath="$PROJECT_DIR$/.idea/NACLA_2.0.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/README_FOR_APP" afterPath="$PROJECT_DIR$/doc/README_FOR_APP" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/course_packs/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/course_packs/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/add.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/add.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/add_coursepack.feature" afterPath="$PROJECT_DIR$/features/add_coursepack.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.rb" afterPath="$PROJECT_DIR$/app/models/article.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/article_test.rb" afterPath="$PROJECT_DIR$/test/unit/article_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/articles.yml" afterPath="$PROJECT_DIR$/test/fixtures/articles.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/boot.rb" afterPath="$PROJECT_DIR$/config/boot.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/performance/browsing_test.rb" afterPath="$PROJECT_DIR$/test/performance/browsing_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/comment.rb" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/comment_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/comment_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/comment_test.rb" afterPath="$PROJECT_DIR$/test/unit/comment_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/comments.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/comments.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/comments.feature" afterPath="$PROJECT_DIR$/features/comments.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/comments.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/comments.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/comments.yml" afterPath="$PROJECT_DIR$/test/fixtures/comments.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/comments_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/comments_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/comments_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/comments_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/comments_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/comments_helper_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/comments_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/comments_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/course_pack.rb" afterPath="$PROJECT_DIR$/app/models/course_pack.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/course_pack_test.rb" afterPath="$PROJECT_DIR$/test/unit/course_pack_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/course_packs.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/course_packs.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/course_packs.yml" afterPath="$PROJECT_DIR$/test/fixtures/course_packs.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/course_packs_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/course_packs_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/course_packs_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/course_packs_helper_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/create_coursepack.feature" afterPath="$PROJECT_DIR$/features/create_coursepack.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/create_coursepack_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/create_coursepack_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/cucumber.rake" afterPath="$PROJECT_DIR$/lib/tasks/cucumber.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/cucumber.yml" afterPath="$PROJECT_DIR$/config/cucumber.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/delete.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/delete.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/document.rb" afterPath="$PROJECT_DIR$/app/models/document.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/document_test.rb" afterPath="$PROJECT_DIR$/test/unit/document_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/documents.yml" afterPath="$PROJECT_DIR$/test/fixtures/documents.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/course_packs/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/course_packs/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/env.rb" afterPath="$PROJECT_DIR$/features/support/env.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/course_packs/index.html.erb" afterPath="$PROJECT_DIR$/app/views/course_packs/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/search/index.html.erb" afterPath="$PROJECT_DIR$/app/views/search/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/course_packs/new.html.erb" afterPath="$PROJECT_DIR$/app/views/course_packs/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/paths.rb" afterPath="$PROJECT_DIR$/features/support/paths.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/search.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/search.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/search.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/search.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/search_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/search_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/search_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/search_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/search_coursepack.feature" afterPath="$PROJECT_DIR$/features/search_coursepack.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/search_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/search_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/search_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/search_helper_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/search_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/search_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/secret_token.rb" afterPath="$PROJECT_DIR$/config/initializers/secret_token.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/selectors.rb" afterPath="$PROJECT_DIR$/features/support/selectors.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/session_store.rb" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/show.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/course_packs/show.html.erb" afterPath="$PROJECT_DIR$/app/views/course_packs/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
     </list>
     <ignored path="NACLA_2.0.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1382227733625" ignored="false" />
+    <file path="/Dummy.txt" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383023500182" ignored="false" />
     <file path="/create_coursepack.feature" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1382228354099" ignored="false" />
+    <file path="/routes.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383024037278" ignored="false" />
+    <file path="/new.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383069236396" ignored="false" />
+    <file path="/20131018182953_create_course_packs.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383025503186" ignored="false" />
+    <file path="/course_packs_controller.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383027482101" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +151,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create_coursepack.feature" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/course_packs/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="19" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.26086956">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course_packs_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/course_packs_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="50" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="4" selection-start="261" selection-end="279" vertical-scroll-proportion="0.4373178">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/search/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="27" selection-start="0" selection-end="1634" vertical-scroll-proportion="-6.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131018182953_create_course_packs.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="70" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131024025345_create_documents.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131024025345_create_documents.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="24" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131024212257_create_articles.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131024212257_create_articles.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="25" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -56,13 +242,19 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/features/create_coursepack.feature" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb" />
+        <option value="$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/course_packs/new.html.erb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="690" />
+    <option name="x" value="-1" />
+    <option name="y" value="-5" />
+    <option name="width" value="1282" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -90,6 +282,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -118,14 +312,138 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course_packs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,6 +556,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
@@ -394,17 +719,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="690" extended-state="0" />
+    <frame x="-1" y="-5" width="1282" height="806" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25364667" sideWeight="0.67116356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25284553" sideWeight="0.65680474" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34330985" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34319526" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -487,7 +812,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="19" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.26086956">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="70" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="25" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131024212257_create_articles.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131024025345_create_documents.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="24" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="70" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/search/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="27" selection-start="0" selection-end="1634" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/search_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="150" selection-end="150" vertical-scroll-proportion="0.23510972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/course_packs_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="50" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="261" selection-end="279" vertical-scroll-proportion="0.4373178">
           <folding />
         </state>
       </provider>

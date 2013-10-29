@@ -25,6 +25,14 @@ class CoursePacksController < ApplicationController
   # GET /course_packs/new.json
   def new
     @course_pack = CoursePack.new
+    @count = Article.count
+    @search_categories = Article.search_categories
+    @articles = nil
+
+    if params[:selected_articles]
+
+    end
+    @selected_articles = []
 
     respond_to do |format|
       format.html # new.html.erb

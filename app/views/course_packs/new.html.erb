@@ -1,5 +1,14 @@
 <h1>New course_pack</h1>
 
-<%= render 'form' %>
+<%= form_tag("/create") %>
+    Title: <%= text_field_tag :title %> <br/>
+    Summary: <%= text_area_tag :summary %><br/>
+    Articles: <br/>
+    <% @selected_articles.each do |article| %>
+        <%= article %> <br/>
+    <%end %>
+
+    <script> </script>
+
 
 <%= link_to 'Back', course_packs_path %>
