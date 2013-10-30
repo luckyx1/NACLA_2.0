@@ -29,19 +29,24 @@ class CoursePacksController < ApplicationController
     @count = Article.count
     @search_categories = Article.search_categories
     @selected_articles = []
+    @articles = nil
+
     if params[:selected_articles]
       params[:selected_articles].each do |id|
         @selected_articles << Article.find(id)
       end
     end
+
     if not params[:articles].nil?
       @articles = Article.all
-    else
-      @articles = []
+    elsif params[:q] and params[:category]
+      @articles = view_context.search_articles(params[:category], params[:q])
     end
+
     if params[:new_article]
      @selected_articles << Article.find(params[:new_article])
     end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @course_pack }
