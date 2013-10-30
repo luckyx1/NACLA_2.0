@@ -1,12 +1,12 @@
 <h1>New course_pack</h1>
-course packs: <%#= @course_pack_articles %>
-selected ids <%#= @selected_article_ids %>
-search ids <%#= @search_article_ids %>
+course packs: <%= @course_pack_articles %>
+selected ids <%= @selected_article_ids %>
+search ids <%= @search_article_ids %>
 search articles <%#= @search_articles %>
 
 <%= form_for :course_pack, url:'create' do |c| %>
 
-    Title: <%= c.text_field :title, {value:@title} %> <br/>
+    Title: <%= c.text_field :title %> <br/>
     Summary:<br/> <%= c.text_area :summary, size:'100x5' %><br/>
     Articles: <br/>
     <% @course_pack_articles.each do |article| %>
@@ -14,26 +14,11 @@ search articles <%#= @search_articles %>
     <%end %>
 
     <%= c.submit %>
-    <p>
-      <%= c.label(:q, "Search for:") %>
-      <%= c.text_field:q, value: (params[:q] ? params[:q] : "") %>
-      <%= c.hidden_field :selected_article_ids,value:@selected_article_ids %>
-      <%= c.hidden_field :search_article_ids, value:@search_article_ids %>
-      <%= c.submit("Search") %>
-    </p>
-
-    <p>
-      Category:
-      <% @search_categories.each do |category| %>
-          <%= radio_button_tag('category', category, (params[:category] == category ? true : false)) %>
-          <%= category %>
-      <% end %>
-    </p>
-    <%#end %>
+    <%end %>
 
     <%= render 'add_article' %>
 
 
-     <% end %>
+
 
 <%= link_to 'Back', course_packs_path %>

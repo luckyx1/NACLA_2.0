@@ -1,15 +1,9 @@
 class CoursePacksController < ApplicationController
-  include CoursePacksHelper
   # GET /course_packs
   # GET /course_packs.json
 
   def index
     @course_packs = CoursePack.all
-
-    session[:selected_article_ids] = nil
-    session[:title] = nil
-    session[:summary] = nil
-    session[:search_article_ids] = nil
 
     respond_to do |format|
       format.html # index.html.erb
@@ -73,34 +67,7 @@ class CoursePacksController < ApplicationController
                                         category:params[:category],
                                         new_article:params[:new_article])
        return
-     end
-
-   if not params[:title].blank?
-     session[:title] = params[:title]
-     @title = session[:title]
-   elsif not session[:title].blank?
-     redirect_to        redirect_to new_course_pack_path(selected_article_ids:session[:selected_article_ids],
-                                                                             search_article_ids:session[:search_article_ids],
-                                                                                               title:session[:title],
-                                                                                                    summary:session[:summary],
-                                                                                                           q:params[:q],
-                                                                                                            category:params[:category],
-                                                                                                                    new_article:params[:new_article])
-    return
-   end
-   if not params[:summary].blank?
-     session[:summary] = params[:summary]
-     @summary = session[:summary]
-   elsif not session[:summary].blank?
-      redirect_to new_course_pack_path(selected_article_ids:session[:selected_article_ids],
-                                                                             search_article_ids:session[:search_article_ids],
-                                                                                               title:session[:title],
-                                                                                                    summary:session[:summary],
-                                                                                                           q:params[:q],
-                                                                                                            category:params[:category],
-                                                                                                                    new_article:params[:new_article])
-     return
-   end
+    end
 
    #if new article, add article to ids
    if params[:new_article]
@@ -176,7 +143,7 @@ class CoursePacksController < ApplicationController
   end
 
   def list_all
-    redirect_to new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids], title:params[:title])
+    redirect_to new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
   end
 
   def add_article

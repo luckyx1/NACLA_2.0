@@ -119,17 +119,16 @@
     <file path="/Dummy.txt" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383165793398" ignored="false" />
     <file path="/create_coursepack.feature" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1382228354099" ignored="false" />
     <file path="/routes.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383075465000" ignored="false" />
-    <file path="/new.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383171260396" ignored="false" />
+    <file path="/new.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383164403436" ignored="false" />
     <file path="/20131018182953_create_course_packs.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383025503186" ignored="false" />
-    <file path="/course_packs_controller.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383170389982" ignored="false" />
+    <file path="/course_packs_controller.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383165712071" ignored="false" />
     <file path="/application.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383069857698" ignored="false" />
     <file path="/course_packs.js.coffee" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383070053283" ignored="false" />
     <file path="/article.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383070488957" ignored="false" />
-    <file path="/_add_article.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383171057195" ignored="false" />
+    <file path="/_add_article.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383160451302" ignored="false" />
     <file path="/course_pack.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383077094361" ignored="false" />
     <file path="/show.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383077167359" ignored="false" />
     <file path="/index.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383092134378" ignored="false" />
-    <file path="/course_packs_helper.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383169420023" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,28 +148,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="course_packs_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="course_packs_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/course_packs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="6" selection-start="3882" selection-end="3882" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="course_packs_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/course_packs_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comments_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/comments_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="55" column="52" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.46721312">
               <folding />
             </state>
           </provider>
@@ -203,10 +184,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_add_article.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_add_article.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="-0.30546075">
+            <state line="12" column="69" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -215,7 +196,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="63" selection-start="619" selection-end="619" vertical-scroll-proportion="-11.25">
+            <state line="4" column="19" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -249,10 +230,9 @@
         <option value="$PROJECT_DIR$/app/views/course_packs/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/course_packs/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb" />
         <option value="$PROJECT_DIR$/app/views/course_packs/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" />
       </list>
     </option>
   </component>
@@ -636,26 +616,6 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
-      <module name="" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="" />
@@ -927,6 +887,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/course_packs.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="57" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="21" selection-end="21" vertical-scroll-proportion="0.04373178" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/search/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="31" selection-start="145" selection-end="145" vertical-scroll-proportion="0.2542373" />
@@ -939,9 +909,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="70" selection-start="231" selection-end="231" vertical-scroll-proportion="0.2754591">
-          <folding />
-        </state>
+        <state line="11" column="70" selection-start="231" selection-end="231" vertical-scroll-proportion="0.2754591" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
@@ -980,30 +948,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/comments_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/course_packs_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/search_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/course_packs_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="6" selection-start="3882" selection-end="3882" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1015,16 +962,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="63" selection-start="619" selection-end="619" vertical-scroll-proportion="-11.25">
+        <state line="12" column="69" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="-0.30546075">
+        <state line="4" column="19" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/course_packs_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="52" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.46721312">
           <folding />
         </state>
       </provider>
