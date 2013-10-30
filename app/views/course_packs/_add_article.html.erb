@@ -6,6 +6,7 @@ Articles in database: <%= @count %>
 <p>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q, (params[:q] ? params[:q] : "")) %>
+  <%= hidden_field_tag :selected_articles, @selected_articles %>
   <%= submit_tag("Search") %>
 </p>
 <p>

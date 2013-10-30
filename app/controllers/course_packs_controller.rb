@@ -31,7 +31,7 @@ class CoursePacksController < ApplicationController
     @selected_articles = []
     @articles = nil
 
-    if params[:selected_articles]
+    if not params[:selected_articles].empty?
       params[:selected_articles].each do |id|
         @selected_articles << Article.find(id)
       end
