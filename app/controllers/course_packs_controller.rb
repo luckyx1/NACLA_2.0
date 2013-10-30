@@ -4,6 +4,10 @@ class CoursePacksController < ApplicationController
 
   def index
     @course_packs = CoursePack.all
+    session[:title] = nil
+    session[:selected_article_ids] = nil
+    session[:search_article_ids] = nil
+    session[:summary] = nil
 
     respond_to do |format|
       format.html # index.html.erb
@@ -143,7 +147,7 @@ class CoursePacksController < ApplicationController
   end
 
   def list_all
-    redirect_to new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
+    render "new", search_article_ids:'all', selected_article_ids:params[:selected_article_ids] #new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
   end
 
   def add_article
