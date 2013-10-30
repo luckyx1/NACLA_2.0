@@ -25,27 +25,67 @@ class CoursePacksController < ApplicationController
   # GET /course_packs/new
   # GET /course_packs/new.json
   def new
-    @course_pack = CoursePack.new
-    @count = Article.count
-    @search_categories = Article.search_categories
-    @selected_articles = []
-    @articles = nil
+   @selected_article_ids = []
+   @search_article_ids = []
+   @title = ""
+   @summary = ''
+   @course_pack_articles = []
+   @search_articles = nil
+   @count = Article.count
+   @search_categories = Article.search_categories
 
-    if not params[:selected_articles].empty?
-      params[:selected_articles].each do |id|
-        @selected_articles << Article.find(id)
-      end
+
+
+
+   #update session or set params to session for selected ids
+
+     if not params[:selected_article_ids].blank?
+       session[:selected_article_ids] = params[:selected_article_ids]
+       @selected_article_ids = (@selected_article_ids << session[:selected_article_ids]).flatten
+     elsif not session[:selected_article_ids].blank?
+       redirect_to new_course_pack_path(selected_article_ids:session[:selected_article_ids],
+                                        search_article_ids:session[:search_article_ids],# || params[:search_article_ids],
+                                        title:session[:title],
+                                        summary:session[:summary],
+                                        q:params[:q],
+                                        category:params[:category],
+                                        new_article:params[:new_article])
+       return
     end
 
-    if not params[:articles].nil?
-      @articles = Article.all
-    elsif params[:q] and params[:category]
-      @articles = view_context.search_articles(params[:category], params[:q])
+
+   #update for search article ids
+     if not params[:search_article_ids].blank?
+       session[:search_article_ids] = params[:search_article_ids]
+       @search_article_ids = (@search_article_ids << session[:search_article_ids]).flatten
+     elsif not session[:search_article_ids].blank?
+       redirect_to new_course_pack_path(selected_article_ids:session[:selected_article_ids],
+                                        search_article_ids:session[:search_article_ids],
+                                        title:session[:title],
+                                        summary:session[:summary],
+                                        q:params[:q],
+                                        category:params[:category],
+                                        new_article:params[:new_article])
+       return
     end
 
-    if params[:new_article]
-     @selected_articles << Article.find(params[:new_article])
-    end
+   #if new article, add article to ids
+   if params[:new_article]
+    @selected_article_ids << params[:new_article]
+   end
+
+   @selected_article_ids.each do |id|
+     @course_pack_articles << Article.find(id)
+   end
+
+   if not params[:q].blank? and params[:category]
+     @search_articles = view_context.search_articles(params[:category], params[:q])
+     #@search_articles = Article.all
+   elsif @search_article_ids == "all" or @search_article_ids == ['all']
+     @search_articles = Article.all
+  end
+
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -103,10 +143,10 @@ class CoursePacksController < ApplicationController
   end
 
   def list_all
-    redirect_to new_course_pack_path(articles:'all', selected_articles:params[:selected_articles])
+    redirect_to new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
   end
 
   def add_article
-    redirect_to new_course_pack_path(selected_articles:params[:selected_articles],new_article:params[:new_article])
+    redirect_to new_course_pack_path(selected_article_ids:params[:selected_article_ids],new_article:params[:new_article])
   end
 end

@@ -6,7 +6,8 @@ Articles in database: <%= @count %>
 <p>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q, (params[:q] ? params[:q] : "")) %>
-  <%= hidden_field_tag :selected_articles, @selected_articles %>
+  <%= hidden_field_tag :selected_article_ids, @selected_article_ids %>
+  <%= hidden_field_tag :search_article_ids, @search_article_ids %>
   <%= submit_tag("Search") %>
 </p>
 <p>
@@ -18,7 +19,7 @@ Articles in database: <%= @count %>
 </p>
 <% end %>
 
-<%= button_to "List All", {action:'list_all',selected_articles:@selected_articles}, method: "post" %>
+<%= button_to "List All", {action:'list_all',selected_article_ids:@selected_article_ids}, method: "post" %>
 
 
 <br>
@@ -31,10 +32,10 @@ Articles in database: <%= @count %>
       <font color='red'>
         <b><%= "Please select a search category." %></b>
       </font>
-  <% elsif params[:q] and (@articles.nil? or @articles.count == 0)%>
+  <% elsif params[:q] and (@search_articles.nil? or @search_articles.count == 0)%>
       <b><%= "No articles found." %></b>
-  <% elsif @articles %>
-      <b><%= @articles.count.to_s + " article(s) found." %></b>
+  <% elsif @search_articles %>
+      <b><%= @search_articles.count.to_s + " article(s) found." %></b>
 
       <h2>Results:</h2>
 
@@ -48,13 +49,13 @@ Articles in database: <%= @count %>
         <tr>
         </thead>
         <tbody>
-        <% @articles.each do |article| %>
+        <% @search_articles.each do |article| %>
             <tr>
               <td> <%= article.title %> </td>
               <td> <%= article.description %> </td>
               <td> <%= article.publication_date %> </td>
               <td> <%= article.tags %> </td>
-              <td> <%= button_to "Add to coursepack", {action:'new',new_article:article.id,selected_articles:@selected_articles}, :method=>:post  %> </td>	 <!-- button should return something for the course pack? -->
+              <td> <%= button_to "Add to coursepack", {action:'new',new_article:article.id,selected_article_ids:@selected_article_ids}, :method=>:post  %> </td>	 <!-- button should return something for the course pack? -->
             </tr>
         <% end %>
         </tbody>
