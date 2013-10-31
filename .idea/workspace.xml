@@ -178,7 +178,7 @@
       <file leaf-file-name="_add_article.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.25597268">
+            <state line="16" column="28" selection-start="566" selection-end="566" vertical-scroll-proportion="0.4095563">
               <folding />
             </state>
           </provider>
@@ -1003,7 +1003,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.25597268">
+        <state line="16" column="28" selection-start="566" selection-end="566" vertical-scroll-proportion="0.4095563">
           <folding />
         </state>
       </provider>
