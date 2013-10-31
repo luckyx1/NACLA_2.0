@@ -38,8 +38,12 @@ class CoursePacksController < ApplicationController
    @count = Article.count
    @search_categories = Article.search_categories
 
+  @title = params[:first]
 
-
+   if params[:first]
+     @title = 'CREATED'
+     return redirect_to course_packs_create_path(title:params[:title], summary:params[:summary])
+   end
 
    #update session or set params to session for selected ids
 
@@ -147,7 +151,7 @@ class CoursePacksController < ApplicationController
   end
 
   def list_all
-    render "new", search_article_ids:'all', selected_article_ids:params[:selected_article_ids] #new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
+    redirect_to new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
   end
 
   def add_article

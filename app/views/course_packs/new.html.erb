@@ -3,21 +3,35 @@ course packs: <%= @course_pack_articles %>
 selected ids <%= @selected_article_ids %>
 search ids <%= @search_article_ids %>
 search articles <%#= @search_articles %>
+<%= form_for :course_pack do |c| %>
 
-<%= form_for :course_pack, url:'create' do |c| %>
-
-    Title: <%= c.text_field :title %> <br/>
+    Title: <%= c.text_field :title, value:@title %> <br/>
     Summary:<br/> <%= c.text_area :summary, size:'100x5' %><br/>
     Articles: <br/>
     <% @course_pack_articles.each do |article| %>
         <%= article.title %> <br/>
     <%end %>
 
-    <%= c.submit %>
-    <%end %>
+    <%= c.submit 'Create Course Pack', name:'commit', value:'Create' %>
+    <div id='test'>BUTTON!!</div>
 
+<%#end %>
+    <p>
+      <%= c.label(:q, "Search for:") %>
+      <%= c.text_field :q, value:(params[:q] ? params[:q] : "") %>
+      <%= c.hidden_field :selected_article_ids, value: @selected_article_ids %>
+      <%= c.hidden_field :search_article_ids, value: @search_article_ids %>
+      <%= c.submit "Search", value:"Search" %>
+<% end %>
+
+
+<button id='button1'>TEST</button>
+
+<script> JQuery('#button1').click(function(){
+    alert('test');
+})   ;
+</script>
     <%= render 'add_article' %>
-
 
 
 
