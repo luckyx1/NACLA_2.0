@@ -32,7 +32,6 @@ class CommentsController < ApplicationController
 		  	end
 		  	@par = params
 	  		@display = true
-	  	end
   	end
   end
 
