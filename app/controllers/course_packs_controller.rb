@@ -39,8 +39,6 @@ class CoursePacksController < ApplicationController
    @search_categories = Article.search_categories
 
 
-
-
    #update session or set params to session for selected ids
 
      if not params[:selected_article_ids].blank?
