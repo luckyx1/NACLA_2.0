@@ -3,50 +3,18 @@ class CommentsController < ApplicationController
   end
 
   def add
-  	if(params[:addstatus] == 'add')
-  		commentstring = params[:comment]
-  		username = params[:username]
-  		datetime = DateTime.current()
-  		article = params[:article]
+  	if(params[:addstatus] == 'add') 
   		if article != "" and username !="" and commentstring != ""
   			newcommentSpecs = Hash.new
-  			newcommentSpecs[:user] = username
-  			newcommentSpecs[:comment] = commentstring
+  			newcommentSpecs[:user] = params[:username]
+  			newcommentSpecs[:comment] = params[:comment]
   			newcommentSpecs[:privacy] = "false"
-  			newcommentSpecs[:postdate] = datetime
-  			newcommentSpecs[:article] = article
+  			newcommentSpecs[:postdate] = DateTime.current()
+  			newcommentSpecs[:article] = params[:article]
 	  		newcomment = Comment.new(newcommentSpecs)
-	  		newcomment.comment = commentstring
-	  		newcomment.user = username
-	  		newcomment.privacy = false
-	  		newcomment.article = article
-	  		newcomment.postdate = datetime
 	  		@status = "Your comment was added successfully."
 	  	else
-	  		error = ""
-	  		count = 0
-
-	  		if (username == "")
-	  			error = error + "the username field was left blank"
-	  			count = count + 1
-	  		end
-
-	  		if commentstring == ""
-	  			if count > 0
-	  				error = error + ", "
-	  			end
-	  			error = error + "the comment field was left blank"
-	  			count = count + 1
-	  		end
-
-	  		if article == ""
-	  			if count > 0
-	  				error = error + ", "
-	  			end
-	  			error = error + "the article url field was left blank"
-	  			count = count + 1
-	  		end
-	  		@status = "There was an error(s) in your submission: " + error
+	  		@status = view_context.get_failure_status_message(params[:username], params[:comment], params[:article])
 	  	end
 	  	@par = params
   		@display = true
@@ -55,45 +23,20 @@ class CommentsController < ApplicationController
 
   def delete
   		if(params[:delstatus] == 'del')
-  		commentstring = params[:comment]
-  		username = params[:username]
-  		datetime = DateTime.current()
-  		article = params[:article]
-  		if article != "" and username !="" and commentstring != ""
-	  		@comment = Comment.find(:first, :conditions => {:user => username, :comment => commentstring, :article => article})
-		    @comment.destroy
-	  		@status = "Your comment was deleted successfully."
-	  	else
-	  		error = ""
-	  		count = 0
-
-	  		if (username == "")
-	  			error = error + "the username field was left blank"
-	  			count = count + 1
-	  		end
-
-	  		if commentstring == ""
-	  			if count > 0
-	  				error = error + ", "
-	  			end
-	  			error = error + "the comment field was left blank"
-	  			count = count + 1
-	  		end
-
-	  		if article == ""
-	  			if count > 0
-	  				error = error + ", "
-	  			end
-	  			error = error + "the article url field was left blank"
-	  			count = count + 1
-	  		end
-	  		@status = "There was an error(s) in your submission: " + error
+	  		if article != "" and username !="" and commentstring != ""
+		  		@comment = Comment.find(:first, :conditions => {:user => params[:username], :comment => params[:comment], :article => params[:article]})
+			    @comment.destroy
+		  		@status = "Your comment was deleted successfully."
+		  	else
+		  		@status = view_context.get_failure_status_message(params[:username], params[:comment], params[:article])
+		  	end
+		  	@par = params
+	  		@display = true
 	  	end
-	  	@par = params
-  		@display = true
   	end
   end
 
   def index
   end
+
 end

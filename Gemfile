@@ -9,8 +9,17 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :test, :development do 
+  gem 'database_cleaner' # to clear Cucumber's test database between runs
+  gem 'capybara'         # lets Cucumber pretend to be a web browser
+  gem 'launchy'          # a useful debugging aid for user stories
+  gem 'rspec-rails'
+  gem 'simplecov' 
+end
+
 group :test do
   gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
