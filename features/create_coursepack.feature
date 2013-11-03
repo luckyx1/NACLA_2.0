@@ -7,10 +7,10 @@ Feature: create a coursepack
 Background: documents exists in the database
 
   Given the following documents exist:
-  | title                    | description                               | published_date |
-  | Brazilian Colonialism    | Colonialism of Brazil between 1800-1900   | 10-Jan-2004    |
-  | Modern Politics of Chile | The political climate of modern day Chile | 5-Nov-1998     |
-  | Drug Cartels, Mexico     | The history of drug cartels in Mexico     | 4-May-1985     |
+  | title                    | description                               | publication_date | tags                |
+  | Brazilian Colonialism    | Colonialism of Brazil between 1800-1900   | 20-Sep-2010      | Brazil, colony      |
+  | Modern Politics of Chile | The political climate of modern day Chile | 2-Apr-2011       | republic, election  |
+  | Drug Cartels, Mexico     | The history of drug cartels in Mexico     | 14-Dec-2003      | drugs, war          |
 
   And I am on the new coursepack page
 
