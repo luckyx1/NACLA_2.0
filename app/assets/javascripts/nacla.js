@@ -24,5 +24,9 @@ function CreateCoursePackCtrl($scope,$resource){
         $scope.selected_articles.splice(index,1);
     };
 
+    $scope.submit = function(){
+        $resource('create').post({title:$scope.title, summary:$scope.summary}).success();
+    }
+
 
 }
