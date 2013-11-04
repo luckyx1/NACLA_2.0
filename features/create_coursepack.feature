@@ -21,13 +21,6 @@ Scenario: create an coursepack with no articles
   Then I should see a new coursepack with the 'title' 'Early Colombia'
 
 
-Scenario: create a coursepack and add files
-  When I fill in 'California Missions' for the 'Title'
-  When I select 'Mexico' as the 'country'
-  And I add articles
-  And I press the 'create' button
-  Then I should see a new coursepack with the 'title' 'California Missions'
-
 Scenario: start creating a coursepack but cancel before saving
   When I fill in 'Latino subcultures in California' as for the 'Title'
   And I press the 'cancel' button
