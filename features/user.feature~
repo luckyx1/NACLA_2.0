@@ -1,0 +1,17 @@
+Feature name: I want to create dynamic coursepacks
+	As a user
+	So that I can create a custom collection of articles
+	I want to create a custom course pack for my account
+
+Background: I'm logged in and on the add course pack page
+	Given I am logged in 
+	And I am on the "Add a Course Pack" page
+
+Scenario: merge articles
+	When I am logged in as admin
+	Then I should see 'Merge Articles'
+
+Scenario: non-admin on edit article page
+	When I am not logged in as admin
+	Then I should not see 'Merge Articles'
+
