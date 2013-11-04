@@ -28,11 +28,7 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-<<<<<<< HEAD
-    addressable (2.3.5)
-=======
     angularjs-rails (1.0.8)
->>>>>>> create_course_pack
     arel (3.0.2)
     builder (3.0.4)
     capybara (2.1.0)
