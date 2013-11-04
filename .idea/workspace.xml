@@ -89,7 +89,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/nacla.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/nacla.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/paths.rb" afterPath="$PROJECT_DIR$/features/support/paths.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
@@ -136,7 +135,7 @@
     <file path="/course_packs_helper.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383169420023" ignored="false" />
     <file path="/nacla.js" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383608748742" ignored="false" />
     <file path="/add_article_to_coursepack.feature" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383526696871" ignored="false" />
-    <file path="/production.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383609124404" ignored="false" />
+    <file path="/production.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383609236684" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +194,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="59" selection-start="738" selection-end="738" vertical-scroll-proportion="0.52389705">
+            <state line="14" column="3" selection-start="507" selection-end="507" vertical-scroll-proportion="0.38602942">
               <folding />
             </state>
           </provider>
@@ -269,8 +268,8 @@
         <option value="$PROJECT_DIR$/features/create_coursepack.feature" />
         <option value="$PROJECT_DIR$/features/add_article_to_coursepack.feature" />
         <option value="$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/nacla.js" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -1071,7 +1070,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="59" selection-start="738" selection-end="738" vertical-scroll-proportion="0.52389705">
+        <state line="14" column="3" selection-start="507" selection-end="507" vertical-scroll-proportion="0.38602942">
           <folding />
         </state>
       </provider>
