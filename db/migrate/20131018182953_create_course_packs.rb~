@@ -9,4 +9,8 @@ class CreateCoursePacks < ActiveRecord::Migration
     end
   end
 end
+          #are you wondering why title and summary don't show up?
+#aren't they nil
 
+#they should still be fields in the table
+#db migrate doesnt seem to be running
