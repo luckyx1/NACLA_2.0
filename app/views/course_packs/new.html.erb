@@ -1,20 +1,49 @@
-<h1>New course_pack</h1>
+<h1>New Course Pack</h1>
+<div ng-controller="CreateCoursePackCtrl">
 
 <%= form_for :course_pack, url:'create' do |c| %>
 
     Title: <%= c.text_field :title %> <br/>
     Summary:<br/> <%= c.text_area :summary, size:'100x5' %><br/>
     Articles: <br/>
-    <% @course_pack_articles.each do |article| %>
-        <%= article.title %> <br/>
+     <ul>
+       <li ng-repeat="selected in selected_articles">{{selected.title}}[<a href="#" ng-click="remove_selected($index)">X</a>]</li>
+     </ul>
+
+    <button type='button' ng-click='submit()'>Create</button>
+    <%#= c.submit %>
     <%end %>
 
-    <%= c.submit %>
-    <%end %>
 
-    <%= render 'add_article' %>
+  <input type='text' ng-model="search_input">
+  <table id="articles">
+    <thead>
+    <tr>
+      <th> Title </th>
+      <th> Description </th>
+      <th> Publication Date </th>
+      <th> Tags </th>
+    <tr>
+    </thead>
 
+    <tbody ng-repeat="article in all_articles|filter:search_input">
+    Search by:
+    <input type='checkbox' checked='checked'>Title
+    <input type='checkbox' >Description
+          <tr ng-hide='!search_input'>
+            <td> {{article.title}} </td>
+            <td> {{article.description}}</td>
+            <td> {{article.publication_date}}</td>
+            <td> {{article.tags}} </td>
+            <td><button type='button' ng-click='add_to_selected($index)'>Add</button></td>
+          </tr>
+      </tbody>
+    </table>
+
+   </div>
 
 
 
 <%= link_to 'Back', course_packs_path %>
+
+</div>
