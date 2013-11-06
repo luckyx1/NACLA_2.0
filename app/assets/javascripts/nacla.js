@@ -15,13 +15,15 @@ function CreateCoursePackCtrl($scope,$resource){
     $scope.selected_articles = [];
     $scope.search_input = '';
 
-    $scope.add_to_selected = function(index){
-        if($scope.selected_articles.indexOf($scope.all_articles[index]) == -1)
-            $scope.selected_articles.push($scope.all_articles[index]);
+    $scope.add_to_selected = function(article){
+        $scope.test = 'rails sucks because i dont know it';
+        if($scope.selected_articles.indexOf(article) == -1)
+            $scope.selected_articles.push(article);
+
     };
 
-    $scope.remove_selected = function(index){
-        $scope.selected_articles.splice(index,1);
+    $scope.remove_selected = function(article){
+        $scope.selected_articles.splice($scope.selected_articles.indexOf(article),1);
     };
 
     $scope.submit = function(){
