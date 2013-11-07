@@ -6,12 +6,12 @@ When /I press "(.*)"/ do |link|
 
 end
 
-When /I fill out valid registration information/ do |
+When (/I fill out valid registration information/) do 
 
 end
 
 #figure out how to dry this with above
-When /I fill out invalid registration information/ do |
+When /I fill out invalid registration information/ do 
 
 end
 
