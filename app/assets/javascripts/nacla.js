@@ -16,7 +16,6 @@ function CreateCoursePackCtrl($scope,$resource){
     $scope.search_input = '';
 
     $scope.add_to_selected = function(article){
-        $scope.test = 'rails sucks because i dont know it';
         if($scope.selected_articles.indexOf(article) == -1)
             $scope.selected_articles.push(article);
 

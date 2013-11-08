@@ -50,6 +50,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.rb" afterPath="$PROJECT_DIR$/app/models/article.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/article_test.rb" afterPath="$PROJECT_DIR$/test/unit/article_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/articles.yml" afterPath="$PROJECT_DIR$/test/fixtures/articles.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
@@ -101,6 +102,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/nacla.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/nacla.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/course_packs/new.html.erb" afterPath="$PROJECT_DIR$/app/views/course_packs/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/paths.rb" afterPath="$PROJECT_DIR$/features/support/paths.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
@@ -140,9 +142,9 @@
     <file path="/course_packs_controller.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383334752140" ignored="false" />
     <file path="/application.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383331568539" ignored="false" />
     <file path="/course_packs.js.coffee" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383070053283" ignored="false" />
-    <file path="/article.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383070488957" ignored="false" />
+    <file path="/article.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383939243492" ignored="false" />
     <file path="/_add_article.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383173314795" ignored="false" />
-    <file path="/course_pack.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383077094361" ignored="false" />
+    <file path="/course_pack.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383939317533" ignored="false" />
     <file path="/show.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383077167359" ignored="false" />
     <file path="/index.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383092134378" ignored="false" />
     <file path="/course_packs_helper.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383169420023" ignored="false" />
@@ -171,7 +173,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="117" selection-start="376" selection-end="376" vertical-scroll-proportion="-5.2916665">
+            <state line="14" column="12" selection-start="498" selection-end="498" vertical-scroll-proportion="-8.75">
               <folding />
             </state>
           </provider>
@@ -186,19 +188,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course_pack.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="course_pack.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/course_pack.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+            <state line="5" column="52" selection-start="99" selection-end="99" vertical-scroll-proportion="0.12520868">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nacla.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="nacla.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nacla.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="43" selection-start="387" selection-end="387" vertical-scroll-proportion="0.37562606">
+            <state line="17" column="47" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/article.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="25" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -254,15 +265,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="14" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -281,7 +283,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/course_packs/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/course_packs/index.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb" />
@@ -294,9 +295,10 @@
         <option value="$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/log/development.log" />
-        <option value="$PROJECT_DIR$/app/models/course_pack.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/nacla.js" />
         <option value="$PROJECT_DIR$/app/views/course_packs/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/nacla.js" />
+        <option value="$PROJECT_DIR$/app/models/article.rb" />
+        <option value="$PROJECT_DIR$/app/models/course_pack.rb" />
       </list>
     </option>
   </component>
@@ -830,13 +832,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/add_coursepack.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="55" selection-start="0" selection-end="1017" vertical-scroll-proportion="0.42570952" />
@@ -914,23 +909,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/course_pack.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="117" selection-start="376" selection-end="376" vertical-scroll-proportion="-5.2916665">
+        <state line="14" column="12" selection-start="498" selection-end="498" vertical-scroll-proportion="-8.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nacla.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="43" selection-start="387" selection-end="387" vertical-scroll-proportion="0.37562606">
+        <state line="17" column="47" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/article.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/course_pack.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="52" selection-start="99" selection-end="99" vertical-scroll-proportion="0.12520868">
           <folding />
         </state>
       </provider>
