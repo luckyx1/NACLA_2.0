@@ -1,0 +1,26 @@
+<h1>Sign Up</h1>
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <% for message in @user.errors.full_messages %>
+      <%= message %>
+    <% end %>
+  <% end %>
+  <p>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  </p>
+  <p>
+  <%= f.label :email %>
+  <%= f.text_field :email%>
+  </p>
+  <p>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  </p>
+  <p>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  </p>
+  <%= submit_tag 'Create new account' %>
+<% end %>
