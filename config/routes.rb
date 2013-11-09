@@ -14,6 +14,12 @@ NACLA::Application.routes.draw do
 
   resources :course_packs
 
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  post "log_in" => "sessions#create" 
+  get "sign_up" => "users#new", :as => "sign_up"
+  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
