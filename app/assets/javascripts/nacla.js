@@ -30,7 +30,13 @@ function CreateCoursePackCtrl($scope,$resource){
         angular.forEach($scope.selected_articles, function(article){
             article_ids.push(article.id);
         })
-        $resource('create').save({title:$scope.title, summary:$scope.summary, article_ids:article_ids}, function(){console.log('success')}) ;
+        $resource('create').save({title:$scope.title, summary:$scope.summary, article_ids:article_ids},
+            //Success
+            function(){
+                window.location = '/'
+            },
+            //Failure
+            function(){console.log('FAILED!')}) ;
     }
 
 

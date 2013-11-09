@@ -113,7 +113,8 @@ class CoursePacksController < ApplicationController
           @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
           if params[:article_ids]
             params[:article_ids].each do |id|
-            @course_pack.articles << Article.find(id)
+              @course_pack.articles << Article.find(id)
+            end
           end
 
           if @course_pack.save
