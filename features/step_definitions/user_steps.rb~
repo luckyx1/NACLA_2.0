@@ -46,7 +46,7 @@ end
 
 #might need one for Then as well?
 When /I am logged in/ do
-	page.has_content? 'Logged in as
+	
 end
 
 When /I am on the "(.*)" page/ do |page|
