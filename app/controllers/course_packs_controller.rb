@@ -28,69 +28,10 @@ class CoursePacksController < ApplicationController
 
   # GET /course_packs/new
   # GET /course_packs/new.json
+
   def new
-   @selected_article_ids = []
-   @search_article_ids = []
-   @title = ""
-   @summary = ''
-   @course_pack_articles = []
-   @search_articles = nil
-   @count = Article.count
-   @search_categories = Article.search_categories
-
-
-   #update session or set params to session for selected ids
-
-     if not params[:selected_article_ids].blank?
-       session[:selected_article_ids] = params[:selected_article_ids]
-       @selected_article_ids = (@selected_article_ids << session[:selected_article_ids]).flatten
-     elsif not session[:selected_article_ids].blank?
-       redirect_to new_course_pack_path(selected_article_ids:session[:selected_article_ids],
-                                        search_article_ids:session[:search_article_ids],# || params[:search_article_ids],
-                                        title:session[:title],
-                                        summary:session[:summary],
-                                        q:params[:q],
-                                        category:params[:category],
-                                        new_article:params[:new_article])
-       return
-    end
-
-
-   #update for search article ids
-     if not params[:search_article_ids].blank?
-       session[:search_article_ids] = params[:search_article_ids]
-       @search_article_ids = (@search_article_ids << session[:search_article_ids]).flatten
-     elsif not session[:search_article_ids].blank?
-       redirect_to new_course_pack_path(selected_article_ids:session[:selected_article_ids],
-                                        search_article_ids:session[:search_article_ids],
-                                        title:session[:title],
-                                        summary:session[:summary],
-                                        q:params[:q],
-                                        category:params[:category],
-                                        new_article:params[:new_article])
-       return
-    end
-
-   #if new article, add article to ids
-   if params[:new_article]
-    @selected_article_ids << params[:new_article]
-   end
-
-   @selected_article_ids.each do |id|
-     @course_pack_articles << Article.find(id)
-   end
-
-   if not params[:q].blank? and params[:category]
-     @search_articles = view_context.search_articles(params[:category], params[:q])
-     #@search_articles = Article.all
-   elsif @search_article_ids == "all" or @search_article_ids == ['all']
-     @search_articles = Article.all
-  end
-
-
-
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render "new"}
       format.json { render json: @course_pack }
     end
   end
@@ -103,16 +44,25 @@ class CoursePacksController < ApplicationController
   # POST /course_packs
   # POST /course_packs.json
   def create
-    @course_pack = CoursePack.new(params[:course_pack])
 
     respond_to do |format|
-      if @course_pack.save
-        format.html { redirect_to @course_pack, notice: 'Course pack was successfully created.' }
-        format.json { render json: @course_pack, status: :created, location: @course_pack }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @course_pack.errors, status: :unprocessable_entity }
-      end
+        format.html { redirect_to '/'}
+        format.json {
+
+          @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
+
+          if params[:article_ids]
+            params[:article_ids].each do |id|
+              @course_pack.articles << Article.find(id)
+            end
+          end
+
+          if @course_pack.save
+            render :nothing => true, :status => :ok
+          else
+            render :nothing => true, :status => :conflict
+          end
+        }
     end
   end
 

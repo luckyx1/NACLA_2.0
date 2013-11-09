@@ -9,16 +9,18 @@
   </table>
 
 <% @course_packs.each do |course_pack| %>
-  Title: <%= course_pack.title %><br/>
-  Summary: <br/><%= course_pack.summary %><br/>
-   <table>
+  <b>Title:</b> <%= course_pack.title %><br/>
+  <b>Summary:</b> <br/>&nbsp&nbsp&nbsp<%= course_pack.summary %><br/>
+  <table>
   <tr>
     <td><%= link_to 'Show', course_pack %></td>
     <td><%= link_to 'Edit', edit_course_pack_path(course_pack) %></td>
     <td><%= link_to 'Destroy', course_pack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+  </table>
+    <br/>
 <% end %>
-</table>
+
 
 <br />
 
