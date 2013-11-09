@@ -11,6 +11,7 @@ NACLA::Application.routes.draw do
   post 'new/list_all' => 'course_packs#list_all'
   post 'course_packs/new' => 'course_packs#add_article'
   post 'course_packs/create' => 'course_packs#create'
+  get 'course_packs/all_articles' => 'course_packs#all_articles'
 
   resources :course_packs
 

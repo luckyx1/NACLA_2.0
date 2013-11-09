@@ -15,21 +15,14 @@ Background: documents exists in the database
   And I am on the new coursepack page
 
 Scenario: create an coursepack with no articles
-  When I fill in 'Early Colombia' for the 'Title'
+  When I fill in 'Title' with 'Early Colombia'
   When I select the 'Colombia' as the 'country'
   And I press the create button
   Then I should see a new coursepack with the 'title' 'Early Colombia'
 
 
-Scenario: create a coursepack and add files
-  When I fill in 'California Missions' for the 'Title'
-  When I select 'Mexico' as the 'country'
-  And I add articles
-  And I press the 'create' button
-  Then I should see a new coursepack with the 'title' 'California Missions'
-
 Scenario: start creating a coursepack but cancel before saving
-  When I fill in 'Latino subcultures in California' as for the 'Title'
+  When I fill in 'Title' with 'Latino subcultures in California'
   And I press the 'cancel' button
   Then I should not see a new coursepack with the 'title' 'Latino Subcultures in California'
 

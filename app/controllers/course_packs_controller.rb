@@ -144,6 +144,13 @@ class CoursePacksController < ApplicationController
     end
   end
 
+  def all_articles
+    @articles = Article.all
+    respond_to do |format|
+      format.json {render json: @articles}
+    end
+  end
+
   def list_all
     redirect_to new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
   end

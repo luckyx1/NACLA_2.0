@@ -1,13 +1,13 @@
  Then(/^I am on the article\/coursepack search page$/) do
-  pending # express the regexp above with the code you wish you had
+ 	visit  '/search'
 end
 
 When(/^I am logged in as NACLA$/) do
-  pending # express the regexp above with the code you wish you had
+  pending # waiting to see how to log in
 end
 
 When(/^I follow the "(.*?)" page$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+ click_link(arg1)
 end
 
 Then(/^I should see the regular "(.*?)" page$/) do |arg1|

@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
   attr_accessible :description, :publication_date, :tags, :title
+  belongs_to :course_pack
 
   def self.search_categories
   	%w(title description tags)
