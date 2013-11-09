@@ -103,16 +103,30 @@ class CoursePacksController < ApplicationController
   # POST /course_packs
   # POST /course_packs.json
   def create
-    @course_pack = CoursePack.new(params[:course_pack])
+    #@course_pack = CoursePack.new(params[:course_pack])
 
     respond_to do |format|
-      if @course_pack.save
+      #if @course_pack.save
         format.html { redirect_to @course_pack, notice: 'Course pack was successfully created.' }
-        format.json { render json: @course_pack, status: :created, location: @course_pack }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @course_pack.errors, status: :unprocessable_entity }
-      end
+        format.json {
+
+          @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
+          if params[:article_ids]
+            params[:article_ids].each do |id|
+            @course_pack.articles << Article.find(id)
+          end
+
+          if @course_pack.save
+            render :nothing => true, :status => :ok
+          else
+            render :nothing => true, :status => :conflict
+          end
+        }
+
+      #else
+        #format.html { render action: "new" }
+        #format.json { render json: @course_pack.errors, status: :unprocessable_entity }
+      #end
     end
   end
 

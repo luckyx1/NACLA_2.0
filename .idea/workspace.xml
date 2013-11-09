@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-08cb428387005fa5a9a83bab9ec2d21d.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-08cb428387005fa5a9a83bab9ec2d21d.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min-6336c5bca4c709e809647cdfcb484d0a.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails-a3386665c05a2d82f711a4aaa72d247c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/.gitkeep" afterPath="$PROJECT_DIR$/app/mailers/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/.gitkeep" afterPath="$PROJECT_DIR$/app/models/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/.gitkeep" afterPath="$PROJECT_DIR$/lib/assets/.gitkeep" />
@@ -14,10 +27,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/.gitkeep" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/.gitkeep" afterPath="$PROJECT_DIR$/vendor/plugins/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-08cb428387005fa5a9a83bab9ec2d21d.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-08cb428387005fa5a9a83bab9ec2d21d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/rails.png" afterPath="$PROJECT_DIR$/app/assets/images/rails.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
@@ -41,15 +50,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/add.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/add.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/add_coursepack.feature" afterPath="$PROJECT_DIR$/features/add_coursepack.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/add_coursepack_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/add_coursepack_steps.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-08cb428387005fa5a9a83bab9ec2d21d.js" afterPath="$PROJECT_DIR$/public/assets/application-08cb428387005fa5a9a83bab9ec2d21d.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css" afterPath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="$PROJECT_DIR$/public/assets/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.rb" afterPath="$PROJECT_DIR$/app/models/article.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/article_test.rb" afterPath="$PROJECT_DIR$/test/unit/article_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/articles.yml" afterPath="$PROJECT_DIR$/test/fixtures/articles.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
@@ -69,10 +75,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/comments_spec.rb" afterPath="$PROJECT_DIR$/spec/models/comments_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/comments_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/comments_steps.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/course_pack.rb" afterPath="$PROJECT_DIR$/app/models/course_pack.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/course_pack_test.rb" afterPath="$PROJECT_DIR$/test/unit/course_pack_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/course_packs.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/course_packs.yml" afterPath="$PROJECT_DIR$/test/fixtures/course_packs.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/course_packs_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/course_packs_controller_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/course_packs_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/course_packs_helper_test.rb" />
@@ -94,9 +102,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/search/index.html.erb" afterPath="$PROJECT_DIR$/app/views/search/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min-6336c5bca4c709e809647cdfcb484d0a.map" afterPath="$PROJECT_DIR$/public/assets/jquery.min-6336c5bca4c709e809647cdfcb484d0a.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min.map" afterPath="$PROJECT_DIR$/public/assets/jquery.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
@@ -127,27 +132,30 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/user_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/user_steps.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
     </list>
     <ignored path="NACLA_2.0.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383939612200" ignored="false" />
+    <file path="/Dummy.txt" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384034238378" ignored="false" />
     <file path="/create_coursepack.feature" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1382228354099" ignored="false" />
     <file path="/routes.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383334972568" ignored="false" />
-    <file path="/new.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383938755884" ignored="false" />
+    <file path="/new.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384030180051" ignored="false" />
     <file path="/20131018182953_create_course_packs.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383608225147" ignored="false" />
-    <file path="/course_packs_controller.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383334752140" ignored="false" />
+    <file path="/course_packs_controller.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384034622103" ignored="false" />
     <file path="/application.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383331568539" ignored="false" />
     <file path="/course_packs.js.coffee" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383070053283" ignored="false" />
-    <file path="/article.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383939243492" ignored="false" />
+    <file path="/article.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384034070876" ignored="false" />
     <file path="/_add_article.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383173314795" ignored="false" />
-    <file path="/course_pack.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383939317533" ignored="false" />
+    <file path="/course_pack.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384034001254" ignored="false" />
     <file path="/show.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383077167359" ignored="false" />
     <file path="/index.html.erb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383092134378" ignored="false" />
     <file path="/course_packs_helper.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383169420023" ignored="false" />
-    <file path="/nacla.js" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383711336245" ignored="false" />
+    <file path="/nacla.js" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384034637961" ignored="false" />
     <file path="/add_article_to_coursepack.feature" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383526696871" ignored="false" />
     <file path="/production.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1383609236684" ignored="false" />
+    <file path="/20131024212257_create_articles.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384031706753" ignored="false" />
+    <file path="/20131109214010_create_articles_course_packs_table.rb" changelist="f2e24158-1ef8-45e4-b4ad-1e1beef92a4c" time="1384034266682" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,16 +178,16 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="7" selection-start="493" selection-end="493" vertical-scroll-proportion="-8.75">
+            <state line="6" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course_packs_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="course_packs_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/course_packs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="26" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.2576792">
+            <state line="131" column="85" selection-start="4264" selection-end="4264" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,16 +196,43 @@
       <file leaf-file-name="course_pack.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/course_pack.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+            <state line="5" column="65" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nacla.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="20131109214010_create_articles_course_packs_table.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131109214010_create_articles_course_packs_table.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="29" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131018182953_create_course_packs.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="11" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131024212257_create_articles.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131024212257_create_articles.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="39" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nacla.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nacla.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
+            <state line="29" column="65" selection-start="827" selection-end="827" vertical-scroll-proportion="0.5683453">
               <folding />
             </state>
           </provider>
@@ -206,43 +241,7 @@
       <file leaf-file-name="article.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/article.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="25" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="64" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="36" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="27" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/application.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="22" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
+            <state line="10" column="33" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -251,13 +250,8 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/course_packs/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="27" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1383606307000" expanded="true" signature="37:105" placeholder="..." />
-                <marker date="1383606307000" expanded="true" signature="44:94" placeholder="..." />
-                <marker date="1383606307000" expanded="true" signature="246:503" placeholder="..." />
-                <marker date="1383606307000" expanded="true" signature="253:484" placeholder="..." />
-              </folding>
+            <state line="25" column="27" selection-start="569" selection-end="569" vertical-scroll-proportion="-15.625">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -280,30 +274,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/course_packs/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/course_packs/_add_article.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/features/create_coursepack.feature" />
         <option value="$PROJECT_DIR$/features/add_article_to_coursepack.feature" />
         <option value="$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/log/development.log" />
-        <option value="$PROJECT_DIR$/app/models/article.rb" />
-        <option value="$PROJECT_DIR$/app/models/course_pack.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/nacla.js" />
         <option value="$PROJECT_DIR$/app/views/course_packs/new.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20131024212257_create_articles.rb" />
+        <option value="$PROJECT_DIR$/app/models/course_pack.rb" />
+        <option value="$PROJECT_DIR$/app/models/article.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20131109214010_create_articles_course_packs_table.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/course_packs_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/nacla.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="-5" />
-    <option name="width" value="1282" />
-    <option name="height" value="806" />
+    <option name="y" value="24" />
+    <option name="width" value="1280" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -331,6 +324,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -374,6 +368,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NACLA_2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,7 +456,6 @@
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -745,14 +756,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-5" width="1282" height="806" extended-state="6" />
+    <frame x="0" y="24" width="1280" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495935" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.299187" sideWeight="0.65680474" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3102606" sideWeight="0.65680474" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34319526" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -829,31 +840,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/features/add_coursepack.feature">
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="55" selection-start="0" selection-end="1017" vertical-scroll-proportion="0.42570952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/add_article_to_coursepack.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="0" selection-end="1506" vertical-scroll-proportion="0.16693419" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="21" selection-start="0" selection-end="1542" vertical-scroll-proportion="0.5163934" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
+        <state line="25" column="27" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb">
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" />
+        <state line="27" column="22" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log/development.log">
@@ -866,70 +862,80 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/course_packs/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="27" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1383606307000" expanded="true" signature="37:105" placeholder="..." />
-            <marker date="1383606307000" expanded="true" signature="44:94" placeholder="..." />
-            <marker date="1383606307000" expanded="true" signature="246:503" placeholder="..." />
-            <marker date="1383606307000" expanded="true" signature="253:484" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="27" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="36" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="64" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/course_pack.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+        <state line="5" column="65" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131024212257_create_articles.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="39" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="27" selection-start="569" selection-end="569" vertical-scroll-proportion="-15.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/article.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+        <state line="10" column="33" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131018182953_create_course_packs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="64" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
+        <state line="12" column="11" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nacla.js">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131109214010_create_articles_course_packs_table.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="493" selection-end="493" vertical-scroll-proportion="-8.75">
+        <state line="10" column="29" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/course_packs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="26" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.2576792">
+        <state line="131" column="85" selection-start="4264" selection-end="4264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/course_packs/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nacla.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="65" selection-start="827" selection-end="827" vertical-scroll-proportion="0.5683453">
           <folding />
         </state>
       </provider>

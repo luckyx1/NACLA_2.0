@@ -1,18 +1,16 @@
 <h1>New Course Pack</h1>
 <div ng-controller="CreateCoursePackCtrl">
 
-<%= form_for :course_pack, url:'create' do |c| %>
-
-    Title: <%= c.text_field :title %> <br/>
-    Summary:<br/> <%= c.text_area :summary, size:'100x5' %><br/>
+    Title:<input type='text' ng-model='title'> <br/>
+    Summary:<br/>
+        <textarea ng-model='summary' cols='100' rows='5'></textarea>
+        <br/>
     Articles: <br/>
      <ul>
        <li ng-repeat="selected in selected_articles">{{selected.title}}[<a href="" ng-click="remove_selected(selected)">X</a>]</li>
      </ul>
 
     <button type='button' ng-click='submit()'>Create</button>
-    <%#= c.submit %>
-    <% end %>
 
   <input type='text' ng-model="search_input">
   <table id="articles">

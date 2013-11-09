@@ -26,7 +26,11 @@ function CreateCoursePackCtrl($scope,$resource){
     };
 
     $scope.submit = function(){
-        $resource('create').post({title:$scope.title, summary:$scope.summary}).success();
+        var article_ids = [];
+        angular.forEach($scope.selected_articles, function(article){
+            article_ids.push(article.id);
+        })
+        $resource('create').save({title:$scope.title, summary:$scope.summary, article_ids:article_ids}, function(){console.log('success')}) ;
     }
 
 

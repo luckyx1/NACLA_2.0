@@ -5,7 +5,6 @@ class CreateArticles < ActiveRecord::Migration
       t.text :description
       t.datetime :publication_date
       t.text :tags
-
       t.timestamps
     end
   end
