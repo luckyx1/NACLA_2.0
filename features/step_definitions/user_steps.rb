@@ -51,6 +51,10 @@ When /I fill out incorrect account information/ do
 	click 'Log in'
 end
 
+When /I am logged out/ do
+	click 'Log out'
+end
+
 #might need one for Then as well?
 When /I am logged in/ do
 	page.has_content? 'Logged in as test@test.com'

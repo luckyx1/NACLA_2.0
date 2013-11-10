@@ -14,6 +14,7 @@ Scenario: create an account
 	
 Scenario: login to the account
 	Given I have an account
+	And I am logged out
 	When I press "Log in"
 	And I fill out correct account information
 	Then I am logged in
@@ -39,6 +40,7 @@ Scenario: create an account with invalid information (sad path)
 	
 Scenario: login to the account with incorrect information (sad path)
 	Given I have an account
+	And I am logged out
 	When I press "Log in"
 	And I fill out incorrect account information
 	Then I should not be logged into my account
