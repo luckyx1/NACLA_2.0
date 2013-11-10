@@ -2,23 +2,23 @@ Given /I am on the home page/ do
 	visit ('/')	
 end
 
-When /I press (.*)/ do |link|
+When /I press "(.*)"/ do |link|
 	click_link(link)
 end
 
 When (/I fill out valid registration information/) do 
-	fill_in 'username', :with => 'Alex'
-	fill_in 'email', :with => 'test@test.com'
-	fill_in 'password', :with => 'password'
-	fill_in 'password_confirmation', :with => 'password'
+	page.fill_in 'username', :with => 'Alex'
+	page.fill_in 'email', :with => 'test@test.com'
+	page.fill_in 'password', :with => 'password'
+	page.fill_in 'password_confirmation', :with => 'password'
 	click 'Create new account'
 end
 
 
 #testing each situation i.e. unique username, email, matching passwords etc is TDD
 When /I fill out invalid registration information/ do 
-	fill_in 'password', :with => 'pass'
-	fill_in 'password_confirmation', :with => 'password'
+	page.fill_in 'password', :with => 'pass'
+	page.fill_in 'password_confirmation', :with => 'password'
 	click 'Create new account'	
 end
 
@@ -28,25 +28,26 @@ end
 
 Then /I should not have my own account/ do
 	page.has_no_content? 'You have created an account.'
+end
 
 Given /I have an account/ do
-	fill_in 'username', :with => 'Alex'
-	fill_in 'email', :with => 'test@test.com'
-	fill_in 'password', :with => 'password'
-	fill_in 'password_confirmation', :with => 'password'
+	page.fill_in 'username', :with => 'Alex'
+	page.fill_in 'email', :with => 'test@test.com'
+	page.fill_in 'password', :with => 'password'
+	page.fill_in 'password_confirmation', :with => 'password'
 	click 'Create new account'
 	visit ('/')
 end
 
 When /I fill out correct account information/ do 
-	fill_in 'username', :with => 'Alex'
-	fill_in 'password', :with => 'password'
+	page.fill_in 'username', :with => 'Alex'
+	page.fill_in 'password', :with => 'password'
 	click 'Log in'
 end
 
 When /I fill out incorrect account information/ do
-	fill_in 'username', :with => 'Alex'
-	fill_in 'password', :with => 'pass'
+	page.fill_in 'username', :with => 'Alex'
+	page.fill_in 'password', :with => 'pass'
 	click 'Log in'
 end
 
@@ -61,11 +62,11 @@ end
 
 When /I am on the "(.*)" page/ do |page|
 	visit '/'
-	click "#{page}"
+	click page
 end
 
 When /I create a new course pack named "(.*)"/ do |name|
-	fill_in 'title', :with => "#{name}"
+	page.fill_in 'title', :with => "#{name}"
 	click_button 'Create'
 end
 
@@ -82,7 +83,7 @@ When /I am on the "(.*)" course pack page/ do |name|
 end
 
 Then /I should be able to write "(.*)" to "(.*)"/ do |comment, course_pack|
-	fill_in 'comment', with => "#{comment}" 
+	page.fill_in 'comment', with => "#{comment}" 
 	click 'Add comment'
 	page.has_content? "#{comment}"	
 end
