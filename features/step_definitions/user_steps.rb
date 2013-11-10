@@ -31,11 +31,12 @@ Then /I should not have my own account/ do
 end
 
 Given /I have an account/ do
-	page.fill_in 'username', :with => 'Alex'
-	page.fill_in 'email', :with => 'test@test.com'
-	page.fill_in 'password', :with => 'password'
-	page.fill_in 'password_confirmation', :with => 'password'
-	click 'Create new account'
+  visit ('/sign_up')
+	page.fill_in 'user_username', :with => 'Alex'
+	page.fill_in 'user_email', :with => 'test@test.com'
+	page.fill_in 'user_password', :with => 'password'
+	page.fill_in 'user_password_confirmation', :with => 'password'
+	click_button 'Create new account'
 	visit ('/')
 end
 
@@ -57,7 +58,8 @@ end
 
 #might need one for Then as well?
 When /I am logged in/ do
-	page.has_content? 'Logged in as test@test.com'
+  (/Logged in as test@test.com/ =~ page.all).should_not == nil
+	#page.has_content? 'Logged in as test@test.com'
 end
 
 Then /I should not be logged into my account'/ do 
