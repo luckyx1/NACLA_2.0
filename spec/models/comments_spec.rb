@@ -27,6 +27,6 @@ describe Comment do
 			@comment1 = Comment.create(comment)
 			@comment1.destroy
 		end
-		it{{Comment.find(:first, :conditions => {:user => comment[:user], :comment => comment[:comment], :article => comment[:article]}).should eql(nil)}
+		it{{Comment.find(:first, :conditions => {:user => comment[:user], :comment => comment[:comment], :article => comment[:article]}).should eql(nil)}}
 	end
 end
