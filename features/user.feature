@@ -21,14 +21,14 @@ Scenario: login to the account
 Scenario: add a course pack to my account
 	Given I have an account
 	When I am logged in 
-	And I am on the "Add a course pack" page
+	And I am on the "New Course pack" page
 	And I create a new course pack named "Test"
 	Then "Test" should be added to my account
 	
 Scenario: write comments
 	Given I have an account
 	When I am logged in
-	And I am on the "Course packs" page
+	And I am on the "Test" course pack page
 	Then I should be able to write "Great course pack!" to "Test"
 
 Scenario: create an account with invalid information (sad path)
@@ -38,6 +38,7 @@ Scenario: create an account with invalid information (sad path)
 	And I should get to try again
 	
 Scenario: login to the account with incorrect information (sad path)
+	Given I have an account
 	When I press "login"
 	And I fill out incorrect account information
 	Then I should not be logged into my account

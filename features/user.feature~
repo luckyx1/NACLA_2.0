@@ -14,21 +14,21 @@ Scenario: create an account
 	
 Scenario: login to the account
 	Given I have an account
-	When I press "login"
+	When I press "Log in"
 	And I fill out correct account information
 	Then I am logged in
 
 Scenario: add a course pack to my account
 	Given I have an account
 	When I am logged in 
-	And I am on the "Add a course pack" page
+	And I am on the "New Course pack" page
 	And I create a new course pack named "Test"
 	Then "Test" should be added to my account
 	
 Scenario: write comments
 	Given I have an account
 	When I am logged in
-	And I am on the "Course packs" page
+	And I am on the "Test" course pack page
 	Then I should be able to write "Great course pack!" to "Test"
 
 Scenario: create an account with invalid information (sad path)
