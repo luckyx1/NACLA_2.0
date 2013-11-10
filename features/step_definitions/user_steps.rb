@@ -7,18 +7,18 @@ When /I press "(.*)"/ do |link|
 end
 
 When (/I fill out valid registration information/) do 
-	page.fill_in 'username', :with => 'Alex'
-	page.fill_in 'email', :with => 'test@test.com'
-	page.fill_in 'password', :with => 'password'
-	page.fill_in 'password_confirmation', :with => 'password'
+	page.fill_in 'user_username', :with => 'Alex'
+	page.fill_in 'user_email', :with => 'test@test.com'
+	page.fill_in 'user_password', :with => 'password'
+	page.fill_in 'user_password_confirmation', :with => 'password'
 	click 'Create new account'
 end
 
 
 #testing each situation i.e. unique username, email, matching passwords etc is TDD
 When /I fill out invalid registration information/ do 
-	page.fill_in 'password', :with => 'pass'
-	page.fill_in 'password_confirmation', :with => 'password'
+	page.fill_in 'user_password', :with => 'pass'
+	page.fill_in 'user_password_confirmation', :with => 'password'
 	click 'Create new account'	
 end
 
@@ -41,14 +41,15 @@ Given /I have an account/ do
 end
 
 When /I fill out correct account information/ do 
-	page.fill_in 'username', :with => 'Alex'
-	page.fill_in 'password', :with => 'password'
+	#might be 'username' and 'password
+	page.fill_in 'user_username', :with => 'Alex'
+	page.fill_in 'user_password', :with => 'password'
 	click 'Log in'
 end
 
 When /I fill out incorrect account information/ do
-	page.fill_in 'username', :with => 'Alex'
-	page.fill_in 'password', :with => 'pass'
+	page.fill_in 'user_username', :with => 'Alex'
+	page.fill_in 'user_password', :with => 'pass'
 	click 'Log in'
 end
 
@@ -58,8 +59,7 @@ end
 
 #might need one for Then as well?
 When /I am logged in/ do
-  (/Logged in as test@test.com/ =~ page.all).should_not == nil
-	#page.has_content? 'Logged in as test@test.com'
+  	page.has_content? 'Logged in as test@test.com'
 end
 
 Then /I should not be logged into my account'/ do 
