@@ -88,6 +88,6 @@ Then /I should be able to write "(.*)" to "(.*)"/ do |comment, course_pack|
 end
 
 When /I should get to try again/ do 
-	#not sure what to do yet
+	page.has_content? 'Try again.'
 end
 

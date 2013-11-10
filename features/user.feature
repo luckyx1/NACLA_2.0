@@ -32,14 +32,14 @@ Scenario: write comments
 	Then I should be able to write "Great course pack!" to "Test"
 
 Scenario: create an account with invalid information (sad path)
-	When I press "create an account"
+	When I press "Sign up"
 	And I fill out invalid registration information
 	Then I should have not have my own account
 	And I should get to try again
 	
 Scenario: login to the account with incorrect information (sad path)
 	Given I have an account
-	When I press "login"
+	When I press "Log in"
 	And I fill out incorrect account information
 	Then I should not be logged into my account
 	And I should get to try again
