@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131026060428) do
+ActiveRecord::Schema.define(:version => 20131109214010) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(:version => 20131026060428) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
+
+  create_table "articles_course_packs", :id => false, :force => true do |t|
+    t.integer "article_id"
+    t.integer "course_pack_id"
+  end
+
+  add_index "articles_course_packs", ["article_id", "course_pack_id"], :name => "index_articles_course_packs_on_article_id_and_course_pack_id"
+  add_index "articles_course_packs", ["course_pack_id"], :name => "index_articles_course_packs_on_course_pack_id"
 
   create_table "comments", :force => true do |t|
     t.text     "comment"
@@ -33,6 +41,10 @@ ActiveRecord::Schema.define(:version => 20131026060428) do
   end
 
   create_table "course_packs", :force => true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.integer  "owner_id"
+    t.text     "articles"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -44,6 +56,15 @@ ActiveRecord::Schema.define(:version => 20131026060428) do
     t.text     "tags"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "username"
   end
 
 end
