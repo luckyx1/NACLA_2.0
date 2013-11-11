@@ -4,3 +4,8 @@ Given(/^the following comments exits:$/) do |table|
   	Comment.create(comment)
   end
 end
+
+Given(/^I am on the comments front page$/) do
+  visit '/comments?'
+end
+
