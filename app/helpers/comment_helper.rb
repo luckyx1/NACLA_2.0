@@ -9,7 +9,7 @@ module CommentHelper
 		count = count + 1
 	end
 
-	if commentstring == ""
+	if comment == ""
 		if count > 0
 			error = error + ", "
 		end
