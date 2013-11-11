@@ -3,16 +3,17 @@
     <span id='course_pack_error'>{{error}}</span><br/>
 
     <form name='course_pack_form'>
-    Title:<input type='text' ng-model='title' name='title'> <br/>
+    Title:<input type='text' ng-model='title' name='title' id='title'> <br/>
     Summary:<br/>
-        <textarea ng-model='summary' cols='100' rows='5' name='summary'></textarea>
+        <textarea ng-model='summary' cols='100' rows='5' name='summary' id='summary'></textarea>
         <br/>
     Articles: <br/>
      <ul>
        <li ng-repeat="selected in selected_articles">{{selected.title}}[<a href="" ng-click="remove_selected(selected)">X</a>]</li>
      </ul>
-      <button type='button' ng-click='submit()'>Create</button> <br/> <br/>
+      <button type='button' ng-click='submit()' id='submit'>Create</button> <button type='button' ng-click='cancel()' id='cancel'> Cancel </button> <br/> <br/>
     </form>
+
 
 
 
@@ -47,4 +48,7 @@
 
 <%= link_to 'Back', course_packs_path %>
 
+    <div id='cancel_dialog'>
+        <p>Are you sure you want to cancel? Your course pack will is not saved</p>
+    </div>
 </div>
