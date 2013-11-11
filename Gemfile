@@ -14,7 +14,7 @@ group :test, :development do
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
   gem 'rspec-rails'
-  gem 'simplecov' 
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :test do

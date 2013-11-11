@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4d76b73-36b8-47b4-bb2d-cd6c9c722958" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-25414682c284c3d606d649ca6b126aee.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-25414682c284c3d606d649ca6b126aee.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-4d33a87b6d5b7fc99e5ca3c1e07ca05e.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min-6336c5bca4c709e809647cdfcb484d0a.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails-a3386665c05a2d82f711a4aaa72d247c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/.gitkeep" afterPath="$PROJECT_DIR$/app/mailers/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/.gitkeep" afterPath="$PROJECT_DIR$/app/models/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/.gitkeep" afterPath="$PROJECT_DIR$/lib/assets/.gitkeep" />
@@ -43,7 +30,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/README_FOR_APP" afterPath="$PROJECT_DIR$/doc/README_FOR_APP" />
@@ -84,7 +70,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/course_packs_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/course_packs_controller_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/course_packs_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/course_packs_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/course_packs_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/create_coursepack.feature" afterPath="$PROJECT_DIR$/features/create_coursepack.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/create_coursepack_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/create_coursepack_steps.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/cucumber.rake" afterPath="$PROJECT_DIR$/lib/tasks/cucumber.rake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/cucumber.yml" afterPath="$PROJECT_DIR$/config/cucumber.yml" />
@@ -148,12 +133,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/helpers/users_helper_spec.rb" afterPath="$PROJECT_DIR$/spec/helpers/users_helper_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
     </list>
     <ignored path="NACLA_2.0.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f4d76b73-36b8-47b4-bb2d-cd6c9c722958" time="1384134826150" ignored="false" />
+    <file path="/Dummy.txt" changelist="f4d76b73-36b8-47b4-bb2d-cd6c9c722958" time="1384136546298" ignored="false" />
     <file path="/create_coursepack.feature" changelist="f4d76b73-36b8-47b4-bb2d-cd6c9c722958" time="1384135120736" ignored="false" />
     <file path="/new.html.erb" changelist="f4d76b73-36b8-47b4-bb2d-cd6c9c722958" time="1384130565277" ignored="false" />
     <file path="/nacla.js" changelist="f4d76b73-36b8-47b4-bb2d-cd6c9c722958" time="1384130058946" ignored="false" />
@@ -177,19 +161,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create_coursepack.feature" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create_coursepack.feature" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="766" selection-end="766" vertical-scroll-proportion="0.24398074">
+            <state line="16" column="13" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_coursepack_steps.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="create_coursepack_steps.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/create_coursepack_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="29" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
+            <state line="52" column="29" selection-start="1248" selection-end="1248" vertical-scroll-proportion="1.2394603">
               <folding />
             </state>
           </provider>
@@ -278,7 +262,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -448,6 +431,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,14 +450,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="776" extended-state="6" />
+    <frame x="0" y="24" width="1280" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26422763" sideWeight="0.67011833" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26954398" sideWeight="0.67011833" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -645,16 +629,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/step_definitions/create_coursepack_steps.rb">
+    <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="29" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
+        <state line="16" column="13" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/create_coursepack.feature">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/create_coursepack_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="766" selection-end="766" vertical-scroll-proportion="0.24398074">
+        <state line="52" column="29" selection-start="1248" selection-end="1248" vertical-scroll-proportion="1.2394603">
           <folding />
         </state>
       </provider>
