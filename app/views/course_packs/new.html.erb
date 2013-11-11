@@ -1,16 +1,21 @@
 <h1>New Course Pack</h1>
 <div ng-controller="CreateCoursePackCtrl">
+    <span id='course_pack_error'>{{error}}</span><br/>
 
-    Title:<input type='text' ng-model='title'> <br/>
+    <form name='course_pack_form'>
+    Title:<input type='text' ng-model='title' name='title' id='title'> <br/>
     Summary:<br/>
-        <textarea ng-model='summary' cols='100' rows='5'></textarea>
+        <textarea ng-model='summary' cols='100' rows='5' name='summary' id='summary'></textarea>
         <br/>
     Articles: <br/>
      <ul>
        <li ng-repeat="selected in selected_articles">{{selected.title}}[<a href="" ng-click="remove_selected(selected)">X</a>]</li>
      </ul>
+      <button type='button' ng-click='submit()' id='submit'>Create</button> <button type='button' ng-click='cancel()' id='cancel'> Cancel </button> <br/> <br/>
+    </form>
 
-    <button type='button' ng-click='submit()'>Create</button> <br/> <br/>
+
+
 
   <input type='text' ng-model="search_input">
   <table id="articles">
@@ -43,4 +48,7 @@
 
 <%= link_to 'Back', course_packs_path %>
 
+    <div id='cancel_dialog'>
+        <p>Are you sure you want to cancel? Your course pack will is not saved</p>
+    </div>
 </div>

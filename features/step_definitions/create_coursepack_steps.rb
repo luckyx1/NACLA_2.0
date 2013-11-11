@@ -11,49 +11,45 @@ Given(/^I am on the new coursepack page$/) do
 end
 
 When (/^I fill in '([^"]*)' with '([^"]*)'$/) do |field, value|
-  fill_in "course_pack["+ field.downcase.to_str+"]", :with => value
+  fill_in  field.downcase.to_str, :with => value
 end
 
 When(/^I select the '([^"]*)' as the 'country'$/) do |count|
   select count.to_str
 end
 
-When(/^I press the create button$/) do
-  click_button 'Create'   
+When(/^I press the '([^"]*)' button$/) do |button|
+  click_button button   
 end
 
-Then(/^I should see a new coursepack with the 'title' 'Early Colombia'$/) do
+Then(/^I should see a new coursepack with the 'title' as '([^"]*)'$/) do |text|
   if page.respond_to? :should
-    page.should have_content('Early Colombia')
+    page.should have_content(text)
   else
-    assert page.has_content?('Early Colombia')
+    assert page.has_content?(text)
   end
 end
 
 
-When(/^I select 'Mexico' as the 'country'$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see 'You must assign a title and summary' on the page$/) do
+ if page.respond_to? :should
+    page.should have_content("You must assign a title and summary")
+  else
+    assert page.has_content?("You must assign a title and summary")
+  end
 end
 
-When(/^I add articles$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see 'Listing course_pack'$/) do
+ if page.respond_to? :should
+    page.should have_content("Listing course_pack")
+  else
+    assert page.has_content?("Listing course_pack")
+  end
 end
 
-When(/^I press the 'create' button$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
-Then(/^I should see a new coursepack with the 'title' 'California Missions'$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
-When(/^I fill in 'Latino subcultures in California' as for the 'Title'$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
-When(/^I press the 'cancel' button$/) do
-  click_button 'cancel'
-end
 
 Then (/^I should not see a new coursepack with the 'title' '([^"]*)'$/) do |text|
   if page.respond_to? :should

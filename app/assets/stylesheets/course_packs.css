@@ -13,4 +13,12 @@
 	width: 100%;
 }
 
+#course_pack_error {
+    color:red;
+}
+
+#cancel_dialog{
+    display:none;
+}
+
 

@@ -18,6 +18,7 @@ group :test, :development do
 end
 
 group :test do
+  gem 'selenium-webdriver' #for js testing
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   # database_cleaner is not required, but highly recommended
