@@ -13,10 +13,13 @@
  */
 #container {
 	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin-bottom: -40px;
 }
-
 #header {
-	background-color:#FFA500;
+	background-color:#FFFFFF;
 	height: 100px;
 	width: 100%;
 	top: 0px;
@@ -43,5 +46,8 @@ h1 {
 	background-color:#FFA500;
 	clear:both;
 	text-align:center;
-	height: 200px;
+	height: 40px;
+}
+#push {
+	height: 40px;
 }
