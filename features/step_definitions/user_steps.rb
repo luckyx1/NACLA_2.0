@@ -2,10 +2,6 @@ Given /I am on the NACLA home page/ do
 
 end
 
-When /I press "(.*)"/ do |link|
-
-end
-
 When (/I fill out valid registration information/) do 
 
 end
