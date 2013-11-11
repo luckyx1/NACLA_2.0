@@ -20,7 +20,7 @@ Scenario: create an coursepack with no articles
   #When I select the 'Colombia' as the 'country'
   And I fill in 'Summary' with 'As early as 1392...'
   And I press the 'Create' button
-  Then I should see a new coursepack with the 'title' as 'Early Colombia'
+  Then I should see 'Listing course_pack'
 
 Scenario: start creating a coursepack but cancel before saving
   When I fill in 'Title' with 'Latino subcultures in California'
@@ -36,8 +36,8 @@ Scenario: try to create a course pack without a title
   @javascript
 Scenario: try to create course pack without summary
   When I fill in 'Title' with 'Latino subcultures in California'
-  And I press the 'cancel' button
-  Then I should see 'Listing course_pack'
+  And I press the 'Create' button
+  Then I should see 'You must assign a title and summary' on the page
 
 
 
