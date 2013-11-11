@@ -22,6 +22,11 @@ function CreateCoursePackCtrl($scope,$resource){
             $scope.selected_articles.push(article);
 
     };
+
+    $scope.cancel = function(){
+        window.location = '/';
+    };
+
     $scope.remove_selected = function(article){
         $scope.selected_articles.splice($scope.selected_articles.indexOf(article),1);
     };
