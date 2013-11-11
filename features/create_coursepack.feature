@@ -37,7 +37,7 @@ Scenario: try to create a course pack without a title
 Scenario: try to create course pack without summary
   When I fill in 'Title' with 'Latino subcultures in California'
   And I press the 'cancel' button
-  Then I should see 'You must assign a title and summary' on the page
+  Then I should see 'Listing course_pack'
 
 
 

@@ -31,6 +31,22 @@ Then(/^I should see a new coursepack with the 'title' as '([^"]*)'$/) do |text|
 end
 
 
+Then(/^I should see 'You must assign a title and summary' on the page$/) do
+ if page.respond_to? :should
+    page.should have_content("You must assign a title and summary")
+  else
+    assert page.has_content?("You must assign a title and summary")
+  end
+end
+
+Then(/^I should see 'Listing course_pack'$/) do
+ if page.respond_to? :should
+    page.should have_content("Listing course_pack")
+  else
+    assert page.has_content?("Listing course_pack")
+  end
+end
+
 
 
 
