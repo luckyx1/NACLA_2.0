@@ -11,7 +11,7 @@ Given(/^I am on the new coursepack page$/) do
 end
 
 When (/^I fill in '([^"]*)' with '([^"]*)'$/) do |field, value|
-  fill_in "course_pack["+ field.downcase.to_str+"]", :with => value
+  fill_in  field.downcase.to_str, :with => value
 end
 
 When(/^I select the '([^"]*)' as the 'country'$/) do |count|
