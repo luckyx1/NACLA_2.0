@@ -886,18 +886,18 @@
         null
       ]
     },
-    "timestamp": 1384153817
+    "timestamp": 1384154153
   },
   "RSpec": {
     "coverage": {
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/environment.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/application.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/application.rb": [
         1,
         null,
         1,
@@ -961,7 +961,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/boot.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/boot.rb": [
         1,
         null,
         null,
@@ -969,7 +969,7 @@
         null,
         1
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/environments/test.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/environments/test.rb": [
         1,
         null,
         null,
@@ -1008,7 +1008,7 @@
         1,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/initializers/backtrace_silencers.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -1017,7 +1017,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/initializers/inflections.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -1034,14 +1034,14 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/initializers/mime_types.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/initializers/secret_token.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -1050,7 +1050,7 @@
         null,
         1
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/initializers/session_store.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -1060,7 +1060,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/initializers/wrap_parameters.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -1076,7 +1076,7 @@
         1,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/controllers/application_controller.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -1086,11 +1086,11 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/helpers/application_helper.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/helpers/comment_helper.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/helpers/comment_helper.rb": [
         1,
         null,
         1,
@@ -1114,258 +1114,6 @@
         0,
         0,
         null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/helpers/comments_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/helpers/course_packs_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/helpers/search_helper.rb": [
-        1,
-        null,
-        1,
-        null,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/helpers/sessions_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/controllers/comments_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/models/comment.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/controllers/course_packs_controller.rb": [
-        1,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/models/course_pack.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/controllers/search_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        0,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/controllers/sessions_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/controllers/users_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
         0,
         0,
         null,
@@ -1374,7 +1122,263 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/models/user.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/helpers/course_packs_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/helpers/search_helper.rb": [
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/controllers/comments_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/controllers/course_packs_controller.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/models/course_pack.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/controllers/search_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/models/user.rb": [
         1,
         1,
         1,
@@ -1404,7 +1408,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/models/article.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/models/article.rb": [
         1,
         1,
         1,
@@ -1427,7 +1431,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/app/models/document.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/app/models/document.rb": [
         1,
         1,
         null,
@@ -1436,7 +1440,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/config/routes.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/config/routes.rb": [
         1,
         1,
         1,
@@ -1518,21 +1522,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/controllers/search_controller_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/controllers/sessions_controller_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/controllers/search_controller_spec.rb": [
         1,
         null,
         1,
@@ -1546,7 +1536,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/controllers/users_controller_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/controllers/sessions_controller_spec.rb": [
         1,
         null,
         1,
@@ -1560,24 +1550,21 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/helpers/sessions_helper_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/controllers/users_controller_spec.rb": [
         1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
         null,
         1,
         1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/helpers/users_helper_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/helpers/sessions_helper_spec.rb": [
         1,
         null,
         null,
@@ -1594,7 +1581,24 @@
         1,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/models/article_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/helpers/users_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/models/article_spec.rb": [
         1,
         null,
         1,
@@ -1609,7 +1613,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/models/comments_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/models/comments_spec.rb": [
         1,
         null,
         1,
@@ -1649,7 +1653,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/models/course_pack_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/models/course_pack_spec.rb": [
         1,
         null,
         1,
@@ -1665,21 +1669,27 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/models/user_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/views/sessions/new.html.erb_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/views/course_packs/new.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/views/sessions/new.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/saasbook/Desktop/nacla/NACLA_2.0/spec/views/users/new.html.erb_spec.rb": [
+      "/home/saasbook/Desktop/CS169_project/NACLA/spec/views/users/new.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1687,6 +1697,6 @@
         null
       ]
     },
-    "timestamp": 1384147494
+    "timestamp": 1384154165
   }
 }
