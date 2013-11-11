@@ -27,5 +27,16 @@ Scenario: start creating a coursepack but cancel before saving
   Then I should not see a new coursepack with the 'title' 'Latino Subcultures in California'
 
 
+Scenario: try to create a course pack without a title
+  When I fill in 'Summary' with 'Course pack summary'
+  And I press the 'create' button
+  Then I should see 'You must assign a title and summary' on the page
+
+Scenario: try to create course pack without summary
+  When I fill in 'Title' with 'Latino subcultures in California'
+  And I press the 'cancel' button
+  Then I should see 'You must assign a title and summary' on the page
+
+
 
 
