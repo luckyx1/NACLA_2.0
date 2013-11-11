@@ -7,7 +7,7 @@ Feature: I want to add coursepacks
 Background: articles have been added to the database
 
  And I am on the article/coursepack search page
-
+ 	@javascript
 Scenario: feature prebundled coursepacks
 	When I am logged in as NACLA
 	And I follow the "add a coursepack" page
