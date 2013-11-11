@@ -14,6 +14,7 @@ Background: documents exists in the database
 
   And I am on the new coursepack page
 
+  @javascript
 Scenario: create an coursepack with no articles
   When I fill in 'Title' with 'Early Colombia'
   #When I select the 'Colombia' as the 'country'
