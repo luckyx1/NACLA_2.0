@@ -3,26 +3,108 @@
 
 <head>
   <title> NACLA </title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "layout" %>
+  <%= stylesheet_link_tag    "bootstrap" %>
+  <%= stylesheet_link_tag    "bootstrap-responsive" %>
+  <%= javascript_include_tag "bootstrap" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.sticky" %>
   <%= csrf_meta_tags %>
+  <script>
+  	$(document).ready(function(){
+    	$("#shadow_bar").sticky({topSpacing:40});
+    	$('.menu_link').css("visibility", "hidden");
+		$('.dropdown-toggle').dropdown();
+		  var width = $(window).width();
+		  $("#footer").css("width", width);
+		  $('#test').hover(function() {
+		        $("#menu_bar").css("height", "30px");
+				$('.menu_link').css("visibility", "visible");
+		    }, function() {
+		        $("#menu_bar").css("height", "0px");
+	    		$('.menu_link').css("visibility", "hidden");
+		    });
+	});
+  </script>
+  <script>
+  </script>
 </head>
-<body>
-       <div id="container">
-			<div id="header">
-				<h1>NACLA 2.0 </h1>
-			</div>
-			<div id="side_bar">
-				<b>Menu</b>
-			</div>
+<body style ="margin:0px;">
+   <div id="container">
+   		<div id="shadow_bar"></div>
+		<div class="navbar navbar-inverse navbar-fixed-top" id="test">
+		    <div class="navbar-inner">
+		    	<div id="navbar_container">
+		    		<img id="logo_img" src="/images/nacla_bar.png">
+		    		<div id ="navbar_right_container" >
+		    			<div id="sign_in_container">
+		    				<ul role="navigation" class="nav">
+				                <li class="dropdown">
+				                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sign In <b class="caret"></b>
+				                    </a>
+				                    <ul class="dropdown-menu" id="signin_dropdown">
+				                    	<%= form_tag("/", method: "get") do %>
+					                        <li><a href="#">
+					                        	<%= text_field_tag :signin_name, params[:signin_name], id: "signin_name_entry", placeholder: "Username" %>
+					                        </a></li>
+					                        <li><a href="#">
+					                        	<%= text_field_tag :signin_password, params[:signin_password], id: "signin_password_entry", placeholder: "Password" %>
+					                        </a></li>
+					                        <li><a href="#">
+					                        	<button class="btn" id="signin_submit" type="submit">Log In</button>
+					                        </a></li>
+				                        <% end %>
+				                    </ul>
+				                </li>
+				            </ul>		    				
+		    			</div>
+		    			<div id="search_container">
+			    			<%= form_tag("/search", method: "get") do %>
+							      <%= text_field_tag :search, params[:search], id: "navbar_search", placeholder: "Search" %>
+							      <button class="btn"id="navbar_search_button" type="submit">
+							      	<img id="search_button_image" src="/images/mag_lense.png">
+							      </button>						    
+						  	<% end %>
+					  	</div>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div id="menu_bar">
+		    	<div id="menu_bar_container">
+		    		<%= link_to 'Home', {:controller=>"static", :action => "index"}, :class =>"menu_link" %>
+		    		<%= link_to 'New Course Pack', new_course_pack_path, :class =>"menu_link" %>
+		    		<%= link_to 'Search', {:controller=>"search", :action => "index"}, :class =>"menu_link" %>
+		    	</div>
+		    </div>
+		</div>	
+		<div id="top_spacer"></div>
+
+		<div id="content_container">
 			<div id="content">
 				<%= yield %>
 			</div>
-			<div id="footer">
-				Copyright NACLA 2.0
+		</div>
+		<div id="push"></div>
+	</div>
+
+	<div id="footer">
+		<div id="footer_container">
+			<div id="footer_text_container">
+				<div id="footer_column1">
+					<p class="footer_text" style="margin-top:20px;">NACLA | c/o NYU CLACS</p>
+					<p class="footer_text">53 WASHINGTON SQ. SOUTH FL. 4W</p>
+					<p class="footer_text">NEW YORK, NY 10012</p>
+
+					<p class="footer_text" style="margin-top:20px;">TEL: (646) 535-9085</p>
+				</div>
+				<div id="footer_column2">
+					<p class="footer_text" style="margin-top:20px;">Sitemap</p>
+					<p class="footer_text">Terms Of Use</p>
+					<p class="footer_text">Privacy Policy</p>
+					<p class="footer_text">Contact Us</p>
+				</div>
 			</div>
 		</div>
-
-
+	</div>
 </body>
 </html>
