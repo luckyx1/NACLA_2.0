@@ -48,7 +48,6 @@ class CoursePacksController < ApplicationController
     respond_to do |format|
         format.html { redirect_to '/'}
         format.json {
-
           @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
 
           if params[:article_ids]

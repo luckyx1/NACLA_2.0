@@ -1,16 +1,20 @@
 <h1>New Course Pack</h1>
 <div ng-controller="CreateCoursePackCtrl">
+    <span id='course_pack_error'>{{error}}</span><br/>
 
-    Title:<input type='text' ng-model='title'> <br/>
+    <form name='course_pack_form'>
+    Title:<input type='text' ng-model='title' name='title'> <br/>
     Summary:<br/>
-        <textarea ng-model='summary' cols='100' rows='5'></textarea>
+        <textarea ng-model='summary' cols='100' rows='5' name='summary'></textarea>
         <br/>
     Articles: <br/>
      <ul>
        <li ng-repeat="selected in selected_articles">{{selected.title}}[<a href="" ng-click="remove_selected(selected)">X</a>]</li>
      </ul>
+      <button type='button' ng-click='submit()'>Create</button> <br/> <br/>
+    </form>
 
-    <button type='button' ng-click='submit()'>Create</button> <br/> <br/>
+
 
   <input type='text' ng-model="search_input">
   <table id="articles">
