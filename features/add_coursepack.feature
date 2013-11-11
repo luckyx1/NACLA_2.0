@@ -5,25 +5,20 @@ Feature: I want to add coursepacks
  I want to make available particular coursepacks to users
 
 Background: articles have been added to the database
-
  And I am on the article/coursepack search page
+ When I am logged in as NACLA
+ And I follow the "New Course pack" page
+ Then I should see "New Course Pack"
+
  	@javascript
 Scenario: feature prebundled coursepacks
-	When I am logged in as NACLA
-	And I follow the "add a coursepack" page
-	Then I should see the regular "add a coursepack" page
 	And I should see an option to feature prebundled coursepacks
 	But regular users should not
 
 Scenario: set price of prebundled coursepacks
-	When I am logged in as NACLA
-	And I follow the "add a coursepack" page
-	Then I should see the regular "add a coursepack" page
 	And I should see an option to set the price of prebundled coursepacks
 	But regular users should not
 
 Scenario: edit prebundled coursepacks options
-	When I am logged in as NACLA
-	And I follow the page for a coursepack
 	Then I should see an option to feature or set the price of that coursepack
 	But regular users should not

@@ -1,17 +1,21 @@
  Then(/^I am on the article\/coursepack search page$/) do
- 	visit  '/search'
+ 	visit  '/course_packs'
 end
 
-When(/^I am logged in as NACLA$/) do
-  pending # waiting to see how to log in
+When(/^I am logged in as "(.*?)"$/) do 
+	current_user.should_not be_nil
 end
 
-When(/^I follow the "(.*?)" page$/) do |arg1|
- click_link(arg1)
+When(/^I follow the "(.*?)" page$/) do |link|
+ click_link(link)
 end
 
-Then(/^I should see the regular "(.*?)" page$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see "(.*?)"$/) do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
 end
 
 Then(/^I should see an option to feature prebundled coursepacks$/) do
