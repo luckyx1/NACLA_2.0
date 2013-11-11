@@ -19,3 +19,5 @@
 *.tmproj
 .idea/workspace.xml
 
+coverage
+
