@@ -11,8 +11,19 @@ describe UsersController do
 	
 	describe "GET 'create'" do
 		it "returns http success" do
-			get 'create' do
+			get 'create' 
 			response.should be_success
 		end
+		
+		it "renders new on account creation failure" do
+		  User.create!(username: 'Alex', email: 'alex@test.com',
+  			password: 'password', password_confirmation: 'password')
+  		params = {}
+  		params[:user] = {username: 'Alex', email: 'alex@test.com',
+  			password: 'password', password_confirmation: 'password'}
+  		get 'create'
+  		expect(response).to render_template('new')
+  	end
+  	
 	end
 end
