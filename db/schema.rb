@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(:version => 20131116212854) do
 
   create_table "comments", :force => true do |t|
     t.text     "comment"
-    t.string   "user"
     t.string   "privacy"
     t.datetime "postdate"
     t.string   "article"
