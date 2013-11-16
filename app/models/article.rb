@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  attr_accessible :description, :publication_date, :tags, :title
+  attr_accessible :description, :publication_date, :tags, :title, :thumbnail_link, :volume, :issue, :download_link
   has_and_belongs_to_many :course_packs
 
 
