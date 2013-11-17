@@ -1,6 +1,6 @@
 Feature: I want to have my own account with NACLA
 	As a user
-	So that I can see my course packs and comments
+	So that I can create my own course packs and comments
 	I want to be able to create my own account
 
 Background: I'm on the home page
