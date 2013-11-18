@@ -1,0 +1,28 @@
+<%= link_to "Back", search_path %>	<!-- Change this redirect? -->
+
+<h2>
+	<%= @article.title %>
+</h2>
+
+<img src=<%= @article.thumbnail_link %> >
+
+<div>
+	<p> Volume: <%= @article.volume %> </p>
+	<p> Issue: <%= @article.issue %> </p>
+	<p> Published: <%= @article.publication_date %> </p>
+</div>
+
+<div>
+	<h3> Description </h3>
+	<p> <%= @article.description %> </p>
+</div>
+
+<div>
+	<h3> Tags </h3>
+	<p> <%= @article.tags %> </p>
+</div>
+
+<%= button_to "Download", :action => :download %>
+
+
+
