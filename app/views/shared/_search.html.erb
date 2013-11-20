@@ -1,4 +1,5 @@
 <div ng-controller='SearchPartialCtrl'>
+   <button id='open_modal'>OPEN</button>
   <table id="articles">
       <thead>
       <tr>
@@ -13,7 +14,7 @@
     <input type='checkbox' checked='checked'>Title
     <input type='checkbox' >Description
     <tr ng-hide='!search_input'>
-      <td> {{article.title}} </td>
+      <td> <a href='' ng-click='test(article)'>{{article.title}}</a> </td>
       <td> {{article.description}}</td>
       <td> {{article.publication_date}}</td>
       <td> {{article.tags}} </td>
@@ -21,6 +22,39 @@
     </tr>
     </tbody>
   </table>
+
+  <div id='modal'>
+    <div style="
+    width:400px;
+    background: #FFF;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);"
+    >
+
+      <h2>
+        {{modal.title}}
+      </h2>
+
+      <img src="{{modal.thumbnail_link}}">
+
+      <div>
+        <p> Volume: {{modal.volume}} </p>
+        <p> Issue: {{modal.issue}} </p>
+        <p> Published: {{modal.publication_date}} </p>
+      </div>
+
+      <div>
+        <h3> Description </h3>
+        <p> {{modal.description}} </p>
+      </div>
+
+      <div>
+        <h3> Tags </h3>
+        <p> {{modal.tags}} </p>
+      </div>
+
+      <%= button_to "Download", :action => :download %>
+  </div>
+
 
 
 

@@ -15,6 +15,7 @@ function CreateCoursePackCtrl($scope,$resource){
     $scope.error = ''
     $scope.selected_articles = [];
     $scope.search_input = "";
+    $scope.modal = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
 
 
     $scope.add_to_selected = function(article){
@@ -51,12 +52,21 @@ function CreateCoursePackCtrl($scope,$resource){
     }
 
 
+    $(function() {
+        $("#modal").easyModal();
+    });
+
+    $scope.test = function(article){
+        $scope.modal = article;
+        $("#modal").trigger('openModal');
+    }
+
 
 
 }
 function SearchPartialCtrl($scope, $resource){
 
-    $scope.all_articles = $resource('/articles/search').query() ;
+    $scope.all_articles = $resource('/articles/search').query();
 
 }
 
@@ -65,3 +75,5 @@ function SearchCtrl($scope, $resource){
     $scope.search_input = "";
     $scope.all_coursepacks = $resource('/course_packs/search').query();
 }
+
+
