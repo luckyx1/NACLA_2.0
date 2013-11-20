@@ -13,9 +13,8 @@ function CreateCoursePackCtrl($scope,$resource){
     $scope.title = '';
     $scope.summary = '';
     $scope.error = ''
-    $scope.all_articles = $resource('all_articles').query() ;
     $scope.selected_articles = [];
-    $scope.search_input = '';
+    $scope.search_input = "";
 
 
     $scope.add_to_selected = function(article){
@@ -56,5 +55,7 @@ function CreateCoursePackCtrl($scope,$resource){
 
 }
 function SearchCtrl($scope, $resource){
+
+    $scope.all_articles = $resource('/articles/search').query() ;
 
 }

@@ -9,9 +9,10 @@ NACLA::Application.routes.draw do
   post "comments/delete" => "comments#delete"
 
 
-  match '/search' => 'search#index'
+  match 'articles/search' => 'articles#search'
   match 'articles/:id' => 'articles#show'
   match 'articles/:id/download' => 'articles#download'
+
 
   post 'new/list_all' => 'course_packs#list_all'
   post 'course_packs/new' => 'course_packs#add_article'
@@ -81,5 +82,5 @@ NACLA::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
 end
