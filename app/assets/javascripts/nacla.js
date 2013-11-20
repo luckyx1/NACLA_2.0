@@ -59,3 +59,9 @@ function SearchPartialCtrl($scope, $resource){
     $scope.all_articles = $resource('/articles/search').query() ;
 
 }
+
+function SearchCtrl($scope, $resource){
+
+    $scope.search_input = "";
+    $scope.all_coursepacks = $resource('/course_packs/search').query();
+}
