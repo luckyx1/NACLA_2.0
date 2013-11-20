@@ -54,7 +54,7 @@ function CreateCoursePackCtrl($scope,$resource){
 
 
 }
-function SearchCtrl($scope, $resource){
+function SearchPartialCtrl($scope, $resource){
 
     $scope.all_articles = $resource('/articles/search').query() ;
 
