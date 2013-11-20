@@ -105,7 +105,7 @@ class CoursePacksController < ApplicationController
       format.html{redirect_to '/'}
       format.json {
         @course_pack = CoursePack.all
-        render json @course_pack
+        render json: @course_pack
       }
     end
 

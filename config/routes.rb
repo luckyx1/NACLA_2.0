@@ -18,6 +18,7 @@ NACLA::Application.routes.draw do
   post 'course_packs/new' => 'course_packs#add_article'
   match 'course_packs/create' => 'course_packs#create'
   get 'course_packs/all_articles' => 'course_packs#all_articles'
+  match 'course_packs/search' => 'course_packs#search'
 
   resources :course_packs
 
