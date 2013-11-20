@@ -1,4 +1,6 @@
 NACLA::Application.routes.draw do
+  get "articles/show"
+
   get "comments/show"
   get "comments/add"
   get "comments/delete"
@@ -8,6 +10,9 @@ NACLA::Application.routes.draw do
 
 
   match '/search' => 'search#index'
+  match 'articles/:id' => 'articles#show'
+  match 'articles/:id/download' => 'articles#download'
+
   post 'new/list_all' => 'course_packs#list_all'
   post 'course_packs/new' => 'course_packs#add_article'
   match 'course_packs/create' => 'course_packs#create'
