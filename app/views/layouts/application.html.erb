@@ -16,7 +16,6 @@
     	$('.menu_link').css("visibility", "hidden");
 		$('.dropdown-toggle').dropdown();
 		  var width = $(window).width();
-		  $("#footer").css("width", width);
 		  $('#test').hover(function() {
 		        $("#menu_bar").css("height", "30px");
 				$('.menu_link').css("visibility", "visible");
@@ -26,10 +25,8 @@
 		    });
 	});
   </script>
-  <script>
-  </script>
 </head>
-<body style ="margin:0px;">
+<body style ="margin:0px; min-width: 990px;">
    <div id="container">
    		<div id="shadow_bar"></div>
 		<div class="navbar navbar-inverse navbar-fixed-top" id="test">
@@ -80,8 +77,39 @@
 		<div id="top_spacer"></div>
 
 		<div id="content_container">
-			<div id="content">
-				<%= yield %>
+			<div id="logo_container">
+				<img style="width:700px; display: block; margin-bottom:10px; margin-top:10px; margin-left:auto; margin-right:auto;" src="/images/nacla_logo.jpg">
+				<div id="links_bar">
+					<div class="links_item">
+						<%= link_to 'HOME', {:controller=>"static", :action => "index"}, :class =>"links_item_text" %>
+					</div>
+					<div class="links_item">
+						<%= link_to 'COURSE PACKS', new_course_pack_path, :class =>"links_item_text" %>
+					</div>
+					<div class="links_item">
+						<%= link_to 'SEARCH', {:controller=>"search", :action => "index"}, :class =>"links_item_text" %>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="left_content">
+					<div id="left_login_container" class="left_container_div">
+						<p style="text-align:center; font-size:15px; font-weight: bold; line-height:15px;">Nacla User Login</p>
+						<%= form_tag("/", method: "get") do %>
+	                        	<%= text_field_tag :signin_name, params[:signin_name], id: "left_signin_username", placeholder: "Username" %>
+	                        	<%= text_field_tag :signin_password, params[:signin_password], id: "left_signin_password", placeholder: "Password" %>
+	                        	<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
+                        <% end %>						
+					</div>
+				</div>
+				<div id="center_content">
+					<div id="content">
+						<%= yield %>
+					</div>
+				</div>
+				<div id="right_content">
+					
+				</div>
 			</div>
 		</div>
 		<div id="push"></div>
