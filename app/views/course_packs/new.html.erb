@@ -14,11 +14,8 @@
       <button type='button' ng-click='submit()' id='submit'>Create</button> <button type='button' ng-click='cancel()' id='cancel'> Cancel </button> <br/> <br/>
     </form>
 
-
-
-
-  <input type='text' ng-model="search_input">
-  <table id="articles">
+    <input type='text' ng-model="search_input">
+    <table id="articles">
     <thead>
     <tr>
       <th> Title </th>
@@ -28,19 +25,8 @@
     <tr>
     </thead>
 
-    <tbody ng-repeat="article in all_articles|filter:search_input">
-    Search by:
-    <input type='checkbox' checked='checked'>Title
-    <input type='checkbox' >Description
-          <tr ng-hide='!search_input'>
-            <td> {{article.title}} </td>
-            <td> {{article.description}}</td>
-            <td> {{article.publication_date}}</td>
-            <td> {{article.tags}} </td>
-            <td><button type='button' ng-click='add_to_selected(article)'>Add</button></td>
-          </tr>
-      </tbody>
-    </table>
+
+    <%= render 'shared/search' %>
 
    </div>
 

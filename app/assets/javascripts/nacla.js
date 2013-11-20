@@ -17,6 +17,7 @@ function CreateCoursePackCtrl($scope,$resource){
     $scope.selected_articles = [];
     $scope.search_input = '';
 
+
     $scope.add_to_selected = function(article){
         if($scope.selected_articles.indexOf(article) == -1)
             $scope.selected_articles.push(article);
@@ -52,5 +53,8 @@ function CreateCoursePackCtrl($scope,$resource){
 
 
 
+
+}
+function SearchCtrl($scope, $resource){
 
 }

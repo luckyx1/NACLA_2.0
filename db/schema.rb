@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(:version => 20131116224743) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
+    t.boolean  "public"
+    t.text     "tags"
   end
 
   create_table "documents", :force => true do |t|
