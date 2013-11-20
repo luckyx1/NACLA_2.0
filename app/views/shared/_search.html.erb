@@ -14,18 +14,18 @@
     <input type='checkbox' checked='checked'>Title
     <input type='checkbox' >Description
     <tr ng-hide='!search_input'>
-      <td> <a href='' ng-click='test(article)'>{{article.title}}</a> </td>
+      <td> <a href='' ng-click='open_modal(article)'>{{article.title}}</a> </td>
       <td> {{article.description}}</td>
       <td> {{article.publication_date}}</td>
       <td> {{article.tags}} </td>
-      <td> <button type='button' ng-click='add_to_selected(article)'>Add</button></td>
+      <td> <button type='button' ng-click='add_to_selected(article)' ng-show="add_button">Add</button></td>
     </tr>
     </tbody>
   </table>
 
   <div id='modal'>
     <div style="
-    width:400px;
+    width:800px;
     background: #FFF;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.5);"
     >
@@ -52,7 +52,7 @@
         <p> {{modal.tags}} </p>
       </div>
 
-      <%= button_to "Download", :action => :download %>
+      <%= button_to "Download", :action => :download %> <button type='button' ng-click='close_modal()' style="position:absolute;bottom:0;right:0;">Close</button>
   </div>
 
 

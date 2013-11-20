@@ -28,6 +28,9 @@ NACLA::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   resources :users
 
+
+  match "search" => "articles#search"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
