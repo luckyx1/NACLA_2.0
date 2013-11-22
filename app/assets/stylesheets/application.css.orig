@@ -46,14 +46,19 @@ h1 {
 	background-color:#FFA500;
 	clear:both;
 	text-align:center;
-	height: 40px;
+<<<<<<< HEAD
+	height: 200px;
 }
 
 #thumbnail_container{
     width:166px;
     height:220px;
-}
 
+}
+=======
+	height: 40px;
+}
 #push {
 	height: 40px;
 }
+>>>>>>> b8a0ef430dd6a29cae57194f355da288d7b11c15

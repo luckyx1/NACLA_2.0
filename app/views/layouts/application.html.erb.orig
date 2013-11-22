@@ -43,6 +43,32 @@
 	});
   </script>
 </head>
+<<<<<<< HEAD
+<body>
+	<div>
+		<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :id => "flash#{name}" %>
+		<% end %>
+	</div>
+	<div id="user_nav">
+		<% if current_user %>
+			Logged in as <b><%= current_user.email %></b>
+			<%= link_to "Log out", log_out_path %>
+		<% else %>
+			<%= link_to "Sign up", sign_up_path %> or 
+			<%= link_to "Log in", log_in_path %>
+		<% end %>
+	</div>
+       <div id="container">
+			<div id="header">
+				<h1>NACLA 2.0 </h1>
+			</div>
+			<div id="side_bar">
+				<b>Menu</b>
+			</div>
+			<div id="content">
+				<%= yield %>
+=======
 <body style ="margin:0px; min-width: 990px;">
    <div id="container">
    		<div id="shadow_bar"></div>
@@ -117,6 +143,7 @@
 						<%= link_to 'SEARCH', {:controller=>"search", :action => "index"}, :class =>"links_item_text" %>
 					</div>
 				</div>
+>>>>>>> b8a0ef430dd6a29cae57194f355da288d7b11c15
 			</div>
 			<div>
 				<div id="left_content">
