@@ -1,4 +1,24 @@
+<div ng-controller='CoursePackShowCtrl'>
 <p id="notice"><%= notice %></p>
+
+
+<div id='course_pack_content' data-url="<%= @course_pack %>"></div>
+<div id='articles_content' data-url="<%= @articles %>"></div>
+
+
+ Title: {{course_pack.title}} <br/>
+ Summary: {{course_pack.summary}}<br/>
+ Articles:
+ <ul>
+ <li ng-repeat="article in articles">
+   {{article.title}}
+ </li>
+ </ul>
+ Tags:{{course_pack.tags}}
+ Public: {{course_pack.public}}
 
 <%= link_to 'Edit', edit_course_pack_path(@course_pack) %> |
 <%= link_to 'Back', course_packs_path %>
+
+
+</div>

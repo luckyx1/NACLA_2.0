@@ -19,6 +19,12 @@ class CoursePacksController < ApplicationController
   # GET /course_packs/1.json
   def show
     @course_pack = CoursePack.find(params[:id])
+    @articles = []
+    #create list of articles in json format
+    @course_pack.articles.each do |article|
+      @articles << article.to_json
+    end
+    @course_pack = @course_pack.to_json
 
     respond_to do |format|
       format.html # show.html.erb

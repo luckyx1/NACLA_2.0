@@ -84,4 +84,14 @@ function SearchCtrl($scope, $resource){
     $scope.all_coursepacks = $resource('/course_packs/search').query();
 }
 
+function CoursePackShowCtrl($scope, $resource){
+    $scope.course_pack = $('#course_pack_content').data('url');
+    $scope.articles_raw = $('#articles_content').data('url');
+    $scope.articles = [];
+    angular.forEach($scope.articles_raw, function(article){
+        $scope.articles.push(angular.fromJson(article));
+    })
+}
+
+
 
