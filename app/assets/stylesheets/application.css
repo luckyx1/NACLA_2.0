@@ -45,3 +45,9 @@ h1 {
 	text-align:center;
 	height: 200px;
 }
+
+#thumbnail_container{
+    width:166px;
+    height:220px;
+
+}

@@ -18,7 +18,11 @@ NACLA::Application.routes.draw do
   post 'course_packs/new' => 'course_packs#add_article'
   match 'course_packs/create' => 'course_packs#create'
   get 'course_packs/all_articles' => 'course_packs#all_articles'
+<<<<<<< HEAD
+  match 'course_packs/search' => 'course_packs#all_articles'
+=======
   match 'course_packs/search' => 'course_packs#search'
+>>>>>>> 3b0a274c4e13c113cc40b7e8a371b47080beff8c
 
   resources :course_packs
 
@@ -27,9 +31,6 @@ NACLA::Application.routes.draw do
   post "log_in" => "sessions#create" 
   get "sign_up" => "users#new", :as => "sign_up"
   resources :users
-
-
-  match "search" => "articles#search"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

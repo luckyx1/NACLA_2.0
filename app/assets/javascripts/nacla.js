@@ -13,9 +13,10 @@ function CreateCoursePackCtrl($scope,$resource){
     $scope.title = '';
     $scope.summary = '';
     $scope.error = ''
-    $scope.all_articles = $resource('all_articles').query() ;
     $scope.selected_articles = [];
-    $scope.search_input = '';
+    $scope.search_input = "";
+    $scope.modal = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
+    $scope.add_button = true;
 
     $scope.add_to_selected = function(article){
         if($scope.selected_articles.indexOf(article) == -1)
@@ -53,4 +54,44 @@ function CreateCoursePackCtrl($scope,$resource){
 
 
 
+
+
+
 }
+function SearchPartialCtrl($scope, $resource){
+
+    $(function() {
+        $("#modal").easyModal();
+    });
+
+    $scope.all_articles = $resource('/articles/search').query();
+
+    $scope.open_modal = function(article){
+        $scope.modal = article;
+        $("#modal").trigger('openModal');
+    }
+
+    $scope.close_modal = function(){
+        $scope.modal = "";
+        $("#modal").trigger('closeModal');
+    }
+
+}
+
+function SearchCtrl($scope, $resource){
+
+    $scope.search_input = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
+    $scope.all_coursepacks = $resource('/course_packs/search').query();
+}
+
+function CoursePackShowCtrl($scope, $resource){
+    $scope.course_pack = $('#course_pack_content').data('url');
+    $scope.articles_raw = $('#articles_content').data('url');
+    $scope.articles = [];
+    angular.forEach($scope.articles_raw, function(article){
+        $scope.articles.push(angular.fromJson(article));
+    })
+}
+
+
+
