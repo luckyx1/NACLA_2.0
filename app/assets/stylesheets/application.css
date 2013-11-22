@@ -46,7 +46,8 @@ h1 {
 	height: 200px;
 }
 
-/*#modal {*/
-    /*margin-top:auto;*/
-    /*margin-bottom:auto;*/
-/*}*/
+#thumbnail_container{
+    width:166px;
+    height:220px;
+
+}

@@ -72,7 +72,7 @@ function SearchPartialCtrl($scope, $resource){
     }
 
     $scope.close_modal = function(){
-//        $scope.modal = "";
+        $scope.modal = "";
         $("#modal").trigger('closeModal');
     }
 
@@ -80,7 +80,7 @@ function SearchPartialCtrl($scope, $resource){
 
 function SearchCtrl($scope, $resource){
 
-    $scope.search_input = "";
+    $scope.search_input = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
     $scope.all_coursepacks = $resource('/course_packs/search').query();
 }
 
