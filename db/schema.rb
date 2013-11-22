@@ -46,6 +46,10 @@ ActiveRecord::Schema.define(:version => 20131116224743) do
   end
 
   create_table "course_packs", :force => true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.integer  "owner_id"
+    t.text     "articles"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"

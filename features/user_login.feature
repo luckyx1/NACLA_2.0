@@ -1,4 +1,4 @@
-Feature Name: I want users to only see certain pages when logged in
+Feature: I want users to only see certain pages when logged in
   As NACLA
   So I can protect my content from unauthorized users
   I want to make sure users are logged in before using the site
