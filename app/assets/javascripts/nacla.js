@@ -7,7 +7,36 @@
  */
 
 app = angular.module("NACLA", ["ngResource"])
+var articleIsExpanded = false;
 
+function expandArticles(){
+    var input = document.getElementById("search_input");
+    var length = input.value.length;
+    var articles = document.getElementById("articles");
+    if(length > 0)
+    {
+
+        if(articles.offsetHeight > 0)
+        {
+            var left_content = document.getElementById("left_content");
+            var left_height = left_content.height;
+            var center_content = document.getElementById("center_content");
+            var center_height = $("#footer").offset().top;
+            var offset = $("#articles").offset().top;
+
+            if(!articleIsExpanded)
+            {
+                $("#articles").css("height", center_height - offset - 60);
+                articleIsExpanded = true;
+            }
+        }
+    }
+    else
+    {
+        $("#articles").css("height", "auto");
+        articleIsExpanded = false;
+    }
+}
 
 function CreateCoursePackCtrl($scope,$resource){
     $scope.title = '';
@@ -20,7 +49,12 @@ function CreateCoursePackCtrl($scope,$resource){
 
     $scope.add_to_selected = function(article){
         if($scope.selected_articles.indexOf(article) == -1)
+        {
             $scope.selected_articles.push(article);
+            var height = $("#center_content").height();
+            var height2 = height + 20;
+            $("#center_content").height(height2);
+        }
 
     };
 
@@ -30,6 +64,9 @@ function CreateCoursePackCtrl($scope,$resource){
 
     $scope.remove_selected = function(article){
         $scope.selected_articles.splice($scope.selected_articles.indexOf(article),1);
+        var height = $("#center_content").height();
+        var height2 = height - 20;
+        $("#center_content").height(height2);
     };
 
     $scope.submit = function(){
@@ -50,13 +87,6 @@ function CreateCoursePackCtrl($scope,$resource){
                 function(){$scope.error = 'The course pack could not be saved'}) ;
         }
     }
-
-
-
-
-
-
-
 }
 function SearchPartialCtrl($scope, $resource){
 
@@ -72,15 +102,14 @@ function SearchPartialCtrl($scope, $resource){
     }
 
     $scope.close_modal = function(){
-//        $scope.modal = "";
+        $scope.modal = "";
         $("#modal").trigger('closeModal');
     }
 
 }
 
 function SearchCtrl($scope, $resource){
-
-    $scope.search_input = "";
+    $scope.search_input = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
     $scope.all_coursepacks = $resource('/course_packs/search').query();
 }
 
