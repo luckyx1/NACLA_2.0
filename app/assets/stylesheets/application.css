@@ -43,7 +43,7 @@ h1 {
 	float:right;
 }
 #thumbnail_container {
-  width: 166 px;
+  width: 166px;
   height: 220px;
 }
 #footer {
@@ -55,4 +55,8 @@ h1 {
 
 #push {
 	height: 40px;
+}
+#thumbnail_container{
+    width:166px;
+    height:220px;
 }
