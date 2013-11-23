@@ -13,10 +13,13 @@
  */
 #container {
 	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin-bottom: -40px;
 }
-
 #header {
-	background-color:#FFA500;
+	background-color:#FFFFFF;
 	height: 100px;
 	width: 100%;
 	top: 0px;
@@ -39,6 +42,10 @@ h1 {
 	width:90%;
 	float:right;
 }
+#thumbnail_container {
+  width: 166px;
+  height: 220px;
+}
 #footer {
 	background-color:#FFA500;
 	clear:both;
@@ -46,8 +53,10 @@ h1 {
 	height: 200px;
 }
 
+#push {
+	height: 40px;
+}
 #thumbnail_container{
     width:166px;
     height:220px;
-
 }
