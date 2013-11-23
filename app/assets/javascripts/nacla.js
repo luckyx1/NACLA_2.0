@@ -61,19 +61,19 @@ function CreateCoursePackCtrl($scope,$resource){
 function SearchPartialCtrl($scope, $resource){
 
     $(function() {
-        $("#modal").easyModal();
+        $("#course_pack_modal").easyModal();
     });
 
     $scope.all_articles = $resource('/articles/search').query();
 
     $scope.open_modal = function(article){
         $scope.modal = article;
-        $("#modal").trigger('openModal');
+        $("#course_pack_modal").trigger('openModal');
     }
 
     $scope.close_modal = function(){
         $scope.modal = "";
-        $("#modal").trigger('closeModal');
+        $("#course_pack_modal").trigger('closeModal');
     }
 
 }

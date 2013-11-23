@@ -21,4 +21,8 @@
     display:none;
 }
 
+#thumbnail_container img{
+    width:166px;
+    height:220px;
+}
 
