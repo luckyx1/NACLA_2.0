@@ -22,34 +22,6 @@
     </tbody>
   </table>
 
-  <div id='show_article'> <!--data-modal-overflow="true">  -->
-
-
-      <h2>
-        {{modal.title}}
-      </h2>
-      <div id='thumbnail_container'>
-      <img ng-src="{{modal.thumbnail_link}}">
-       </div>
-
-      <div>
-        <p> Volume: {{modal.volume}} </p>
-        <p> Issue: {{modal.issue}} </p>
-        <p> Published: {{dateFormatting(modal.publication_date)}} </p>
-      </div>
-
-      <div>
-        <h3> Description </h3>
-        <p> {{modal.description}} </p>
-      </div>
-
-      <div>
-        <h3> Tags </h3>
-        <p> {{modal.tags}} </p>
-      </div>
-
-         <%= button_to "Download", :action => :download %> <button type='button' ng-click='close_modal()' id='modal_close'>Close</button>
-
-    </div> <!-- Modal -->
+  <%= render 'shared/modal' %>
 
 </div> <!-- SearchPartialCtrl -->

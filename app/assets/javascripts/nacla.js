@@ -8,14 +8,66 @@
 
 app = angular.module("NACLA", ["ngResource"])
 
+app.factory('Page', function(){
+    return{
+        init: function($scope,page_inst){
+            $scope.course_pack = page_inst.get_course_pack();
+            $scope.articles = page_inst.get_articles();
+        },
+        get_course_pack: function(){
+            return $('#course_pack_content').data('url');
+        },
+        get_articles:  function(){
+            var articles_raw = $('#articles_content').data('url');
+            var articles = [];
+            angular.forEach(articles_raw, function(article){
+                articles.push(angular.fromJson(article));
+            });
+            return articles;
+        }
 
-function CreateCoursePackCtrl($scope,$resource){
-    $scope.title = '';
-    $scope.summary = '';
-    $scope.error = ''
-    $scope.selected_articles = [];
+    }
+});
+
+app.factory('Modal', function(){
+    return{
+        init: function($scope,modal_inst,selector){
+            $(selector).easyModal();
+
+            $scope.open_modal = function(article){
+                modal_inst.open($scope,article);
+            };
+
+            $scope.close_modal =function(){
+                modal_inst.close();
+            }
+        },
+        open:  function($scope,article){
+            $scope.modal = article;
+            $("#show_article").trigger('openModal');
+        },
+        close: function(){
+            //$scope.modal = "";
+            $("#show_article").trigger('closeModal');
+        }
+    }
+});
+
+app.factory('Form', function(){
+    return{
+        init: function($scope,form_inst){
+            $scope.title = '';
+            $scope.summary = '';
+            $scope.selected_articles = [];
+        }
+
+    }
+})
+
+function CreateCoursePackCtrl($scope,$resource, Form){
+    Form($scope,Form);
+    $scope.error = ''  ;
     $scope.search_input = "";
-    //$scope.modal = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/03503001.png",download_link:""};
     $scope.add_button = true;
 
     $scope.add_to_selected = function(article){
@@ -51,18 +103,10 @@ function CreateCoursePackCtrl($scope,$resource){
         }
     }
 
-
-
-
-
-
-
 }
-function SearchPartialCtrl($scope, $resource){
+function SearchPartialCtrl($scope, $resource, Modal){
 
-    $(function() {
-        $("#show_article").easyModal();
-    });
+    Modal.init($scope,Modal,"#show_article");
 
     $scope.all_articles = $resource('/articles/search').query(function(data){
         //with successful return, assign first element to modal
@@ -74,17 +118,6 @@ function SearchPartialCtrl($scope, $resource){
         }
         return data;
     });
-
-    $scope.open_modal = function(article){
-        $scope.modal = article;
-        angular.element()
-        $("#show_article").trigger('openModal');
-    }
-
-    $scope.close_modal = function(){
-        //$scope.modal = "";
-        $("#show_article").trigger('closeModal');
-    }
 
     $scope.dateFormatting = function(date){
         var formatted_date =  new Date(date);
@@ -98,45 +131,30 @@ function SearchCtrl($scope, $resource){
     $scope.search_input = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
     $scope.all_coursepacks = $resource('/course_packs/search').query();
 
-
-
 }
 
-function CoursePackShowCtrl($scope, $resource){
-    $scope.course_pack = $('#course_pack_content').data('url');
-    $scope.articles_raw = $('#articles_content').data('url');
-    $scope.articles = [];
-    angular.forEach($scope.articles_raw, function(article){
-        $scope.modal = angular.fromJson(article);
-        $scope.articles.push($scope.modal);
-    });
-
-    $(function() {
-        $("#show_article").easyModal();
-    });
-
-    $scope.open_modal = function(article){
-        $scope.modal = article;
-        angular.element()
-        $("#show_article").trigger('openModal');
-    }
-
-    $scope.close_modal = function(){
-        //$scope.modal = "";
-        $("#show_article").trigger('closeModal');
-    }
+function CoursePackShowCtrl($scope, $resource, Page, Modal){
+    Page.init($scope,Page);
+    Modal.init($scope,Modal,"#show_article");
 
     $scope.dateFormatting = function(date){
         var formatted_date =  new Date(date);
         return formatted_date.toLocaleDateString();
     }
 
-}
+};
 
 function ModalCtrl($scope){
 
 
 }
+
+function EditCoursePackCtrl($scope, Page){
+    Page.init($scope,Page);
+    Form($scope,Form);
+
+}
+
 
 
 
