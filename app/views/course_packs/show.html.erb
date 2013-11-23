@@ -1,4 +1,7 @@
 <div ng-controller='CoursePackShowCtrl'>
+
+  User: <%= @user ? @user.username : 'None' %>  <br/>
+  Session: <%= session[:user_id] %>
 <p id="notice"><%= notice %></p>
 
 

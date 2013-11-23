@@ -173,7 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   angularjs-rails
-  bcrypt-ruby (~> 3.0.0)
+  bcrypt-ruby
   bootstrap-sass (= 2.3.1.0)
   capybara
   coffee-rails (~> 3.2.1)

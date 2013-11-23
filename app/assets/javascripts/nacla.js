@@ -5,7 +5,6 @@
  * Time: 11:30 AM
  * To change this template use File | Settings | File Templates.
  */
-
 app = angular.module("NACLA", ["ngResource"])
 
 app.factory('Page', function(){
@@ -42,7 +41,7 @@ app.factory('Modal', function(){
                 modal_inst.close();
             }
         },
-        open:  function($scope,article){
+        open: function($scope,article){
             $scope.modal = article;
             $("#show_article").trigger('openModal');
         },
@@ -56,16 +55,23 @@ app.factory('Modal', function(){
 app.factory('Form', function(){
     return{
         init: function($scope,form_inst){
+            if($scope.course_pack){
+            $scope.title = $scope.course_pack['title'];
+
+            }
+            else{
             $scope.title = '';
             $scope.summary = '';
+            }
             $scope.selected_articles = [];
+
         }
 
     }
 })
 
 function CreateCoursePackCtrl($scope,$resource, Form){
-    Form($scope,Form);
+    Form.init($scope,Form);
     $scope.error = ''  ;
     $scope.search_input = "";
     $scope.add_button = true;
@@ -77,7 +83,7 @@ function CreateCoursePackCtrl($scope,$resource, Form){
     };
 
     $scope.cancel = function(){
-        window.location = '/';
+        window.location = '/course_packs';
     };
 
     $scope.remove_selected = function(article){
@@ -93,13 +99,15 @@ function CreateCoursePackCtrl($scope,$resource, Form){
             angular.forEach($scope.selected_articles, function(article){
                 article_ids.push(article.id);
             })
-            $resource('create').save({title:$scope.title, summary:$scope.summary, article_ids:article_ids},
-                //Success
-                function(){
-                    window.location = '/'
-                },
-                //Failure
-                function(){$scope.error = 'The course pack could not be saved'}) ;
+            var user_id = $('#user_id').data('url');
+            $.ajax({ url: '/course_packs/create',
+                type: 'POST',
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: {"title":$scope.title, "summary":$scope.summary, "article_ids":article_ids, 'user_id':user_id},
+                success: function(response) {
+                    window.location = '/course_packs';
+                }
+            });
         }
     }
 
@@ -149,9 +157,9 @@ function ModalCtrl($scope){
 
 }
 
-function EditCoursePackCtrl($scope, Page){
+function EditCoursePackCtrl($scope,Page,Form){
     Page.init($scope,Page);
-    Form($scope,Form);
+    Form.init($scope,Form);
 
 }
 
