@@ -11,7 +11,7 @@
  Articles:
  <ul>
  <li ng-repeat="article in articles">
-   {{article.title}}
+   <a href='' ng-click='open_modal(article)'>{{article.title}}</a>
  </li>
  </ul>
  Tags:{{course_pack.tags}}
@@ -19,6 +19,8 @@
 
 <%= link_to 'Edit', edit_course_pack_path(@course_pack) %> |
 <%= link_to 'Back', course_packs_path %>
+
+  <%= render 'shared/modal' %>
 
 
 </div>
