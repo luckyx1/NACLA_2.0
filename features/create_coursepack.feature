@@ -6,7 +6,9 @@ Feature: create a coursepack
 
 Background: documents exists in the database
 
-  Given the following documents exist:
+  Given I have an account
+
+  And the following documents exist:
   | title                    | description                               | publication_date | tags                |
   | Brazilian Colonialism    | Colonialism of Brazil between 1800-1900   | 20-Sep-2010      | Brazil, colony      |
   | Modern Politics of Chile | The political climate of modern day Chile | 2-Apr-2011       | republic, election  |
