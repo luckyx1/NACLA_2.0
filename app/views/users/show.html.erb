@@ -1,18 +1,17 @@
 <h1><%=@user[:username]%>'s Profile</h1>
-
-<%= @user[:id] %>
-
-<p><%= link_to 'Change Password', edit_user_path %></p>
-<p><%= link_to 'Delete Profile', destroy_user_path, :confirm => "Are you sure you want to delete your profile?" %></p>
-
+<% if @user.username == current_user.username %>
+  <p><%= link_to 'Change Password', edit_user_path %></p>
+  <p><%= link_to 'Delete Profile', destroy_user_path, :confirm => "Are you sure you want to delete your profile?" %></p>
+<% end %>
 <div>
   <b>Recent Course Packs</b>
   <% @coursepacks.each do |coursepack| %>
     <p>
-      <%= coursepack.title %>
+      <%= coursepack[:title] %>
       <%= link_to 'Show', course_pack_path(coursepack[:id]) %>
       <%= link_to 'Edit', edit_course_pack_path(coursepack[:id]) %>
     </p>
   <% end %>
   <p><%= link_to 'Click Here For More Course Packs', course_packs_path %> </p>
+  <%= link_to 'Log out', log_out_path %>
 </div>

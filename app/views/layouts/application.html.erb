@@ -108,13 +108,17 @@
 				<img style="width:700px; display: block; margin-bottom:10px; margin-top:10px; margin-left:auto; margin-right:auto;" src="/images/nacla_logo.jpg">
 				<div id="links_bar">
 					<div class="links_item">
-						<%= link_to 'HOME', {:controller=>"user", :action => "profile"}, :class =>"links_item_text" %>
+
+						<%= link_to 'HOME', root_path, :class =>"links_item_text" %>
 					</div>
 					<div class="links_item">
 						<%= link_to 'COURSE PACKS', course_packs_path, :class =>"links_item_text" %>
 					</div>
 					<div class="links_item">
 						<%= link_to 'SEARCH', {:controller=>"search", :action => "index"}, :class =>"links_item_text" %>
+					</div>
+					<div class="links_item">
+					  <%= link_to 'PROFILE', users_path, :class =>"links_item_text" %>
 					</div>
 				</div>
 			</div>
@@ -144,7 +148,7 @@
                        				 		<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
                         				<% end %>
 						<% end %>
-                        <p style="text-align:center; color:navy; font-size:10px; font-weight: bold; line-height:15px; margin-top:-18px;">Register for an account</p>					
+                        <p style="text-align:center; color:navy; font-size:10px; font-weight: bold; line-height:15px; margin-top:-18px;"><%= link_to "Register for an account", sign_up_path%></p>
 					</div>
 
 					<div class="left_white_container_div">

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-  before_filter :require_login, only: [:edit, :update, :index, :destroy]
-
+  before_filter :require_login, except: [:new, :create]
+   
   def new
     @user = User.new
   end
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      redirect_to '', :notice=>"You have created an account."
+      redirect_to user_path(@user.id), :notice=>"You have created an account."
     else
       render "new"
     end
@@ -46,9 +46,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    @coursepacks = CoursePack.find_all_by_user_id(@user[:id], :order => "created_at desc", :limit =>5)
+  end
+  
   def index
-    @coursepacks = CoursePack.find(:all, :order => "created_at desc", :limit =>5)
-    @coursepacks ||= []
+    redirect_to user_path(current_user[:id])
   end
 
   def destroy
