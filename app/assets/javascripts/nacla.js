@@ -24,7 +24,7 @@ app.filter('input_filter', function()
             coursepacks_flag = false;
         }
         
-        if (search_term.length > 0)
+        if (!isNullOrUndefined(search_term) && search_term.length > 0)
         { 
             var search_exp = new RegExp(search_term, "i");
 
@@ -185,7 +185,6 @@ function SearchPartialCtrl($scope, $resource, Modal){
 
 function SearchCtrl($scope, $resource){
 
-    $scope.search_input = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
     $scope.all_coursepacks = $resource('/course_packs/search').query();
 
 } ;
