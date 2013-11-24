@@ -12,14 +12,10 @@ class CoursePacksController < ApplicationController
     end
   end
 
-  # GET /course_packs/1
-  # GET /course_packs/1.json
   def show
     show_or_edit('show')
   end
 
-  # GET /course_packs/new
-  # GET /course_packs/new.json
 
   def new
     @user = current_user
@@ -29,13 +25,11 @@ class CoursePacksController < ApplicationController
     end
   end
 
-  # GET /course_packs/1/edit
+
   def edit
     show_or_edit('edit')
   end
 
-  # POST /course_packs
-  # POST /course_packs.json
   def create
     if request.xhr?
           @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
@@ -58,8 +52,6 @@ class CoursePacksController < ApplicationController
 
   end
 
-  # PUT /course_packs/1
-  # PUT /course_packs/1.json
   def update
     @course_pack = CoursePack.find(params[:id])
 
@@ -74,8 +66,7 @@ class CoursePacksController < ApplicationController
     end
   end
 
-  # DELETE /course_packs/1
-  # DELETE /course_packs/1.json
+
   def destroy
     @course_pack = CoursePack.find(params[:id])
     @course_pack.destroy
@@ -109,8 +100,6 @@ class CoursePacksController < ApplicationController
   def show_or_edit(call_from)
     @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first
     unless @course_pack.blank?
-      @user = current_user
-      @id = params[:id]
       @articles = []
       #create list of articles in json format
       @course_pack.articles.each do |article|
