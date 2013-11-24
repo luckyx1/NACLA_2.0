@@ -34,17 +34,11 @@ class CoursePacksController < ApplicationController
           @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
           @course_pack.user = User.find_by_id(params[:user_id])
 
-          if params[:article_ids]
-            params[:article_ids].each do |id|
-              @course_pack.articles << Article.find(id)
-            end
+          params[:article_ids].each do |id|
+            @course_pack.articles << Article.find(id)
           end
 
-          if @course_pack.save
-            render :nothing => true, :status => :ok
-          else
-           render :nothing => true, :status => :conflict
-          end
+          render :nothing => true, @course_pack.save ? (:status => :ok) : (:status => :conflict)
     else
       redirect_to '/'
     end
