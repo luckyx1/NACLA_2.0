@@ -1,4 +1,8 @@
 <h1>Log in</h1>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 716adb2b9ba49bce6f43865fd1d96e93863081be
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash#{name}" %>
 <% end %>

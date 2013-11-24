@@ -1,4 +1,5 @@
 <div ng-controller='SearchPartialCtrl'>
+
   <table id="articles">
       <thead>
       <tr>
@@ -8,20 +9,16 @@
         <th> Tags </th>
       <tr>
       </thead>
-    <tbody ng-repeat="article in all_articles|filter:search_input">
-    Search by:
-    <input type='checkbox' checked='checked'>Title
-    <input type='checkbox' >Description
-    <tr ng-hide='!search_input'>
+    <tbody ng-repeat="article in all_articles| input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
       <td> <a href='' ng-click='open_modal(article)' id='search_title'>{{article.title}}</a> </td>
       <td id='search_description'> {{article.description}}</td>
       <td> {{dateFormatting(article.publication_date)}}</td>
       <td> {{article.tags}} </td>
-      <td> <button type='button' ng-click='add_to_selected(article)' ng-show="add_button">Add</button></td>
-    </tr>
+      <td> <button type='button' ng-click='add_to_selected(article)' ng-show="add_button">Add</button> </td>
     </tbody>
   </table>
 
   <%= render 'shared/modal' %>
 
 </div> <!-- SearchPartialCtrl -->
+
