@@ -16,7 +16,6 @@ class CoursePacksController < ApplicationController
     show_or_edit('show')
   end
 
-
   def new
     @user = current_user
     respond_to do |format|
@@ -33,8 +32,8 @@ class CoursePacksController < ApplicationController
   def create
     if request.xhr?
           @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
-          user = User.find_by_id(params[:user_id])
-          @course_pack.user = user
+          @course_pack.user = User.find_by_id(params[:user_id])
+
           if params[:article_ids]
             params[:article_ids].each do |id|
               @course_pack.articles << Article.find(id)
