@@ -21,34 +21,33 @@ When /I fill out invalid registration information/ do
 	click_on 'Create new account'	
 end
 
-Then /I should have my own account/ do 
-	page.should have_content 'You have created an account.'
+Then /I should have my own account with username "(.*)"/ do |username|
+	page.should have_content "#{username}'s Profile"
 end
 
 Then /I should not have my own account/ do
-	page.should_not have_content 'You have created an account.'
+	page.should_not have_content "Profile Change Password"
 end
 
 Given /I have an account/ do
-  visit ('/sign_up')
+  click_on 'Register for an account'
 	page.fill_in 'user_username', :with => 'Alex'
 	page.fill_in 'user_email', :with => 'test@test.com'
 	page.fill_in 'user_password', :with => 'password'
 	page.fill_in 'user_password_confirmation', :with => 'password'
 	click_on 'Create new account'
-	visit ('/')
 end
 
 When /I fill out correct account information/ do 
 	page.fill_in 'username', :with => 'Alex'
 	page.fill_in 'password', :with => 'password'
-	click_button 'Log in'
+	click_button 'Sign In'
 end
 
 When /I fill out incorrect account information/ do
 	page.fill_in 'username', :with => 'Alex'
 	page.fill_in 'password', :with => 'pass'
-	click_button 'Log in'
+	click_button 'Sign In'
 end
 
 When /I am logged out/ do
@@ -57,11 +56,11 @@ end
 
 #might need one for Then as well?
 When /I am logged in/ do
-  	page.should have_content 'Logged in as test@test.com'
+  	page.should have_content "Alex's Profile"
 end
 
 Then /I should not be logged into my account/ do 
-	page.should_not have_content 'Logged in as test@test.com'
+	page.should_not have_content "Alex's Profile"
 end
 
 When /I am on the "(.*)" page/ do |page|
@@ -70,28 +69,24 @@ When /I am on the "(.*)" page/ do |page|
 end
 
 When /I create a new course pack named "(.*)" with summary "(.*)"/ do |name, summary|
+  click_on 'Click Here For More Course Packs'
   click_on 'New Course pack'
 	page.fill_in 'title', :with => name
 	page.fill_in 'summary', :with => summary
 	click_on 'Create'
-	sleep 5
-	puts page.body
 end
 
 Then /"(.*)" should be added to my account/ do |course_pack|
-  page.should have_content 'Logged in as test@test.com'
   page.should have_content "Title: #{course_pack}"
 end
 
 When /I am on the "(.*)" course pack page/ do |name|
-	visit '/course_packs'
-	#find_by_id(name).click_on 'Show'
-	#puts page.body
+
 	page.should have_table name
 end
 
 Then /I should be able to write "(.*)" to "(.*)"/ do |comment, course_pack|
-	page.fill_in 'comment', with => "#{comment}" 
+	page.fill_in 'comment', :with => "#{comment}" 
 	click_on 'Add comment'
 	page.should have_content "#{comment}"	
 end

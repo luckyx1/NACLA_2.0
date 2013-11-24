@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :require_login, except: [:new, :create]
+   
   def new
     @user = User.new
   end
@@ -7,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      redirect_to '', :notice=>"You have created an account."
+      redirect_to user_path(@user.id), :notice=>"You have created an account."
     else
       render "new"
     end
@@ -20,13 +23,13 @@ class UsersController < ApplicationController
         if user.id == current_user.id 
           user.password = params[:password]
           if user.save
-            redirect_to '', :notice=>"Your password has been changed."
+            redirect_to user_path(@user.id), :notice=>"Your password has been changed."
           else
             flash[:notice] = "Your new password is not valid. Please enter another"
             render "edit"
           end
         else
-	  flash[:notice] = "You shouldn't be here..."
+	        flash[:notice] = "You shouldn't be here..."
           render "edit"
         end
       else
@@ -39,9 +42,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = current_user
+    @coursepacks = CoursePack.find_all_by_user_id(@user[:id], :order => "created_at desc", :limit =>5)
+  end
+  
   def index
-    @coursepacks = CoursePack.find(:all, :order => "created_at desc", :limit =>5)
-    @coursepacks ||= []
+    redirect_to user_path(current_user[:id])
   end
 
   def destroy
