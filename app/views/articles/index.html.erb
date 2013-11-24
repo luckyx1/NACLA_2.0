@@ -19,12 +19,6 @@
     <%= render 'shared/search' %>
 
     <table id="coursepacks">
-        <thead>
-        <tr>
-          <th> Title </th>
-          <th> Summary </th>
-        <tr>
-        </thead>
       <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
         <td> {{coursepack.title}} </td>
         <td> {{coursepack.summary}} </td>
