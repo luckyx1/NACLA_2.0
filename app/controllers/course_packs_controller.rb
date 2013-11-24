@@ -1,6 +1,6 @@
 class CoursePacksController < ApplicationController
 
-  before_filter :require_login
+  before_filter :require_login, except:[:search]
 
   def index
     @user = current_user

@@ -216,8 +216,13 @@ function SearchPartialCtrl($scope, $resource, Modal){
 function SearchCtrl($scope, $resource){
 
     $scope.all_coursepacks = $resource('/course_packs/search').query();
+//        $resource('/course_packs/search').query(function(data){
+//            angular.forEach(data,function(course_pack){
+//                $scope.all_coursepacks = angular.fromJson(course_pack);
+//            });
+//        });
 
-} ;
+};
 
 function CoursePackShowCtrl($scope, $resource, Page, Modal){
     Page.init($scope,Page);
