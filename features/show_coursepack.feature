@@ -17,7 +17,7 @@ Background: Starting at the coursepack homepage
 
 Scenario: When you click on a course pack it shows it
 	When I select "show" for coursepack "Early Colombia"
-	I should be on the "show page"
+	Then I should be on the "show page"
 	And I should see "As early as 1392..."
 	
 Scenario: When you create a course pack, then click show it should show the same info

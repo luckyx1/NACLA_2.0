@@ -1,6 +1,6 @@
 class CoursePacksController < ApplicationController
-  # GET /course_packs
-  # GET /course_packs.json
+
+  before_filter :require_login
 
   def index
     @user = current_user
@@ -103,12 +103,6 @@ class CoursePacksController < ApplicationController
     end
   end
 
-  def all_articles
-    @articles = Article.all
-    respond_to do |format|
-      format.json {render json: @articles}
-    end
-  end
 
   def search
     respond_to do |format|
@@ -121,11 +115,11 @@ class CoursePacksController < ApplicationController
 
   end
 
-  def list_all
-    redirect_to new_course_pack_path(search_article_ids:'all', selected_article_ids:params[:selected_article_ids])
-  end
+  private
 
-  def add_article
-    redirect_to new_course_pack_path(selected_article_ids:params[:selected_article_ids],new_article:params[:new_article])
+  def require_login
+    if current_user.nil?
+      redirect_to('/log_in')
+    end
   end
 end

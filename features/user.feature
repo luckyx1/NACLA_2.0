@@ -19,16 +19,17 @@ Scenario: login to the account
 	And I fill out correct account information
 	Then I am logged in
 
+@javascript
 Scenario: add a course pack to my account
 	Given I have an account
 	When I am logged in 
-	And I am on the "New Course pack" page
-	And I create a new course pack named "Test"
+	And I create a new course pack named "Test" with summary "Test Summary"
 	Then "Test" should be added to my account
 	
 Scenario: write comments
 	Given I have an account
 	When I am logged in
+	And I create a new course pack named "Test" with summary "Test Summary"
 	And I am on the "Test" course pack page
 	Then I should be able to write "Great course pack!" to "Test"
 
