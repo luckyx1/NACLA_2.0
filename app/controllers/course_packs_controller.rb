@@ -53,12 +53,12 @@ class CoursePacksController < ApplicationController
           @course_pack.articles = []
           add_articles(@course_pack)
           @course_pack.save
-          redirect_to 'index', notice: 'Course pack was successfully updated.' }
-        format.json { head :no_content }
+          redirect_to 'index', notice: 'Course pack was successfully updated.'
+        }
       else
         format.html { render action: "edit" }
-        format.json { render json: @course_pack.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
