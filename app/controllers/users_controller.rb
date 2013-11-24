@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :require_login, only: [:edit, :update, :index, :destroy]
+
   def new
     @user = User.new
   end
@@ -14,28 +17,32 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.authenticate(current_user.username, params[:old_password])
-    if user != nil
-      if params[:password] == params[:password_confirmation]
-        if user.id == current_user.id 
-          user.password = params[:password]
-          if user.save
-            redirect_to '', :notice=>"Your password has been changed."
+    if params[:commit] == "Cancel"
+      redirect_to '/users'
+    else
+      user = User.authenticate(current_user.username, params[:old_password])
+      if user != nil
+        if params[:password] == params[:password_confirmation]
+          if user.id == current_user.id 
+            user.password = params[:password]
+            if user.save
+              redirect_to '', :notice=>"Your password has been changed."
+            else
+              flash[:notice] = "Your new password is not valid. Please enter another"
+              render "edit"
+            end
           else
-            flash[:notice] = "Your new password is not valid. Please enter another"
+            flash[:notice] = "You shouldn't be here..."
             render "edit"
           end
         else
-	  flash[:notice] = "You shouldn't be here..."
+          flash[:notice] = "Password doesn't match confirmation"
           render "edit"
         end
       else
-        flash[:notice] = "Password doesn't match confirmation"
+        flash[:notice] = 'Your password is incorrect'
         render "edit"
       end
-    else
-      flash[:notice] = 'Your password is incorrect'
-      render "edit"
     end
   end
 
@@ -49,5 +56,11 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     User.destroy(userid)
     redirect_to '', :notice => "Your account was deleted"
+  end
+
+  def require_login
+    if current_user.nil?
+      redirect_to('/log_in')
+    end
   end
 end	

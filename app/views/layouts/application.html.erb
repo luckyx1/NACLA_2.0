@@ -132,12 +132,18 @@
 					</div>
 
 					<div id="left_login_container" class="left_container_div">
-						<p style="text-align:center; font-size:15px; font-weight: bold; line-height:15px;">NACLA User Login</p>
-						<%= form_tag "/log_in" do %>
-	                        	<%= text_field_tag :username, params[:username], id: "left_signin_username", placeholder: "Username" %>
-	                        	<%= password_field_tag :password, params[:password], id: "left_signin_password", placeholder: "Password" %>
-	                        	<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
-                        <% end %>
+						<p style="text-align:center; font-size:15px; font-weight: bold; line-height:15px;">NACLA User Login</p>						
+						<% if current_user %>
+							<p>Logged in as <%= current_user.username %> </p>
+							<p><%= link_to "Your profile", "/users" %></p>
+							<p><%= link_to "Log out", log_out_path %></p>
+						<% else %>						
+							<%= form_tag "/log_in" do %>
+	                       			 		<%= text_field_tag :username, params[:username], id: "left_signin_username", placeholder: "Username" %>
+	                        				<%= password_field_tag :password, params[:password], id: "left_signin_password", placeholder: "Password" %>
+                       				 		<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
+                        				<% end %>
+						<% end %>
                         <p style="text-align:center; color:navy; font-size:10px; font-weight: bold; line-height:15px; margin-top:-18px;">Register for an account</p>					
 					</div>
 
