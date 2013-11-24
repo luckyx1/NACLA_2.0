@@ -1,7 +1,6 @@
 <div  id="show_article">
 <!--<div id='show_article'> <!--data-modal-overflow="true">  -->
-  <div style="width:760px; margin-top:10px; margin-bottom:10px; margin-left:auto; margin-right:auto;">
-
+  <div id="modal_container">
     <h2>
       {{modal.title}}
     </h2>
@@ -24,7 +23,6 @@
       <h3> Tags </h3>
       <p> {{modal.tags}} </p>
     </div>
-
-    <%= button_to "Download", :action => :download %> <button type='button' ng-click='close_modal()' id='modal_close'>Close</button>
   </div>
+  <%= button_to "Download", :action => :download %> <button type='button' ng-click='close_modal()' id='modal_close'>Close Article Viewer</button>
 </div> <!-- Modal -->

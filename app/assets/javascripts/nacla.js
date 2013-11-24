@@ -6,7 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 app = angular.module("NACLA", ["ngResource"])
-
 var articleIsExpanded = false;
 
 function expandArticles(){
@@ -158,12 +157,7 @@ function CreateCoursePackCtrl($scope,$resource, Form){
 
     $scope.add_to_selected = function(article){
         if($scope.selected_articles.indexOf(article) == -1)
-        {
             $scope.selected_articles.push(article);
-            var height = $("#center_content").height();
-            var height2 = height + 20;
-            $("#center_content").height(height2);
-        }
 
     };
 
@@ -173,9 +167,6 @@ function CreateCoursePackCtrl($scope,$resource, Form){
 
     $scope.remove_selected = function(article){
         $scope.selected_articles.splice($scope.selected_articles.indexOf(article),1);
-        var height = $("#center_content").height();
-        var height2 = height - 20;
-        $("#center_content").height(height2);
     };
 
     $scope.submit = function(){
@@ -197,9 +188,6 @@ function CreateCoursePackCtrl($scope,$resource, Form){
                 }
             });
         }
-<<<<<<< HEAD
-    }
-=======
     };
 }
 
@@ -223,7 +211,6 @@ function SearchPartialCtrl($scope, $resource, Modal){
         return formatted_date.toLocaleDateString();
     }
 
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
 }
 
 function SearchCtrl($scope, $resource){
@@ -243,15 +230,8 @@ function CoursePackShowCtrl($scope, $resource, Page, Modal){
 
 };
 
-<<<<<<< HEAD
-function SearchCtrl($scope, $resource){
-    $scope.search_input = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
-    $scope.all_coursepacks = $resource('/course_packs/search').query();
-}
-=======
 function ModalCtrl($scope){
 
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
 
 }
 

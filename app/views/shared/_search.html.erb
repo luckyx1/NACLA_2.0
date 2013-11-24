@@ -3,10 +3,10 @@
   <table id="articles">
       <thead>
       <tr>
-        <th> Title </th>
-        <th> Description </th>
-        <th> Publication Date </th>
-        <th> Tags </th>
+        <th id='title_header'> Title </th>
+        <th id='description_header'> Description </th>
+        <th id='publication_header'> Publication Date </th>
+        <th id='tags_header'> Tags </th>
       <tr>
       </thead>
     <tbody ng-repeat="article in all_articles| input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
@@ -17,6 +17,8 @@
       <td> <button type='button' ng-click='add_to_selected(article)' ng-show="add_button">Add</button> </td>
     </tbody>
   </table>
+
   <%= render 'shared/modal' %>
 
 </div> <!-- SearchPartialCtrl -->
+
