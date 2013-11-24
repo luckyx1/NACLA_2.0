@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20131116222658) do
-=======
 ActiveRecord::Schema.define(:version => 20131116224743) do
->>>>>>> 559642a6a9aabb9be35c83444bbe51ade652e0eb
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -61,6 +57,8 @@ ActiveRecord::Schema.define(:version => 20131116224743) do
     t.text     "tags"
   end
 
+<<<<<<< HEAD
+=======
   create_table "documents", :force => true do |t|
     t.string   "title"
     t.text     "description"
@@ -70,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20131116224743) do
     t.datetime "updated_at",       :null => false
   end
 
+>>>>>>> 0f32a003af75c530d8fd79d3b63ff33f76edbfd9
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "password_hash"

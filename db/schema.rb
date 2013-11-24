@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(:version => 20131116224743) do
     t.text     "tags"
   end
 
+  create_table "documents", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "publication_date"
+    t.text     "tags"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "password_hash"
