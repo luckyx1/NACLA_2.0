@@ -4,14 +4,15 @@ class CommentsController < ApplicationController
 
   def add
   	if(params[:addstatus] == 'add') 
-  		if params[:article] != "" and params[:username] !="" and params[:comment] != ""
-  			newcommentSpecs = Hash.new
-  			newcommentSpecs[:user] = params[:username]
-  			newcommentSpecs[:comment] = params[:comment]
-  			newcommentSpecs[:privacy] = "false"
-  			newcommentSpecs[:postdate] = DateTime.current()
-  			newcommentSpecs[:article] = params[:article]
-	  		newcomment = Comment.new(newcommentSpecs)
+  		#if params[:article] != "" and params[:username] !="" and params[:comment] != ""
+  			#newcommentSpecs = Hash.new
+  			#newcommentSpecs[:user] = params[:username]
+  			#newcommentSpecs[:comment] = params[:comment]
+  			#newcommentSpecs[:privacy] = "false"
+  			#newcommentSpecs[:postdate] = DateTime.current()
+  			#newcommentSpecs[:article] = params[:article]
+	  		#newcomment = Comment.new(newcommentSpecs)
+
 	  		@status = "Your comment was added successfully."
 	  	else
 	  		@status = view_context.get_failure_status_message(params[:username], params[:comment], params[:article])
