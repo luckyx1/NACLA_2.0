@@ -33,12 +33,12 @@ class CoursePacksController < ApplicationController
     if request.xhr?
           @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
           @course_pack.user = User.find_by_id(params[:user_id])
+          add_articles @course_pack
 
-          params[:article_ids].each do |id|
-            @course_pack.articles << Article.find(id)
+          render :nothing => true, :status=>:ok
+          unless @course_pack.save
+              render :status => :conflict
           end
-
-          render :nothing => true, @course_pack.save ? (:status => :ok) : (:status => :conflict)
     else
       redirect_to '/'
     end
@@ -108,6 +108,17 @@ class CoursePacksController < ApplicationController
       redirect_to '/course_packs'
     end
 
+  end
+
+  def add_articles(course_pack)
+     unless params[:article_ids].blank?
+       puts "Articles was not blank"
+       params[:article_ids].each do |id|
+         course_pack.articles << Article.find(id)
+       end
+     else
+       puts "Articles was blank"
+     end
   end
 
 end
