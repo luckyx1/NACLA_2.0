@@ -12,6 +12,7 @@ Background: documents exists in the database
   | Modern Politics of Chile | The political climate of modern day Chile | 2-Apr-2011       | republic, election  |
   | Drug Cartels, Mexico     | The history of drug cartels in Mexico     | 14-Dec-2003      | drugs, war          |
 
+  And I am logged in as "test"
   And I am on the new coursepack page
 
   @javascript
