@@ -1,0 +1,12 @@
+
+<form name='course_pack_form'>
+  Title:<input type='text' ng-model='title' name='title' id='title'> <br/>
+  Summary:<br/>
+  <textarea ng-model='summary' cols='100' rows='5' name='summary' id='summary'></textarea>
+  <br/>
+  Articles: <br/>
+  <ul>
+    <li ng-repeat="selected in selected_articles">{{selected.title}}[<a href="" ng-click="remove_selected(selected)">X</a>]</li>
+  </ul>
+  <button type='button' ng-click='submit()' id='submit'>Create</button> <button type='button' ng-click='cancel()' id='cancel'> Cancel </button> <br/> <br/>
+</form>

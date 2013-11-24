@@ -21,5 +21,9 @@
 
 coverage
 
+
+# Ignore temp files created by text editor
 *~
 
+# Ignore Mac's weird DS_Store thing
+*/.DS_Store 

@@ -55,13 +55,38 @@ h1 {
 	background-color:#FFA500;
 	clear:both;
 	text-align:center;
-	height: 200px;
+	height: 40px;
+}
+
+#push {
+	height: 40px;
+}
+
+#show_article{
+    position:relative;
+    width:800px;
+    background: #FFF;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-top:auto;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    height: 450px;
+    margin: auto auto;
+    overflow-y: scroll;
+    border-radius: 5px;
 }
 
 #push {
 	height: 40px;
 }
 #thumbnail_container{
+    display:inline-block;
     width:166px;
     height:220px;
 }
+#modal_close{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+

@@ -1,6 +1,9 @@
-<h1>Editing course_pack</h1>
+<div ng-controller='EditCoursePackCtrl' >
 
-<%= render 'form' %>
+<div id='course_pack_content' data-url="<%= @course_pack %>"></div>
+<div id='articles_content' data-url="<%= @articles %>"></div>
 
-<%= link_to 'Show', @course_pack %> |
-<%= link_to 'Back', course_packs_path %>
+<%= render 'course_pack_form' %>
+
+
+</div>

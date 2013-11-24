@@ -26,6 +26,9 @@ NACLA::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   post "log_in" => "sessions#create" 
   get "sign_up" => "users#new", :as => "sign_up"
+  get "edit_user" => "users#edit", :as => "edit_user"
+  post "edit_user" => "users#update"
+  get "destroy_user" => "users#destroy"
   resources :users
 
 

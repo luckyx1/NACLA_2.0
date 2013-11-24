@@ -12,9 +12,15 @@
 //
 
 
+
 //= require bootstrap
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min
 //= require angular
 //= require angular-resource
-//= require_tree .
+//= require jquery.easyModal
+//= require modernizr
+//= require nacla
+//= require_self
+// require_tree .    // removed equal sign

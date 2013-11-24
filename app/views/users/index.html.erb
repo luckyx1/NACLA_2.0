@@ -1,0 +1,16 @@
+<h1>User Profile</h1>
+
+<p><%= link_to 'Change Password', edit_user_path %></p>
+<p><%= link_to 'Delete Profile', destroy_user_path, :confirm => "Are you sure you want to delete your profile?" %></p>
+
+<div>
+  <b>Recent Course Packs</b>
+  <% @coursepacks.each do |coursepack| %>
+    <p>
+      <%= coursepack.title %>
+      <%= link_to 'Show', 'course_packs/' + coursepack.id.to_s %>
+      <%= link_to 'Edit', 'course_packs/' + coursepack.id.to_s + '/edit' %>
+    </p>
+  <% end %>
+  <p><%= link_to 'Click Here For More Course Packs', course_packs_path %> </p>
+</div>

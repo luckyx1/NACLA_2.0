@@ -1,4 +1,5 @@
 <div ng-controller='SearchPartialCtrl'>
+
   <table id="articles">
       <thead>
       <tr>
@@ -8,59 +9,14 @@
         <th> Tags </th>
       <tr>
       </thead>
-    <tbody ng-repeat="article in all_articles|filter:search_input">
-    Search by:
-    <input type='checkbox' checked='checked'>Title
-    <input type='checkbox' >Description
-    <tr ng-hide='!search_input'>
-      <td> <a href='' ng-click='open_modal(article)'>{{article.title}}</a> </td>
-      <td> {{article.description}}</td>
-      <td> {{article.publication_date}}</td>
+    <tbody ng-repeat="article in all_articles| input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
+      <td> <a href='' ng-click='open_modal(article)' id='search_title'>{{article.title}}</a> </td>
+      <td id='search_description'> {{article.description}}</td>
+      <td> {{dateFormatting(article.publication_date)}}</td>
       <td> {{article.tags}} </td>
-      <td> <button type='button' ng-click='add_to_selected(article)' ng-show="add_button">Add</button></td>
-    </tr>
+      <td> <button type='button' ng-click='add_to_selected(article)' ng-show="add_button">Add</button> </td>
     </tbody>
   </table>
+  <%= render 'shared/modal' %>
 
-  <div id='modal'>
-    <div style="
-    width:800px;
-    height: 450px;
-    background: #FFF;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
-    margin: auto auto;
-    overflow-y:scroll;
-    border-radius:5px;"
-    >
-
-      <div style="width:760px; margin-top:10px; margin-bottom:10px; margin-left:auto; margin-right:auto;">
-        <h2>
-        {{modal.title}}
-        </h2>
-    
-        <div id='thumbnail_container'>
-          <img src="{{modal.thumbnail_link}}">
-        </div>
-
-        <div>
-          <p> Volume: {{modal.volume}} </p>
-          <p> Issue: {{modal.issue}} </p>
-          <p> Published: {{modal.publication_date}} </p>
-        </div>
-
-        <div>
-          <h3> Description </h3>
-          <p> {{modal.description}} </p>
-        </div>
-
-        <div>
-          <h3> Tags </h3>
-          <p> {{modal.tags}} </p>
-        </div>
-
-        <%= button_to "Download", :action => :download %> <button type='button' ng-click='close_modal()' style="position:absolute;bottom:10px;right:15px;">Close</button>
-      </div>
-      
-    </div>
-  </div>
-</div>
+</div> <!-- SearchPartialCtrl -->

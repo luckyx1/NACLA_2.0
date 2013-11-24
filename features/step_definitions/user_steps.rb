@@ -69,21 +69,25 @@ When /I am on the "(.*)" page/ do |page|
 	click_on page
 end
 
-When /I create a new course pack named "(.*)"/ do |name|
-	page.fill_in 'title', :with => "#{name}"
+When /I create a new course pack named "(.*)" with summary "(.*)"/ do |name, summary|
+  click_on 'New Course pack'
+	page.fill_in 'title', :with => name
+	page.fill_in 'summary', :with => summary
 	click_on 'Create'
+	sleep 5
+	puts page.body
 end
 
 Then /"(.*)" should be added to my account/ do |course_pack|
-	visit '/'
-	page.should have_content 'Title: Test'
+  page.should have_content 'Logged in as test@test.com'
+  page.should have_content "Title: #{course_pack}"
 end
 
 When /I am on the "(.*)" course pack page/ do |name|
-	visit '/'
-	within_table "#{name}" do
-		click_on 'Show'
-	end
+	visit '/course_packs'
+	#find_by_id(name).click_on 'Show'
+	#puts page.body
+	page.should have_table name
 end
 
 Then /I should be able to write "(.*)" to "(.*)"/ do |comment, course_pack|

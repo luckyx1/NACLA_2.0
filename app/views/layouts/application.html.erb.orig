@@ -3,22 +3,11 @@
 
 <head>
   <title> NACLA </title>
-<<<<<<< HEAD
   <%= stylesheet_link_tag    "layout" %>
   <%= stylesheet_link_tag    "bootstrap" %>
   <%= stylesheet_link_tag    "bootstrap-responsive" %>
   <%= javascript_include_tag "bootstrap" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "nacla" %>
-=======
-  <%#= stylesheet_link_tag    "layout" %>
-  <%#= stylesheet_link_tag    "bootstrap" %>
-  <%#= stylesheet_link_tag    "bootstrap-responsive" %>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%#= javascript_include_tag "bootstrap" %>
-
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
   <%= javascript_include_tag "jquery.sticky" %>
   <%= csrf_meta_tags %>
   <script>
@@ -27,30 +16,18 @@
     	$('.menu_link').css("visibility", "hidden");
 		$('.dropdown-toggle').dropdown();
 		  var width = $(window).width();
-<<<<<<< HEAD
-		  /*$('#test').hover(function() {
-=======
 		  $('#test').hover(function() {
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
 		        $("#menu_bar").css("height", "30px");
 				$('.menu_link').css("visibility", "visible");
 		    }, function() {
 		        $("#menu_bar").css("height", "0px");
 	    		$('.menu_link').css("visibility", "hidden");
-<<<<<<< HEAD
-		    });*/
-=======
 		    });
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
 
 		var leftHeight = $("#left_content").height();
 		var centerHeight = $("#center_content").height();
 		var rightHeight = $("#right_content").height();
-<<<<<<< HEAD
-		var centerWidth = $("#content_container").width()*.7 - 15;
-=======
 		var centerWidth = $("#content_container").width()*.7 - 11;
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
 		$("#center_content").css("width", centerWidth);
 		if(leftHeight > centerHeight || rightHeight > centerHeight)
 		{
@@ -66,6 +43,32 @@
 	});
   </script>
 </head>
+<<<<<<< HEAD
+<body>
+	<div>
+		<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :id => "flash#{name}" %>
+		<% end %>
+	</div>
+	<div id="user_nav">
+		<% if current_user %>
+			Logged in as <b><%= current_user.email %></b>
+			<%= link_to "Log out", log_out_path %>
+		<% else %>
+			<%= link_to "Sign up", sign_up_path %> or 
+			<%= link_to "Log in", log_in_path %>
+		<% end %>
+	</div>
+       <div id="container">
+			<div id="header">
+				<h1>NACLA 2.0 </h1>
+			</div>
+			<div id="side_bar">
+				<b>Menu</b>
+			</div>
+			<div id="content">
+				<%= yield %>
+=======
 <body style ="margin:0px; min-width: 990px;">
    <div id="container">
    		<div id="shadow_bar"></div>
@@ -99,11 +102,7 @@
 			    			<%= form_tag("/search", method: "get") do %>
 							      <%= text_field_tag :search, params[:search], id: "navbar_search", placeholder: "Search" %>
 							      <button class="btn"id="navbar_search_button" type="submit">
-<<<<<<< HEAD
-							      	<p>GO</p>
-=======
 							      	<img id="search_button_image" src="/images/mag_lense.png">
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
 							      </button>						    
 						  	<% end %>
 					  	</div>
@@ -121,23 +120,6 @@
 		<div id="top_spacer"></div>
 
 		<div id="content_container">
-<<<<<<< HEAD
-			<div>
-				<% flash.each do |name, msg| %>
-					<%= content_tag :div, msg, :id => "flash#{name}" %>
-				<% end %>
-			</div>
-			<div id="user_nav" style ="margin-top:20px;">
-				<% if current_user %>
-					Logged in as <b><%= current_user.email %></b>
-					<%= link_to "Log out", log_out_path %>
-				<% else %>
-					<%= link_to "Sign up", sign_up_path %> or 
-					<%= link_to "Log in", log_in_path %>
-				<% end %>
-			</div>
-=======
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
 			<div id="logo_container">
 				<div id="top_links_container">
 					<span style="display:table; float:center; margin-left:auto; margin-right:auto;">
@@ -161,6 +143,7 @@
 						<%= link_to 'SEARCH', {:controller=>"search", :action => "index"}, :class =>"links_item_text" %>
 					</div>
 				</div>
+>>>>>>> b8a0ef430dd6a29cae57194f355da288d7b11c15
 			</div>
 			<div>
 				<div id="left_content">
@@ -177,19 +160,11 @@
 
 					<div id="left_login_container" class="left_container_div">
 						<p style="text-align:center; font-size:15px; font-weight: bold; line-height:15px;">NACLA User Login</p>
-<<<<<<< HEAD
 						<%= form_tag("/", method: "get") do %>
 	                        	<%= text_field_tag :signin_name, params[:signin_name], id: "left_signin_username", placeholder: "Username" %>
 	                        	<%= text_field_tag :signin_password, params[:signin_password], id: "left_signin_password", placeholder: "Password" %>
 	                        	<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
                         <% end %>	
-=======
-						<%= form_tag "/log_in" do %>
-	                        	<%= text_field_tag :username, params[:username], id: "left_signin_username", placeholder: "Username" %>
-	                        	<%= password_field_tag :password, params[:password], id: "left_signin_password", placeholder: "Password" %>
-	                        	<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
-                        <% end %>
->>>>>>> f801c38e55b706c73d1fb88532de1d26574e35b8
                         <p style="text-align:center; color:navy; font-size:10px; font-weight: bold; line-height:15px; margin-top:-18px;">Register for an account</p>					
 					</div>
 
