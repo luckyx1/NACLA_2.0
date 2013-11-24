@@ -8,11 +8,13 @@ class ArticlesController < ApplicationController
   end
 
   def search
+    @article_count = Article.count
+    @pack_count = CoursePack.count
     respond_to do |format|
       format.html{render 'index'}
       format.json{
         @articles = Article.all
-        render :json=>@articles
+        render :json => @articles 
       }
     end
   end
