@@ -116,4 +116,11 @@ class CoursePacksController < ApplicationController
      end
   end
 
+  def require_login
+    if current_user.nil?
+      redirect_to('/log_in')
+    end
+  end
+ 
+
 end
