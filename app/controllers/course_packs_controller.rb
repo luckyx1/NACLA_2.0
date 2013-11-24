@@ -1,6 +1,6 @@
 class CoursePacksController < ApplicationController
 
-  before_filter :require_login, except:[:search]
+  before_filter :require_login, except:[:search,:show]
 
   def index
     @user = current_user
@@ -26,7 +26,7 @@ class CoursePacksController < ApplicationController
 
 
   def edit
-    show_or_edit('edit')
+    show_or_edit('new')
   end
 
   def create
@@ -94,8 +94,14 @@ class CoursePacksController < ApplicationController
   end
 
   def show_or_edit(call_from)
-    @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first
     @user = current_user
+
+    if call_from == 'show'
+      @course_pack = CoursePack.find_by_id(params[:id])
+    else
+      @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first
+    end
+
     unless @course_pack.blank?
       @articles = []
       #create list of articles in json format
@@ -103,11 +109,9 @@ class CoursePacksController < ApplicationController
         @articles << article.to_json
       end
       @course_pack = @course_pack.to_json
-      if call_from == 'show'
-        render 'show'
-      else
-        render 'new'
-      end
+
+      render call_from
+
     else
       redirect_to '/course_packs'
     end
