@@ -87,6 +87,7 @@ app.factory('Page', function(){
         init: function($scope,page_inst){
             $scope.course_pack = page_inst.get_course_pack();
             $scope.articles = page_inst.get_articles();
+
         },
         get_course_pack: function(){
             return $('#course_pack_content').data('url');
@@ -129,30 +130,70 @@ app.factory('Modal', function(){
 
 app.factory('Form', function(){
     return{
-        init: function($scope,form_inst){
+        init: function($scope,form_inst,page){
             if($scope.course_pack){
-            $scope.title = $scope.course_pack['title'];
-
+                $scope.title = $scope.course_pack['title'];
+                $scope.summary = $scope.course_pack['summary'];
+                $scope.form_button = 'Update'
+                $scope.selected_articles = $scope.articles;
             }
             else{
-            $scope.title = '';
-            $scope.summary = '';
-            }
-            $scope.selected_articles = [];
+                $scope.title = '';
+                $scope.summary = '';
+                $scope.form_button = 'Create'
+                $scope.selected_articles = [];
+            };
+            $scope.cancel = function(){
+                window.location = '/course_packs';
+            };
+
+            $scope.submit = function(){
+                if ($scope.title.length == 0 || $scope.summary.length == 0){
+                    $scope.error = 'You must assign a title and summary'
+                }
+                else{
+                    var article_ids = [];
+                    angular.forEach($scope.selected_articles, function(article){
+                        article_ids.push(article.id);
+                    });
+                    var user_id = $('#user_id').data('url');
+
+                    if($scope.course_pack){
+                        var url = '/course_packs/update';
+                        var data = {"article_ids":article_ids,"id":$scope.course_pack["id"],"course_pack":{"title":$scope.title, "summary":$scope.summary}};
+                    }
+                    else{
+                        var url = '/course_packs/create';
+                        var data = {"title":$scope.title, "summary":$scope.summary, "article_ids":article_ids, 'user_id':user_id};
+                    }
+
+                    $.ajax({ url: url,
+                        type: 'POST',
+                        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                        data: data,
+                        success: function(response) {
+                            window.location = '/course_packs';
+                        }
+                    });
+                }
+            };
+
         }
     }
-})
+});
 
 function isNullOrUndefined(value)
 {
     return (typeof value === "undefined" || value === null);
 }
 
-function CreateCoursePackCtrl($scope,$resource, Form){
+function CreateCoursePackCtrl($scope,$resource, Form,Page){
+    Page.init($scope,Page);
     Form.init($scope,Form);
     $scope.error = ''  ;
     $scope.search_input = "";
     $scope.add_button = true;
+    $scope.search_title = true;
 
 
     $scope.add_to_selected = function(article){
@@ -161,34 +202,10 @@ function CreateCoursePackCtrl($scope,$resource, Form){
 
     };
 
-    $scope.cancel = function(){
-        window.location = '/course_packs';
-    };
-
     $scope.remove_selected = function(article){
         $scope.selected_articles.splice($scope.selected_articles.indexOf(article),1);
     };
 
-    $scope.submit = function(){
-        if ($scope.title.length == 0 || $scope.summary.length == 0){
-            $scope.error = 'You must assign a title and summary'
-        }
-        else{
-            var article_ids = [];
-            angular.forEach($scope.selected_articles, function(article){
-                article_ids.push(article.id);
-            })
-            var user_id = $('#user_id').data('url');
-            $.ajax({ url: '/course_packs/create',
-                type: 'POST',
-                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-                data: {"title":$scope.title, "summary":$scope.summary, "article_ids":article_ids, 'user_id':user_id},
-                success: function(response) {
-                    window.location = '/course_packs';
-                }
-            });
-        }
-    };
 }
 
 function SearchPartialCtrl($scope, $resource, Modal){
@@ -216,11 +233,6 @@ function SearchPartialCtrl($scope, $resource, Modal){
 function SearchCtrl($scope, $resource){
 
     $scope.all_coursepacks = $resource('/course_packs/search').query();
-//        $resource('/course_packs/search').query(function(data){
-//            angular.forEach(data,function(course_pack){
-//                $scope.all_coursepacks = angular.fromJson(course_pack);
-//            });
-//        });
 
 };
 
@@ -240,9 +252,9 @@ function ModalCtrl($scope){
 
 }
 
-function EditCoursePackCtrl($scope,Page,Form){
-    Page.init($scope,Page);
-    Form.init($scope,Form);
-
-}
+//function EditCoursePackCtrl($scope,Page,Form){
+//    Page.init($scope,Page);
+//    Form.init($scope,Form,'edit');
+//
+//}
 
