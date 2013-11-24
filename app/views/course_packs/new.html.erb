@@ -1,7 +1,7 @@
 <h1>New Course Pack</h1>
 <div id='user_id' data-url="<%= @user.id%>"></div>
 <div ng-controller="CreateCoursePackCtrl">
-  {{}}
+
     <span id='course_pack_error'>{{error}}</span><br/>
 
     <%= render 'course_pack_form' %>
@@ -11,6 +11,7 @@
   </p>
   <p>
     Search by:
+  </p>
     <input type='checkbox' ng-model='search_title'>Title
     <input type='checkbox' ng-model='search_description'>Description
 

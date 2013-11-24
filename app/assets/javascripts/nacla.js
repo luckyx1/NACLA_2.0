@@ -123,6 +123,7 @@ function CreateCoursePackCtrl($scope,$resource, Form){
     $scope.error = ''  ;
     $scope.search_input = "";
     $scope.add_button = true;
+    $scope.search_title = true;
 
 
     $scope.add_to_selected = function(article){
