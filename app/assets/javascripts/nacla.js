@@ -6,6 +6,36 @@
  * To change this template use File | Settings | File Templates.
  */
 app = angular.module("NACLA", ["ngResource"])
+var articleIsExpanded = false;
+
+function expandArticles(){
+    var input = document.getElementById("search_input");
+    var length = input.value.length;
+    var articles = document.getElementById("articles");
+    if(length > 0)
+    {
+
+        if(articles.offsetHeight > 0)
+        {
+            var left_content = document.getElementById("left_content");
+            var left_height = left_content.height;
+            var center_content = document.getElementById("center_content");
+            var center_height = $("#footer").offset().top;
+            var offset = $("#articles").offset().top;
+
+            if(!articleIsExpanded)
+            {
+                $("#articles").css("height", center_height - offset - 60);
+                articleIsExpanded = true;
+            }
+        }
+    }
+    else
+    {
+        $("#articles").css("height", "auto");
+        articleIsExpanded = false;
+    }
+}
 
 app.filter('input_filter', function()
 {
@@ -187,8 +217,13 @@ function SearchPartialCtrl($scope, $resource, Modal){
 function SearchCtrl($scope, $resource){
 
     $scope.all_coursepacks = $resource('/course_packs/search').query();
+//        $resource('/course_packs/search').query(function(data){
+//            angular.forEach(data,function(course_pack){
+//                $scope.all_coursepacks = angular.fromJson(course_pack);
+//            });
+//        });
 
-} ;
+};
 
 function CoursePackShowCtrl($scope, $resource, Page, Modal){
     Page.init($scope,Page);

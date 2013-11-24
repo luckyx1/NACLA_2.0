@@ -1,13 +1,30 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+table#articles{
+  width:100%;
+}
 table#articles th {
+  //width: 200px;
+  //height: 2px;
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-table#articles th, table#articles td {
+#title_header {
+  width:20%;
+}
+#description_header {
+  width:40%;
+}
+#tags_header{
+  width:15%;
+}
+#publication_header{
+  width: 25%;
+}
+table#articles tbody {
+  max-height:10px;
   padding: 4px;
   text-align: left;
 }

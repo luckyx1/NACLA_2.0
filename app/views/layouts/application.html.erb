@@ -3,12 +3,8 @@
 
 <head>
   <title> NACLA </title>
-  <%#= stylesheet_link_tag    "layout" %>
-  <%#= stylesheet_link_tag    "bootstrap" %>
-  <%#= stylesheet_link_tag    "bootstrap-responsive" %>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <%#= javascript_include_tag "bootstrap" %>
 
   <%= javascript_include_tag "jquery.sticky" %>
   <%= csrf_meta_tags %>
@@ -47,7 +43,9 @@
 </head>
 <body style ="margin:0px; min-width: 990px;">
    <div id="container">
-   		<div id="shadow_bar"></div>
+
+     <!-- REMOVING TOP BLACK BAR -->
+   		<!--<div id="shadow_bar"></div>
 		<div class="navbar navbar-inverse navbar-fixed-top" id="test">
 		    <div class="navbar-inner">
 		    	<div id="navbar_container">
@@ -59,41 +57,41 @@
 				                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sign In <b class="caret"></b>
 				                    </a>
 				                    <ul class="dropdown-menu" id="signin_dropdown">
-				                    	<%= form_tag("/", method: "get") do %>
+				                    	<%#= form_tag("/", method: "get") do %>
 					                        <li><a href="#">
-					                        	<%= text_field_tag :signin_name, params[:signin_name], id: "signin_name_entry", placeholder: "Username" %>
+					                        	<%#= text_field_tag :signin_name, params[:signin_name], id: "signin_name_entry", placeholder: "Username" %>
 					                        </a></li>
 					                        <li><a href="#">
-					                        	<%= text_field_tag :signin_password, params[:signin_password], id: "signin_password_entry", placeholder: "Password" %>
+					                        	<%#= text_field_tag :signin_password, params[:signin_password], id: "signin_password_entry", placeholder: "Password" %>
 					                        </a></li>
 					                        <li><a href="#">
 					                        	<button class="btn" id="signin_submit" type="submit">Log In</button>
 					                        </a></li>
-				                        <% end %>
+				                        <%# end %>
 				                    </ul>
 				                </li>
 				            </ul>		    				
 		    			</div>
 		    			<div id="search_container">
-			    			<%= form_tag("/search", method: "get") do %>
-							      <%= text_field_tag :search, params[:search], id: "navbar_search", placeholder: "Search" %>
+			    			<%#= form_tag("/search", method: "get") do %>
+							      <%#= text_field_tag :search, params[:search], id: "navbar_search", placeholder: "Search" %>
 							      <button class="btn"id="navbar_search_button" type="submit">
 							      	<img id="search_button_image" src="/images/mag_lense.png">
 							      </button>						    
-						  	<% end %>
+						  	<%# end %>
 					  	</div>
 		    		</div>
 		    	</div>
 		    </div>
 		    <div id="menu_bar">
 		    	<div id="menu_bar_container">
-		    		<%= link_to 'Home', {:controller=>"static", :action => "index"}, :class =>"menu_link" %>
-		    		<%= link_to 'New Course Pack', new_course_pack_path, :class =>"menu_link" %>
-		    		<%= link_to 'Search', {:controller=>"search", :action => "index"}, :class =>"menu_link" %>
+		    		<%#= link_to 'Home', {:controller=>"static", :action => "index"}, :class =>"menu_link" %>
+		    		<%#= link_to 'New Course Pack', new_course_pack_path, :class =>"menu_link" %>
+		    		<%#= link_to 'Search', {:controller=>"search", :action => "index"}, :class =>"menu_link" %>
 		    	</div>
 		    </div>
 		</div>	
-		<div id="top_spacer"></div>
+		<div id="top_spacer"></div>-->
 
 		<div id="content_container">
 			<div id="logo_container">
@@ -110,10 +108,10 @@
 				<img style="width:700px; display: block; margin-bottom:10px; margin-top:10px; margin-left:auto; margin-right:auto;" src="/images/nacla_logo.jpg">
 				<div id="links_bar">
 					<div class="links_item">
-						<%= link_to 'HOME', {:controller=>"static", :action => "index"}, :class =>"links_item_text" %>
+						<%= link_to 'HOME', {:controller=>"user", :action => "profile"}, :class =>"links_item_text" %>
 					</div>
 					<div class="links_item">
-						<%= link_to 'COURSE PACKS', new_course_pack_path, :class =>"links_item_text" %>
+						<%= link_to 'COURSE PACKS', course_packs_path, :class =>"links_item_text" %>
 					</div>
 					<div class="links_item">
 						<%= link_to 'SEARCH', {:controller=>"search", :action => "index"}, :class =>"links_item_text" %>
