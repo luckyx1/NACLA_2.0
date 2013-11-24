@@ -1,32 +1,41 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-table#articles{
+table.articles{
   width:100%;
 }
-table#articles th {
+table.articles th {
   //width: 200px;
   //height: 2px;
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-#title_header {
+
+.title_column {
   width:20%;
+  text-align: center;
 }
-#description_header {
+.description_column {
   width:40%;
+  text-align: center;
+
 }
-#tags_header{
+.column_height{
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ctags_column{
   width:15%;
+  text-align: center;
 }
-#publication_header{
+.publication_column{
   width: 25%;
+  text-align: center;
 }
-table#articles tbody {
-  max-height:10px;
+table.articles tbody {
   padding: 4px;
-  text-align: left;
 }
 
 table#coursepacks th {

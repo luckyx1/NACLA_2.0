@@ -8,5 +8,5 @@
   <ul>
     <li ng-repeat="selected in selected_articles">{{selected.title}}[<a href="" ng-click="remove_selected(selected)">X</a>]</li>
   </ul>
-  <button type='button' ng-click='submit()' id='submit'>Create</button> <button type='button' ng-click='cancel()' id='cancel'> Cancel </button> <br/> <br/>
+  <button type='button' ng-click='submit()' id='submit' ng-bind='form_button'></button> <button type='button' ng-click='cancel()' id='cancel'> Cancel </button> <br/> <br/>
 </form>

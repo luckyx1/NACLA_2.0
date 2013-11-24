@@ -48,12 +48,16 @@ class CoursePacksController < ApplicationController
 
     respond_to do |format|
       if @course_pack.update_attributes(params[:course_pack])
-        format.html { redirect_to @course_pack, notice: 'Course pack was successfully updated.' }
-        format.json { head :no_content }
+        format.html {
+          @course_pack.articles = []
+          add_articles(@course_pack)
+          @course_pack.save
+          redirect_to 'index', notice: 'Course pack was successfully updated.'
+        }
       else
         format.html { render action: "edit" }
-        format.json { render json: @course_pack.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
@@ -84,6 +88,7 @@ class CoursePacksController < ApplicationController
 
   def show_or_edit(call_from)
     @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first
+    @user = current_user
     unless @course_pack.blank?
       @articles = []
       #create list of articles in json format
@@ -94,7 +99,7 @@ class CoursePacksController < ApplicationController
       if call_from == 'show'
         render 'show'
       else
-        render 'edit'
+        render 'new'
       end
     else
       redirect_to '/course_packs'
@@ -103,13 +108,11 @@ class CoursePacksController < ApplicationController
   end
 
   def add_articles(course_pack)
+    puts "add_articles"
      unless params[:article_ids].blank?
-       puts "Articles was not blank"
        params[:article_ids].each do |id|
          course_pack.articles << Article.find(id)
        end
-     else
-       puts "Articles was blank"
      end
   end
 
