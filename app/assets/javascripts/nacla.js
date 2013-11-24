@@ -139,7 +139,7 @@ function SearchCtrl($scope, $resource){
     $scope.search_input = {title:"",description:"",volume:"",issue:"",publication_date:"",tags:"",thumbnail_link:"",download_link:""};
     $scope.all_coursepacks = $resource('/course_packs/search').query();
 
-}
+} ;
 
 function CoursePackShowCtrl($scope, $resource, Page, Modal){
     Page.init($scope,Page);
