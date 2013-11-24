@@ -1,0 +1,24 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table#articles th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: wheat;
+}
+table#articles th, table#articles td {
+  padding: 4px;
+  text-align: left;
+}
+
+table#coursepacks th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: wheat;
+}
+table#coursepacks th, table#coursepacks td {
+  padding: 4px;
+  text-align: left;
+}
+

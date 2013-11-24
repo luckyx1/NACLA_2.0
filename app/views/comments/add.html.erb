@@ -1,0 +1,35 @@
+<h1>Add a Comment</h1>
+
+<% if( @display) %>
+	
+	<div style="width:90%; margin-left:auto; margin-right:auto; margin-top:10px; background-color:#FFFFFF; border-radius:5px; border: black 1px solid;" >
+		<p style="text-align:center;">
+			<%= @status %>
+		</p>
+	</div>
+<% end %>
+
+<div style="width: 90%; margin-left:auto; margin-right:auto; margin-top:30px; " >
+	<%= form_tag :action=>"add" do %>
+		<div>
+			<p> Enter Your Comment Here: </p>
+			<%= text_field_tag :comment%>
+		</div>
+
+		<div>
+			<p> Enter The Article URL You Wish To Comment Here: </p>
+			<%= text_field_tag :article%>
+		</div>
+
+		<div>
+			<p> Enter Your Username Here: </p>
+			<%= text_field_tag :username %>
+		</div>
+
+		<%= hidden_field_tag(:addstatus, "add") %>
+		<%= submit_tag("Add Comment") %>
+	<% end %>
+
+	<%= button_to "Comments Home", "/comments", :method => :get  %>
+</div>
+
