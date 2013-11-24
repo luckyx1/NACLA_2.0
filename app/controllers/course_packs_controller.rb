@@ -15,18 +15,7 @@ class CoursePacksController < ApplicationController
   # GET /course_packs/1
   # GET /course_packs/1.json
   def show
-    @course_pack = CoursePack.find(params[:id])
-    @articles = []
-    #create list of articles in json format
-    @course_pack.articles.each do |article|
-      @articles << article.to_json
-    end
-    @course_pack = @course_pack.to_json
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @course_pack }
-    end
+    show_or_edit('show')
   end
 
   # GET /course_packs/new
@@ -42,13 +31,7 @@ class CoursePacksController < ApplicationController
 
   # GET /course_packs/1/edit
   def edit
-    @course_pack = CoursePack.find(params[:id])
-    @articles = []
-    #create list of articles in json format
-    @course_pack.articles.each do |article|
-      @articles << article.to_json
-    end
-    @course_pack = @course_pack.to_json
+    show_or_edit('edit')
   end
 
   # POST /course_packs
@@ -122,4 +105,27 @@ class CoursePacksController < ApplicationController
       redirect_to('/log_in')
     end
   end
+
+  def show_or_edit(call_from)
+    @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first
+    unless @course_pack.blank?
+      @user = current_user
+      @id = params[:id]
+      @articles = []
+      #create list of articles in json format
+      @course_pack.articles.each do |article|
+        @articles << article.to_json
+      end
+      @course_pack = @course_pack.to_json
+      if call_from == 'show'
+        render 'show'
+      else
+        render 'edit'
+      end
+    else
+      redirect_to '/course_packs'
+    end
+
+  end
+
 end

@@ -1,9 +1,6 @@
 <div ng-controller='CoursePackShowCtrl'>
 
-  User: <%= @user ? @user.username : 'None' %>  <br/>
-  Session: <%= session[:user_id] %>
 <p id="notice"><%= notice %></p>
-
 
 <div id='course_pack_content' data-url="<%= @course_pack %>"></div>
 <div id='articles_content' data-url="<%= @articles %>"></div>
@@ -20,8 +17,8 @@
  Tags:{{course_pack.tags}}
  Public: {{course_pack.public}}
 
-<%= link_to 'Edit', edit_course_pack_path(@course_pack) %> |
-<%= link_to 'Back', course_packs_path %>
+<%= link_to 'Edit', "{{course_pack.id}}/edit" %> |
+<%= link_to 'Back', "/course_packs" %>
 
  <%= render 'shared/modal' %>
 
