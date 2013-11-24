@@ -3,11 +3,8 @@ class CoursePacksController < ApplicationController
   # GET /course_packs.json
 
   def index
-    @course_packs = CoursePack.all
-    session[:title] = nil
-    session[:selected_article_ids] = nil
-    session[:search_article_ids] = nil
-    session[:summary] = nil
+    @user = current_user
+    @course_packs = CoursePack.find_all_by_user_id(current_user.id) || []
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,6 +16,12 @@ class CoursePacksController < ApplicationController
   # GET /course_packs/1.json
   def show
     @course_pack = CoursePack.find(params[:id])
+    @articles = []
+    #create list of articles in json format
+    @course_pack.articles.each do |article|
+      @articles << article.to_json
+    end
+    @course_pack = @course_pack.to_json
 
     respond_to do |format|
       format.html # show.html.erb
@@ -30,6 +33,7 @@ class CoursePacksController < ApplicationController
   # GET /course_packs/new.json
 
   def new
+    @user = current_user
     respond_to do |format|
       format.html { render "new"}
       format.json { render json: @course_pack }
@@ -39,17 +43,21 @@ class CoursePacksController < ApplicationController
   # GET /course_packs/1/edit
   def edit
     @course_pack = CoursePack.find(params[:id])
+    @articles = []
+    #create list of articles in json format
+    @course_pack.articles.each do |article|
+      @articles << article.to_json
+    end
+    @course_pack = @course_pack.to_json
   end
 
   # POST /course_packs
   # POST /course_packs.json
   def create
-
-    respond_to do |format|
-        format.html { redirect_to '/'}
-        format.json {
+    if request.xhr?
           @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
-
+          user = User.find_by_id(params[:user_id])
+          @course_pack.user = user
           if params[:article_ids]
             params[:article_ids].each do |id|
               @course_pack.articles << Article.find(id)
@@ -59,10 +67,12 @@ class CoursePacksController < ApplicationController
           if @course_pack.save
             render :nothing => true, :status => :ok
           else
-            render :nothing => true, :status => :conflict
+           render :nothing => true, :status => :conflict
           end
-        }
+    else
+      redirect_to '/'
     end
+
   end
 
   # PUT /course_packs/1

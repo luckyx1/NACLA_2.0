@@ -80,7 +80,9 @@ NACLA::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'course_packs#index'
+  #root :to => 'course_packs#index'
+  match 'home', :to => "static#index"
+  root :to => "static#index"
 
   # See how all your routes lay out with "rake routes"
 
