@@ -42,7 +42,6 @@ class CoursePacksController < ApplicationController
     else
       redirect_to '/'
     end
-
   end
 
   def update
