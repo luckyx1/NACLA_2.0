@@ -16,7 +16,7 @@ Scenario: login to the account
 	Given I have an account
 	And I am logged out
 	When I fill out correct account information
-	Then I am logged in
+	Then I should be logged in
 
 @javascript
 Scenario: add a course pack to my account

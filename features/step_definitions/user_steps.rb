@@ -55,7 +55,7 @@ When /I am logged out/ do
 end
 
 #might need one for Then as well?
-When /I am logged in/ do
+When /I should be logged in/ do
   	page.should have_content "Alex's Profile"
 end
 
@@ -63,10 +63,6 @@ Then /I should not be logged into my account/ do
 	page.should_not have_content "Alex's Profile"
 end
 
-When /I am on the "(.*)" page/ do |page|
-	visit '/'
-	click_on page
-end
 
 When /I create a new course pack named "(.*)" with summary "(.*)"/ do |name, summary|
   click_on 'Click Here For More Course Packs'
