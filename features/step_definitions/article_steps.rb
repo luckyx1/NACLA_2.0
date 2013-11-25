@@ -14,8 +14,8 @@ Then(/^I should see the issues "(.*?)" and "(.*?)"$/) do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
 end
 
-When(/^I follow "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+When(/^I follow "(.*?)"$/) do |link|
+  click_link(link)
 end
 
 Then(/^I should see the issue "(.*?)"$/) do |arg1|
