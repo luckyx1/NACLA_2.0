@@ -25,7 +25,7 @@ Background: I'm on the article search page
  @javascript
  Scenario: Search by title
   When I fill in "search_input" with "ch"
-  And I follow "title"
+  And I follow "Title"
   And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
@@ -36,7 +36,7 @@ Background: I'm on the article search page
  @javascript
 Scenario: Search by description
   When I fill in "search_input" with "chile"
-  And I follow "description"
+  And I follow "Description"
   And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
