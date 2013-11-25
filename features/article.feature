@@ -14,7 +14,7 @@ Background: I'm on the article search page
   | Chavismo After Chavez    | Information about movement based on Chavez| 28-June-2013  | Chavez, Chavismo      | 9 | 2 |
   And I am on the article search page
   And I follow "Course Packs"
-  And I follow "articles" 
+  And I follow "Articles"
   #And I follow "Course Packs"
 
   

@@ -15,7 +15,7 @@ Then(/^I should see the issues "(.*?)" and "(.*?)"$/) do |arg1, arg2|
 end
 
 When(/^I follow "(.*?)"$/) do |link|
-  click_link(link)
+  check(link)
 end
 
 Then(/^I should see the issue "(.*?)"$/) do |arg1|
