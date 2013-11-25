@@ -11,7 +11,6 @@ Given(/^I am on the new coursepack page$/) do
 end
 
 When (/^I fill in '([^"]*)' with '([^"]*)'$/) do |field, value|
-  put page
   fill_in  field.downcase.to_str, :with => value
 end
 
