@@ -5,31 +5,33 @@ Feature: Add comments
 	I want to be able to add or delete comments
 
 	Background: comments existing in the databse
+		Given I have a user account with username "Charlie", password "notpassword", and email "rails@fake.com"
+		And the user "Charlie" has an empty coursepack with title "Comment Test"
+		And the user "Charlie" has a test comment on the coursepack "Comment Test"
 
-	Given the following users exist:
-	| | | | |
-
-
+@javascript
 Scenario: Viewing comments of a coursepack while not logged in.
-	Given I am on the "coursepack_name" show page
-	Then I should see "comment_string"
+	Given I log out
+	And I go to the test coursepack show page
+	Then I should see "Test comment for test course pack."
 
+@javascript
 Scenario: Viewing comments of a coursepack while logged in.
-	Given I am logged in as "username"
-	And I am on the "coursepack_name" show page
-	Then I should see "comment_string"
+	Given I am logged in
+	And I go to the test coursepack show page
+	Then I should see "Test comment for test course pack."
 
+@javascript
 Scenario: Commenting on a coursepack while not logged in.
-	Given I am logged in as "username"
-	And I am on the "coursepack_name" show page
-	And I type "Blah Blah Blah" into "comment_input"
-	And I click on "Post"
-	Then I should see "Blah Blah Blah"
+	Given I log out
+	And I go to the test coursepack show page
+	Then I should not see "Post"
 
+@javascript
 Scenario: Commenting on a coursepack while logged in.
-	Given I am logged in as a "username"
-	And I am on the "coursepack_name" show page
-	And I type "Blah Blah Blah" into "comment_input"
+	Given I am logged in
+	And I go to the test coursepack show page
+	And I type "Blah Blah Blah" into "comment"
 	And I click on "Post"
 	Then I should see "Blah Blah Blah"
 
