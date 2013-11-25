@@ -24,7 +24,6 @@ class CoursePacksController < ApplicationController
     end
   end
 
-
   def edit
     show_or_edit('new')
   end
@@ -86,12 +85,6 @@ class CoursePacksController < ApplicationController
   end
 
   private
-
-  def require_login
-    if current_user.nil?
-      redirect_to('/log_in')
-    end
-  end
 
   def show_or_edit(call_from)
     @user = current_user
