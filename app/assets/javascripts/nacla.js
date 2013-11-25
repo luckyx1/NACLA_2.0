@@ -233,6 +233,11 @@ function SearchPartialCtrl($scope, $resource, Modal){
 function SearchCtrl($scope, $resource){
 
     $scope.all_coursepacks = $resource('/course_packs/search').query();
+    $scope.search_articles = true;
+    $scope.search_coursepacks = true;
+    $scope.search_title = true;
+    $scope.search_description = true;
+    $scope.search_summary = true;
 
 };
 
