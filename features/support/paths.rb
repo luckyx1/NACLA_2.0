@@ -3,6 +3,7 @@
 # This file is used by web_steps.rb, which you should also delete
 #
 # You have been warned
+=begin
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -39,3 +40,4 @@ module NavigationHelpers
 end
 
 World(NavigationHelpers)
+=end

@@ -62,9 +62,4 @@ class UsersController < ApplicationController
     redirect_to '', :notice => "Your account was deleted"
   end
 
-  def require_login
-    if current_user.nil?
-      redirect_to('/log_in')
-    end
-  end
 end	

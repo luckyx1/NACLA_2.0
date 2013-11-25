@@ -16,7 +16,7 @@ Scenario: login to the account
 	Given I have an account
 	And I am logged out
 	When I fill out correct account information
-	Then I should be logged in
+	Then I should be logged in as "Alex"
 
 @javascript
 Scenario: add a course pack to my account
@@ -43,4 +43,4 @@ Scenario: login to the account with incorrect information (sad path)
 	And I am logged out
 	When I fill out incorrect account information
   And I click on "Sign In"
-	Then I should not be logged into my account
+	Then I should not be logged in as "Alex"

@@ -26,4 +26,14 @@ describe UsersController do
   	end
   	
 	end
+	
+	describe "delete account"  do
+	  it "should delete the account" do
+	    @user = User.create!(username: 'Alex', email: 'alex@test.com',
+  			password: 'password', password_confirmation: 'password')
+  		@user.destroy
+  		
+  		User.find_by_username('Alex').should == nil
+    end
+   end
 end
