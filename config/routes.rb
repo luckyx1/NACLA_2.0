@@ -7,6 +7,7 @@ NACLA::Application.routes.draw do
   get "comments/" => "comments#index"
   post "comments/add"
   post "comments/delete" => "comments#delete"
+  match "comments/create_comment" => "comments#create_comment"
 
 
   match 'articles/search' => 'articles#search'
@@ -29,6 +30,7 @@ NACLA::Application.routes.draw do
   get "edit_user" => "users#edit", :as => "edit_user"
   post "edit_user" => "users#update"
   get "destroy_user" => "users#destroy"
+  match "user/profile" => "users#index"
   resources :users
 
 

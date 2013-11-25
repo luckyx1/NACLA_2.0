@@ -2,6 +2,7 @@ class CoursePack < ActiveRecord::Base
   attr_accessible :title, :summary, :articles
   has_and_belongs_to_many :articles
   belongs_to :user
+  has_many :comments
 
   validates :title, presence:true
   validates :summary, presence:true
