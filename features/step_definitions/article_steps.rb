@@ -10,9 +10,9 @@ When(/^I have not entered a search query$/) do
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the issues "(.*?)" and "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
+#Then(/^I should see the issues "(.*?)" and "(.*?)"$/) do |arg1, arg2|
+#  pending # express the regexp above with the code you wish you had
+#end
 
 When(/^I follow "(.*?)"$/) do |link|
   check(link)
