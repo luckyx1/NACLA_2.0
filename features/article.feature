@@ -25,7 +25,7 @@ Background: I'm on the article search page
  @javascript
  Scenario: Search by title
   When I fill in "search_input" with "ch"
-  And I follow "title"
+  And I follow "Title"
   And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
@@ -36,7 +36,7 @@ Background: I'm on the article search page
  @javascript
 Scenario: Search by description
   When I fill in "search_input" with "chile"
-  And I follow "description"
+  And I follow "Description"
   And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
@@ -44,17 +44,17 @@ Scenario: Search by description
   And I should not see the issue "Drug Cartels, Mexico" 
   And I should not see the issue "Chavismo After Chaves"
 
-@javascript
-Scenario: Search by tag
-  When I fill in "search_input" with "politics"
-  #And I follow "tag"
+#@javascript
+#Scenario: Search by tag
+ # When I fill in "search_input" with "politics"
+  ##And I follow "tag"
   #And I press "search"
-  And I wait for 2 seconds
-  Then I should see the issue "Chile 40 Years Later"
-  And I should see the issue "Drug Cartels, Mexico" 
-  But I should not see the issue "Brazilian Colonialism"
-  And I should not see the issue "Modern Politics of Chile" 
-  And I should not see the issue "Chavismo After Chaves"
+  #And I wait for 2 seconds
+  #Then I should see the issue "Chile 40 Years Later"
+  #And I should see the issue "Drug Cartels, Mexico" 
+  #But I should not see the issue "Brazilian Colonialism"
+  #And I should not see the issue "Modern Politics of Chile" 
+  #And I should not see the issue "Chavismo After Chaves"
 
 #Scenario: search by volume and issue
  # When I choose volume "3"
