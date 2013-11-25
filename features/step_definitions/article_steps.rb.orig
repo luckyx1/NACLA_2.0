@@ -18,12 +18,19 @@ When(/^I follow "(.*?)"$/) do |link|
   check(link)
 end
 
+<<<<<<< HEAD
+Then(/^I should see the issue "(.*?)"$/) do |arg1|
+  sleep 5
+  (/#{arg1}/ =~ page.body).should_not == nil
+  #puts page.body
+=======
 Then(/^I should see the issue "(.*?)"$/) do |text|
  if page.respond_to? :should
     page.should have_content(text)
   else
     assert page.has_content?(text)
   end
+>>>>>>> 38eca9feb26369cf6c870bcc5892384c1fbbffb0
 end
 
 Then(/^I should not see the issue "(.*?)"$/) do |text|
