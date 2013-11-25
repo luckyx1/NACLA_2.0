@@ -6,14 +6,20 @@ Feature: I want users to only see certain pages when logged in
 Background: I have an account
   Given I have a user account with username "Alex", password "pass", and email "alex@test.com"
   
-Scenario: logged in 
+Scenario: logged in to visit profile page
   Given I am logged in
-  When I visit any page
-  Then I should see the page
+  When I visit the "PROFILE" page
+  Then I should see "Profile"
   
-Scenario: not logged in (sad path)
+Scenario: logged in to view own coursepacks
+  Given I am logged in
+  When I visit the "COURSE PACKS" page
+  Then I should see "New Course pack"
+  
+Scenario: not logged in while visiting profile page(sad path)
   Given I am not logged in 
-  When I visit any page  #not sure which pages require this
-  Then I should be asked to log in or create an account
+  When I visit the "PROFILE" page
+  Then I should be asked to "Log in"
   When I login with username "Alex" and password "pass"
-  Then I should see the page
+  Then I should see "Profile"
+
