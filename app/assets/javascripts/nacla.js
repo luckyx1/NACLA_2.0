@@ -252,9 +252,18 @@ function ModalCtrl($scope){
 
 }
 
-//function EditCoursePackCtrl($scope,Page,Form){
-//    Page.init($scope,Page);
-//    Form.init($scope,Form,'edit');
-//
-//}
+function CommentsCtrl($scope){
+    $scope.comments = $('#comments').data('url');
+
+    $scope.post = function(){
+        $.ajax({ url: '/comments/create_comment',
+            type: 'POST',
+            beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+            data: {course_pack_id:$scope.course_pack.id,comment:$scope.comment_input},
+            success: function(response) {
+                  window.location = window.location;
+                }
+            })
+        };
+}
 
