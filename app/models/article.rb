@@ -3,6 +3,7 @@ class Article < ActiveRecord::Base
   has_and_belongs_to_many :course_packs
 
 
+=begin
   def self.search_categories
   	%w(title description tags)
   end
@@ -18,5 +19,6 @@ class Article < ActiveRecord::Base
       return selected
     end
   end
+=end
 
 end

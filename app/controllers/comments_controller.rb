@@ -1,18 +1,20 @@
 class CommentsController < ApplicationController
   def show
   end
+  
 
-  def comments
-    respond_to do |format|
-      format.json{
-        if params[:course_pack_id]
-          render json: Comment.where(course_pack_id:params[:course_pack_id])
-        else
-          render json: Comment.where(user_id:current_user.id)
-        end
-      }
-    end
-  end
+  #def comments
+  #  respond_to do |format|
+  #    format.json{
+  #      if params[:course_pack_id]
+  #        render json: Comment.where(course_pack_id:params[:course_pack_id])
+  #      else
+  #        render json: Comment.where(user_id:current_user.id)
+  #      end
+  #    }
+  #  end
+  #end
+
 
   def create_comment
     if request.xhr?
