@@ -143,8 +143,8 @@
 							<p><%= link_to "Log out", log_out_path %></p>
 						<% else %>						
 							<%= form_tag "/log_in" do %>
-	                       			 		<%= text_field_tag :username, params[:username], id: "left_signin_username", placeholder: "Username" %>
-	                        				<%= password_field_tag :password, params[:password], id: "left_signin_password", placeholder: "Password" %>
+	                       			 		<%= text_field_tag :username, params[:username], id: "username", placeholder: "Username" %>
+	                        				<%= password_field_tag :password, params[:password], id: "password", placeholder: "Password" %>
                        				 		<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
                         				<% end %>
 						<% end %>

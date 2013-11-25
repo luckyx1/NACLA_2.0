@@ -9,13 +9,14 @@ Given /I have a user account with username "(.*)", password "(.*)", and email "(
 end
 
 Given /I am logged in/ do
-  page.fill_in 'username', :with => 'Alex'
-  page.fill_in 'password', :with => 'pass'
+  if page.has_no_content? 'Log out'
+    page.fill_in 'username', :with => 'Alex'
+    page.fill_in 'password', :with => 'pass'
+  end
 end
 
 Given /I am not logged in/ do
-  click_on 'PROFILE'
-  if page.has_no_content? 'Log in'
+  if page.has_content? 'Log out'
     click_on 'Log out'
   end
 end

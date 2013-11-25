@@ -9,7 +9,9 @@
     <p>
       <%= coursepack[:title] %>
       <%= link_to 'Show', course_pack_path(coursepack[:id]) %>
-      <%= link_to 'Edit', edit_course_pack_path(coursepack[:id]) %>
+      <% if @user.username == current_user.username %>
+        <%= link_to 'Edit', edit_course_pack_path(coursepack[:id]) %>
+      <% end %>
     </p>
   <% end %>
   <p><%= link_to 'Click Here For More Course Packs', course_packs_path %> </p>
