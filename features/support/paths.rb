@@ -1,17 +1,19 @@
-# # TL;DR: YOU SHOULD DELETE THIS FILE
-# #
-# # This file is used by web_steps.rb, which you should also delete
-# #
-# # You have been warned
-# module NavigationHelpers
-#   # Maps a name to a path. Used by the
-#   #
-#   #   When /^I go to (.+)$/ do |page_name|
-#   #
-#   # step definition in web_steps.rb
-#   #
-#   def path_to(page_name)
-#     case page_name
+# TL;DR: YOU SHOULD DELETE THIS FILE
+#
+# This file is used by web_steps.rb, which you should also delete
+#
+# You have been warned
+=begin
+module NavigationHelpers
+  # Maps a name to a path. Used by the
+  #
+  #   When /^I go to (.+)$/ do |page_name|
+  #
+  # step definition in web_steps.rb
+  #
+  def path_to(page_name)
+    case page_name
+>>>>>>> bb8309dc7e9cc72ecc708b8def06e3417e7dd716
 
 #     when /^the home\s?page$/
 #       '/'
@@ -38,4 +40,8 @@
 #   end
 # end
 
+<<<<<<< HEAD
 # World(NavigationHelpers)
+=======
+World(NavigationHelpers)
+=end

@@ -4,18 +4,25 @@
   <p><%= link_to 'Delete Profile', destroy_user_path, :confirm => "Are you sure you want to delete your profile?" %></p>
 <% end %>
 <div>
-  <b><%= @user.username %>'s Recent Course Packs</b>
-  <% @coursepacks.each do |coursepack| %>
-    <p>
-      <%= coursepack[:title] %>
-      <%= link_to 'Show', course_pack_path(coursepack[:id]) %>
+  <b>Recent Course Packs</b> 
+  <br>
+  <% @coursepacks.each do |course_pack| %>
+    <table id = "<%= course_pack[:title] %>" >
+    <tr>
+      <td>
+      <%= course_pack[:title] %>
+      <%= link_to 'Show', course_pack_path(course_pack[:id]) %>
       <% if @user.username == current_user.username %>
-        <%= link_to 'Edit', edit_course_pack_path(coursepack[:id]) %>
+          <%= link_to 'Edit', edit_course_pack_path(course_pack[:id]) %>
       <% end %>
-    </p>
+    </tr>
+    </table>
+      <br>
   <% end %>
+
   <p><%= link_to 'Click Here For More Course Packs', course_packs_path %> </p>
 </div>
+
 <div>
  <b><%= @user.username %>'s Recent Comments </b>
   <% @comments.each do |comment| %>
@@ -26,3 +33,4 @@
     </p>
   <% end %>
 </div>
+

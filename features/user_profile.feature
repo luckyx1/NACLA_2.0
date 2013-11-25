@@ -17,44 +17,54 @@ Background: I have a user account
   And I have coursepack "Brazil" with article "Brazilian Colonialism"
   And I have coursepack "Current" with articles "Chavismo After Chavez" and "Chile 40 Years Later"
   And I am on my user profile page
-  
-Scenario: change email
-  When I click on "Change email"
-  And I fill out "Email" with "new@test.com"
-  And I click "Save"
-  Then I should see "new@test.com"
-  But I should not see "alex@test.com"
 
-Scenario: change password
-  When I click on "Change password"
-  And I fill out "Current password" with "pass"
-  And I fill out "New password" with "password"
-  And I fill out "Confirm password" with "password"
-  And I click "Save"
-  And I logout
+Scenario: change password correctly (happy path)
+  When I click on "Change Password"
+  And I fill out "old_password" with "pass"
+  And I fill out "password" with "password"
+  And I fill out "password_confirmation" with "password"
+  And I click on "Change Password"
+  And I click on "Log out"
   When I login with username "Alex" and password "password"
-  Then I should be logged in 
-  
-  
-#TDD would check to make sure the user data is actually deleted
-Scenario: delete account
-  When I click "Delete account"
-  Then I should see "Are you sure?"
-  When I click "Yes"
-  Then I should not be logged in 
-  When I login with username "Alex" and password "pass"
-  Then I should not be logged in
+  Then I should be logged in as "Alex"
 
+@javascript
 Scenario: show a coursepack
-  Then I should see coursepacks "Brazil", "Chile", and "Current"
-  When I click on "Brazil"
+  Then I should see coursepacks "Brazil", "Chile", "Current"
+  When I am on the "Brazil" course pack page
   Then I should see title "Brazil"
   And I should see article "Brazilian Colonialism"
   But I should not see title "Chile"
   And I should not see title "Current"
 
 Scenario: view all coursepacks
-  Then I should see coursepacks "Brazil", "Chile", and "Current"
-  When I click on "List all"
-  Then I should see coursepacks "Brazil", "Chile", "Current", and "Mexico"
+  Then I should see coursepacks "Brazil", "Chile", "Current"
+  When I click on "Click Here For More Course Packs"
+  Then I should see coursepacks "Brazil", "Chile", "Current", "Mexico"
+  
+Scenario: change password with nonmatching passwords (sad path)
+  When I click on "Change Password"
+  And I fill out "old_password" with "pass"
+  And I fill out "password" with "password"
+  And I fill out "password_confirmation" with "pass2"
+  And I click on "Change Password"
+  Then I should not have changed my password
+  
+Scenario: change password with incorrect password (sad path)
+  When I click on "Change Password"
+  And I fill out "old_password" with "pass112398"
+  And I fill out "password" with "password"
+  And I fill out "password_confirmation" with "password"
+  And I click on "Change Password"
+  Then I should not have changed my password  
 
+Scenario: change password, cancel (sad path)
+  When I click on "Change Password"
+  And I click on "Cancel"
+  Then I should be on my profile page
+  
+Scenario: change password, don't enter new passwords (sad path)
+  When I click on "Change Password"
+  And I fill out "old_password" with "pass"
+  And I click on "Change Password"
+  Then I should not have changed my password
