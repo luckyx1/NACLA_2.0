@@ -30,7 +30,8 @@ Then /I should not have my own account/ do
 end
 
 Given /I have an account/ do
-  click_on 'Register for an account'
+	visit "/sign_up"
+  	click_on 'Register for an account'
 	page.fill_in 'user_username', :with => 'Alex'
 	page.fill_in 'user_email', :with => 'test@test.com'
 	page.fill_in 'user_password', :with => 'password'

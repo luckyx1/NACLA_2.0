@@ -1,6 +1,13 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#articles {
+  display: block;
+  overflow-y: scroll;
+}
+
 table.articles{
   width:100%;
 }
@@ -47,4 +54,3 @@ table#coursepacks th, table#coursepacks td {
   padding: 4px;
   text-align: left;
 }
-

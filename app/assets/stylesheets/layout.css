@@ -5,10 +5,7 @@
 	margin-left:auto; 
 	margin-right:auto;
 }
-#articles {
-	display: block;
-	overflow-y: scroll;
-}
+
 #left_search {
 	width: 90%;
 	margin-left: auto;

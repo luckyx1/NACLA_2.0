@@ -14,7 +14,7 @@ Background: I'm on the article search page
   | Chavismo After Chavez    | Information about movement based on Chavez| 28-June-2013  | Chavez, Chavismo      | 9 | 2 |
   And I am on the article search page
   And I follow "Course Packs"
-  And I follow "articles" 
+  And I follow "Articles"
   #And I follow "Course Packs"
 
   
@@ -22,30 +22,34 @@ Background: I'm on the article search page
  # When I have not entered a search query
   #Then I should see the issues "Chile 40 Years Later" and "Chavismo After Chavez"
  
+ @javascript
  Scenario: Search by title
   When I fill in "search_input" with "ch"
   And I follow "title"
-  #And I press "search"
+  And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
-  And I should see the issue "Chavismo After Chaves"
+  And I should see the issue "Chavismo After Chavez"
   But I should not see the issue "Brazilian Colonialism"
   And I should not see the issue "Drug Cartels, Mexico" 
 
+ @javascript
 Scenario: Search by description
   When I fill in "search_input" with "chile"
   And I follow "description"
-  And I press "search"
+  And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
   But I should not see the issue "Brazilian Colonialism"
   And I should not see the issue "Drug Cartels, Mexico" 
   And I should not see the issue "Chavismo After Chaves"
 
+@javascript
 Scenario: Search by tag
   When I fill in "search_input" with "politics"
-  And I follow "tag"
-  And I press "search"
+  #And I follow "tag"
+  #And I press "search"
+  And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Drug Cartels, Mexico" 
   But I should not see the issue "Brazilian Colonialism"

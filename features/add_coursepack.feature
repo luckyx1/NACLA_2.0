@@ -5,8 +5,8 @@ Feature: I want to add coursepacks
  I want to make available particular coursepacks to users
 
 Background: articles have been added to the database
+  Given I have an account
  And I am on the article/coursepack search page
- When I am logged in as NACLA
  And I follow the "New Course pack" page
  Then I should see "New Course Pack"
 

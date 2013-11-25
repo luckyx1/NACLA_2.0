@@ -1,33 +1,42 @@
 <div ng-controller="SearchCtrl">
 	<h1>Search for articles and course packs</h1>
 
+    <p>For Testing:</p>
 	<p> Articles in database: <%= @article_count %> </p>
 	<p> Coursepacks in database: <%= @pack_count %> </p>
 
 	Search for:
-  <input type='checkbox' ng-model='search_articles'>Articles
-  <input type='checkbox' ng-model='search_coursepacks'>Course Packs
+  <input type='checkbox' ng-model='search_articles' id='articles_checkbox' name='Articles'>Articles
+  <input type='checkbox' ng-model='search_coursepacks' id='course_packs_checkbox' name='Course Packs'>Course Packs
+  <!--
+  <input type='radio' ng-model='radio' value='articles'>Articles
+  <input type='radio' ng-model='radio' value='course_packs'>Course Packs
+  {{radio}}
+  -->
 	<p> 
     <input type='text' ng-model='search_input' id="search_input" onkeyup="expandArticles()">
   </p>
   <p>
     Search by:
-    <input type='checkbox' ng-model='search_title'>Title
-    <input type='checkbox' ng-model='search_description'>Description
-    <input type='checkbox' ng-model='search_summary'>Summary
+    <input type='checkbox' ng-model='search_title' name='Title'>Title
+    <input type='checkbox' ng-model='search_description' name='Description'>Description
+    <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
+
 
     <%= render 'shared/search' %>
-    <table id="coursepacks">
-        <thead>
-          <tr>
-            <th> Title </th>
-            <th> Summary </th>
-          <tr>
-         </thead>
-      <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
-        <td> {{coursepack.title}} </td>
-        <td> {{coursepack.summary}} </td>
-      </tbody>
-    </table>
+  <table id="coursepacks">
+    <thead>
+    <tr>
+      <th> Title </th>
+      <th> Summary </th>
+    <tr>
+    </thead>
+    <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
+    <td> {{coursepack.title}} </td>
+    <td> {{coursepack.summary}} </td>
+    </tbody>
+  </table>
+
 	</p>
-</div>
+
+</div>  <!--SearchCtrl -->
