@@ -18,16 +18,28 @@ When(/^I follow "(.*?)"$/) do |link|
   check(link)
 end
 
-Then(/^I should see the issue "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the issue "(.*?)"$/) do |text|
+ if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
 end
 
-Then(/^I should not see the issue "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should not see the issue "(.*?)"$/) do |text|
+  if page.respond_to? :should
+    page.should have_no_content(text)
+  else
+    assert page.has_no_content?(text)
+  end
 end
 
 Given(/^the following articles exist:$/) do |table|
   table.hashes.each do |pack|
    	Article.create(pack)
    end
+end
+
+And /^I wait for (\d+) seconds?$/ do |n|
+  sleep(n.to_i)
 end
