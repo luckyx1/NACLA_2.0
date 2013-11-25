@@ -56,9 +56,10 @@ When /I am logged out/ do
 end
 
 #might need one for Then as well?
-When /I am logged in/ do
-  	page.should have_content 'Logged in as test@test.com'
-end
+# Already defined in add_coursepack_steps.rb. Either use that one or change the regex string of this one.
+# When /I am logged in/ do
+#   	page.should have_content 'Logged in as test@test.com'
+# end
 
 Then /I should not be logged into my account/ do 
 	page.should_not have_content 'Logged in as test@test.com'

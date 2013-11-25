@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :comment, :user, :privacy, :postdate, :article
+  attr_accessible :comment
   belongs_to :user
   belongs_to :course_pack
 
