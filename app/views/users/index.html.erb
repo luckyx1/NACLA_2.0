@@ -1,4 +1,6 @@
-<h1>User Profile</h1>
+<h1><%=@user[:username]%>'s Profile</h1>
+
+<%= @user[:id] %>
 
 <p><%= link_to 'Change Password', edit_user_path %></p>
 <p><%= link_to 'Delete Profile', destroy_user_path, :confirm => "Are you sure you want to delete your profile?" %></p>
@@ -8,8 +10,8 @@
   <% @coursepacks.each do |coursepack| %>
     <p>
       <%= coursepack.title %>
-      <%= link_to 'Show', 'course_packs/' + coursepack.id.to_s %>
-      <%= link_to 'Edit', 'course_packs/' + coursepack.id.to_s + '/edit' %>
+      <%= link_to 'Show', course_pack_path(coursepack[:id]) %>
+      <%= link_to 'Edit', edit_course_pack_path(coursepack[:id]) %>
     </p>
   <% end %>
   <p><%= link_to 'Click Here For More Course Packs', course_packs_path %> </p>

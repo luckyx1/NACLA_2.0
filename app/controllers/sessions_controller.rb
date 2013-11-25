@@ -6,7 +6,7 @@
     user = User.authenticate(params[:username], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to "", :notice => "Logged in successful!"
+      redirect_to user_path(user.id), :notice => "Logged in successful!"
     else
       flash.now.alert = "Invalid username or password"
       render "new"

@@ -6,9 +6,8 @@ Feature: Add comments
 
 	Background: comments existing in the databse
 
-	Given the following comments exits:
-	| comment 					 | 
-	| My first comment.  | 
+	Given the following users exist:
+	| | | | |
 
 
 Scenario: Viewing comments of a coursepack while not logged in.
@@ -34,7 +33,3 @@ Scenario: Commenting on a coursepack while logged in.
 	And I click on "Post"
 	Then I should see "Blah Blah Blah"
 
-Scenario: Viewing all comments made by me.
-	Given I am logged in as a "username"
-	And I am on my profile page
-	Then I should all my comments
