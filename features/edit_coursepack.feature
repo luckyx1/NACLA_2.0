@@ -20,14 +20,14 @@ Background: Starting at the coursepack homepage
 @javascript
 Scenario: When you edit a course pack the information is changed
 	When I select "Edit" for coursepack "Early colombia"
-	#And I add article "Rethining Human rights"
+	And I add article "Rethining Human rights"
 	And I click "Update"
 	When I select "Show" for coursepack "Early Colombia"
-	#Then I should see "Rethinking Human rights"
+	Then I should see "Rethinking Human rights"
 
 @javascript
 Scenario: When you edit a course pack but don't include title or summary it should give you an error
 	When I select "Edit" for coursepack "Early colombia"
-	And I edit "title" with "''"
+	And I edit "title" with ""
 	And I press "Update"
   	Then I should see 'You must assign a title and summary' on the page
