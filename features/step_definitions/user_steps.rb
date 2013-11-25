@@ -27,7 +27,6 @@ end
 
 Then /I should not have my own account/ do
 	page.should_not have_content "Profile Change Password"
-	page.should have_content "Edit Profile"
 end
 
 Given /I have an account/ do
