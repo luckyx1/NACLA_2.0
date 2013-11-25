@@ -1,0 +1,23 @@
+<div ng-controller='CommentsCtrl'>
+<div id='comments' data-url="<%= @comments %>"></div>
+  <% if @user %>
+  <textarea id='comment' ng-model='comment_input' placeholder='Post comments here..'></textarea>
+  <button type='button' ng-click='post()'>Post</button>
+<% end %>
+<table>
+  <tbody ng-repeat='comment in comments'>
+  <tr>
+    <td><div id='comment_user'>User:{{comment.user}}</div></td><br/>
+    <td><div id='comment_body'>Comment:{{comment.comment}}</div></td>
+  </tr>
+
+  </tbody>
+
+
+</table>
+
+
+
+
+
+</div><!-- CommentsCtrl -->

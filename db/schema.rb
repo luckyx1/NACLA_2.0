@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131124223720) do
+ActiveRecord::Schema.define(:version => 20131125000420) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20131124223720) do
     t.integer  "user_id"
     t.boolean  "public"
     t.text     "tags"
+    t.text     "comments"
   end
 
   create_table "documents", :force => true do |t|

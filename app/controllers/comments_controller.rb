@@ -15,7 +15,18 @@ class CommentsController < ApplicationController
   end
 
   def create_comment
-    if
+    if request.xhr?
+      comment = Comment.new(comment:params[:comment])
+      comment.user_id = current_user.id
+      comment.course_pack_id = params[:course_pack_id]
+      if comment.save
+        render :nothing => true, :status => :ok
+      else
+        render :nothing => true, :status => :conflict
+      end
+    else
+      redirect '/'
+    end
   end
 
   #def add
