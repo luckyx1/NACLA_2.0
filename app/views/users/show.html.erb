@@ -4,7 +4,7 @@
   <p><%= link_to 'Delete Profile', destroy_user_path, :confirm => "Are you sure you want to delete your profile?" %></p>
 <% end %>
 <div>
-  <b>Recent Course Packs</b>
+  <b><%= @user.username %>'s Recent Course Packs</b>
   <% @coursepacks.each do |coursepack| %>
     <p>
       <%= coursepack[:title] %>
@@ -15,4 +15,14 @@
     </p>
   <% end %>
   <p><%= link_to 'Click Here For More Course Packs', course_packs_path %> </p>
+</div>
+<div>
+ <b><%= @user.username %>'s Recent Comments </b>
+  <% @comments.each do |comment| %>
+    <p>
+      <% commentPack = CoursePack.find(comment.course_pack_id) %>
+      <b><%= link_to commentPack.title, course_pack_path(commentPack[:id]) %></b>
+      <%= comment.comment %>
+    </p>
+  <% end %>
 </div>
