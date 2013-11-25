@@ -173,6 +173,7 @@ app.factory('Form', function(){
                         data: data,
                         success: function(response) {
                             window.location = '/course_packs';
+                            return false;
                         }
                     });
                 }
