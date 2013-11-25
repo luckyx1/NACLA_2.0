@@ -19,7 +19,9 @@ When(/^I follow "(.*?)"$/) do |link|
 end
 
 Then(/^I should see the issue "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  sleep 5
+  (/#{arg1}/ =~ page.body).should_not == nil
+  #puts page.body
 end
 
 Then(/^I should not see the issue "(.*?)"$/) do |arg1|
