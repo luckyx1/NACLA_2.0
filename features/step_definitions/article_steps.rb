@@ -25,3 +25,9 @@ end
 Then(/^I should not see the issue "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
+
+Given(/^the following articles exist:$/) do |table|
+  table.hashes.each do |pack|
+   	Article.create(pack)
+   end
+end
