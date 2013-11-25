@@ -87,7 +87,7 @@ NACLA::Application.routes.draw do
   # just remember to delete public/index.html.
   #root :to => 'course_packs#index'
   match 'home', :to => "static#index"
-  root :to => "articles#search"
+  root :to => "static#index"
 
   # See how all your routes lay out with "rake routes"
 

@@ -9,7 +9,8 @@ Background: I have an account
 Scenario: logged in to visit profile page
   Given I am logged in
   When I visit the "PROFILE" page
-  Then I should see "Profile"
+  Then I should be logged in as "Alex"
+  And I should see "Profile"
   
 Scenario: logged in to view own coursepacks
   Given I am logged in
@@ -21,5 +22,5 @@ Scenario: not logged in while visiting profile page(sad path)
   When I visit the "PROFILE" page
   Then I should be asked to "Log in"
   When I login with username "Alex" and password "pass"
-  Then I should see "Profile"
-
+  Then I should be logged in as "Alex"
+  And I should see "Profile"

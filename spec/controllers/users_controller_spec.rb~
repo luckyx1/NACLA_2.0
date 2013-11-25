@@ -15,14 +15,6 @@ describe UsersController do
 			response.should be_success
 		end
 		
-		it "redirects to '' on account creation success" do
-  		params = {}
-  		params[:user] = {username: 'Alex', email: 'alex@test.com',
-  			password: 'password', password_confirmation: 'password'}
-  		post :create
-  		expect(response).to render_template('nadsfew')
-		end
-		
 		it "renders new on account creation failure" do
 		  User.create!(username: 'Alex', email: 'alex@test.com',
   			password: 'password', password_confirmation: 'password')
@@ -34,4 +26,14 @@ describe UsersController do
   	end
   	
 	end
+	
+	describe "delete accoun"  do
+	  it "should delete the account" do
+	    @user = User.create!(username: 'Alex', email: 'alex@test.com',
+  			password: 'password', password_confirmation: 'password')
+  		@user.destroy
+  		
+  		User.find_by_username('Alex').should == nil
+    end
+   end
 end

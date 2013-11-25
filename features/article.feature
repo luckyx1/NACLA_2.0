@@ -46,8 +46,8 @@ Scenario: Search by description
 
 #@javascript
 #Scenario: Search by tag
- # When I fill in "search_input" with "politics"
-  ##And I follow "tag"
+  #When I fill in "search_input" with "politics"
+  #And I follow "tag"
   #And I press "search"
   #And I wait for 2 seconds
   #Then I should see the issue "Chile 40 Years Later"

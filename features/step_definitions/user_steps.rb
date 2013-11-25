@@ -56,12 +56,12 @@ When /I am logged out/ do
 end
 
 #might need one for Then as well?
-When /I should be logged in/ do
-  	page.should have_content "Alex's Profile"
+When /I should be logged in as "(.*)"/ do |name|
+  	page.should have_content "Logged in as #{name}"
 end
 
-Then /I should not be logged into my account/ do 
-	page.should_not have_content "Alex's Profile"
+Then /I should not be logged in as "(.*)"/ do |name|
+	page.should_not have_content "Logged in as #{name}"
 end
 
 
@@ -78,13 +78,14 @@ Then /"(.*)" should be added to my account/ do |course_pack|
 end
 
 When /I am on the "(.*)" course pack page/ do |name|
-
-	page.should have_table name
+	within_table name do
+	  click_on 'Show'
+	end
 end
 
 Then /I should be able to write "(.*)" to "(.*)"/ do |comment, course_pack|
 	page.fill_in 'comment', :with => "#{comment}" 
-	click_on 'Add comment'
+	click_on 'Post'
 	page.should have_content "#{comment}"	
 end
 

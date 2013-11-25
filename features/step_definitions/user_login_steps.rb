@@ -34,6 +34,7 @@ When /I login with username "(.*)" and password "(.*)"/ do |user, pass|
     #fill_in 'username', :with => user
     #fill_in 'password', :with => pass
   #end
+  click_on "PROFILE"
   find("form[action='log_in']").fill_in "username" , :with => user
   find("form[action='log_in']").fill_in "password" , :with => pass
   click_button 'Log in'
