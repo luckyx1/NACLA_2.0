@@ -7,6 +7,7 @@ NACLA::Application.routes.draw do
   get "comments/" => "comments#index"
   post "comments/add"
   post "comments/delete" => "comments#delete"
+  match "comments/create_comment" => "comments#create_comment"
 
 
   match 'articles/search' => 'articles#search'

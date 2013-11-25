@@ -5,7 +5,7 @@ Feature: I want to search and view NACLA's articles
 	
 Background: I'm on the article search page 
 
-  Given the following documents exist:
+  Given the following articles exist:
   | title                    | description                              | publication_date| tags | volume | issue |
   | Brazilian Colonialism    | Colonialism of Brazil between 1800-1900  | 20-Sep-2010    | Brazil, colony | 3 | 4 |
   | Drug Cartels, Mexico     | The history of drug cartels in Mexico    | 14-Dec-2003    | drugs, war, poltics     | 6 | 6 |
