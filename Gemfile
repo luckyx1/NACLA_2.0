@@ -58,5 +58,5 @@ gem 'bootstrap-sass', '2.3.1.0'
 # gem 'capistrano'
 
 # To use debugger
-gem 'debugger'
+#gem 'debugger'
 gem 'bcrypt-ruby', :require=>'bcrypt'
