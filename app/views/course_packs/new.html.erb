@@ -9,18 +9,18 @@
     <%= render 'course_pack_form' %>
 
   <p>
-    <input type='text' ng-model='search_input' id="search_input" onkeyup="expandArticles()">
+  <div class='course_pack_headers form_headers'>Search For Articles</div>
+    <input type='text' ng-model='search_input' id="search_input" class='form_input' onkeyup="expandArticles()">
   </p>
   <p>
-    Search by:
+    <div class='course_pack_headers form_headers'>Search by:</div>
   </p>
-    <input type='checkbox' ng-model='search_title'>Title
+    <div class='course_pack_checkboxs'><input type='checkbox' ng-model='search_title' id='course_pack_checkbox'>Title
     <input type='checkbox' ng-model='search_description'>Description
-
-    <%= render 'shared/search' %>
-
-<%= link_to 'Back', course_packs_path %>
-
+  </div>
+    <div id='course_pack_search_div'>
+        <%= render 'shared/search' %>
+    </div>
     <div id='cancel_dialog'>
         <p>Are you sure you want to cancel? Your course pack will is not saved</p>
     </div>

@@ -1,28 +1,28 @@
+<div id='course_pack_header'>
+  <div id='course_pack_title'><%= @user.username %>'s Course Packs</div>
 
-
-<table >
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  </table>
+<%#= link_to 'New Course pack', '/course_packs/new' %>
+    <%= button_to "Add Course Pack", '/course_packs/new',method: :get, id:'new_course_pack'%>
+</div>
 
 <% @course_packs.each do |course_pack| %>
-  <% title = course_pack.title %>
-  <b>Title:</b> <%= title %><br/>
-  <b>Summary:</b> <br/>&nbsp&nbsp&nbsp<%= course_pack.summary %><br/>
-  <table id = "<%= title %>" >
+  <div class='course_pack_show'><a href="<%="/course_packs/#{course_pack.id}"%>" class='show_link'><div>
+  <%# title = course_pack.title %>
+  <div class='course_pack_headers'><%= course_pack.title %></div>
+  <div class='course_pack_content'><%= course_pack.summary.length > 300 ? (course_pack.summary[0...300] + "...") : course_pack.summary %></div>
+  <table id = "<%= course_pack.title %>" style='display:none'>
   <tr>
-    <td><%= link_to 'Show', course_pack %></td>
+    <!--<td><%#= link_to 'Show', course_pack %></td>  -->
     <td><%= link_to 'Edit', edit_course_pack_path(course_pack) %></td>
     <td><%= link_to 'Destroy', course_pack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
   </table>
     <br>
+    </div></a>
+    <%= button_to "Destroy", course_pack,method: :delete,data:{confirm: "Are you sure?"}, id:'course_pack_destroy'%>
+      </div>
 <% end %>
 
 
 <br>
 
-<%= link_to 'New Course pack', '/course_packs/new' %>

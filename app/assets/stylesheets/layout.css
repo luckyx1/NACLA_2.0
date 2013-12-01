@@ -381,7 +381,7 @@ h1 {
 	float:left;
 }
 #content {
-	width: 98%;
+	width: 100%;
 	height: 98%;
 	margin: auto auto;
 }
@@ -410,4 +410,19 @@ h1 {
 }
 html, body{
 	height: 100%;
+}
+
+
+#left_login_container{
+    text-align: center;
+}
+#username,#password{
+    max-width: 95%;
+    margin:5px;
+}
+.login_div{
+    max-width: 90%;
+}
+#left_signin_submit{
+    margin:auto;
 }

@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
   <script>
   	$(document).ready(function(){
-    	$("#shadow_bar").sticky({topSpacing:40});
+    	//$("#shadow_bar").sticky({topSpacing:40});
     	$('.menu_link').css("visibility", "hidden");
 		$('.dropdown-toggle').dropdown();
 		  var width = $(window).width();
@@ -143,8 +143,8 @@
 							<p><%= link_to "Log out", log_out_path %></p>
 						<% else %>						
 							<%= form_tag "/log_in" do %>
-	                       			 		<%= text_field_tag :username, params[:username], id: "username", placeholder: "Username" %>
-	                        				<%= password_field_tag :password, params[:password], id: "password", placeholder: "Password" %>
+	                       			 		<div class='login_div'><%= text_field_tag :username, params[:username], id: "username", placeholder: "Username" %>        </div>
+                                            <div class='login_div'><%= password_field_tag :password, params[:password], id: "password", placeholder: "Password" %>    </div>
                        				 		<button class="btn" id="left_signin_submit" type="submit">Sign In</button>
                         				<% end %>
 				                        <p style="text-align:center; color:navy; font-size:10px; font-weight: bold; line-height:15px; margin-top:-18px;"><%= link_to "Register for an account", sign_up_path%></p>

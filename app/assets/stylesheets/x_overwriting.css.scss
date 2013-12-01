@@ -1,0 +1,23 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//File used to overwrite CSS
+
+a.show_link:hover{
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  background-color:transparent;
+
+}
+a:visited{
+  color:inherit;
+}
+
+#remove_article:hover{
+  color:red;
+  background-color:transparent;
+  text-decoration: none;
+}
