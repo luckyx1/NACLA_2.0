@@ -54,3 +54,18 @@ table#coursepacks th, table#coursepacks td {
   padding: 4px;
   text-align: left;
 }
+
+//Modal
+#modal_content{
+  display:block;
+}
+#download_button{
+  position:absolute;
+  right:200px;
+  bottom:10px;
+}
+
+
+#modal_title{
+  background-color: #DEDEA5;
+}

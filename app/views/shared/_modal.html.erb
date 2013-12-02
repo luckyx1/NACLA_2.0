@@ -1,18 +1,16 @@
 <div  id="show_article">
 <!--<div id='show_article'> <!--data-modal-overflow="true">  -->
   <div id="modal_container">
-    <h2>
-      {{modal.title}}
-    </h2>
+    <div id='modal_title'>
+          <h2>
+          {{modal.title}}
+           </h2>
+    </div>
     <div id='thumbnail_container'>
       <img ng-src="{{modal.thumbnail_link}}">
     </div>
 
-    <div>
-      <p> Volume: {{modal.volume}} </p>
-      <p> Issue: {{modal.issue}} </p>
-      <p> Published: {{dateFormatting(modal.publication_date)}} </p>
-    </div>
+    <div id='modal_content'>
 
     <div>
       <h3> Description </h3>
@@ -23,6 +21,14 @@
       <h3> Tags </h3>
       <p> {{modal.tags}} </p>
     </div>
+
+  <div>
+    <div class='course_pack_headers form_headers'> Volume:</div> {{modal.volume}} </p>
+    <div class='course_pack_headers form_headers'>Issue:</div> {{modal.issue}} </p>
+    <div class='course_pack_headers form_headers'>Published:</div> {{dateFormatting(modal.publication_date)}} </p>
   </div>
-  <%= button_to "Download", :action => :download %> <button type='button' ng-click='close_modal()' id='modal_close'>Close Article Viewer</button>
+  </div>
+  </div>
+  <%= button_to "Download", {:action => :download},{:id=>'download_button'} %> <button type='button' ng-click='close_modal()' id='modal_close'>Close Article Viewer</button>
+
 </div> <!-- Modal -->

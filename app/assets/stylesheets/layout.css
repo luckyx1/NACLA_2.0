@@ -1,4 +1,5 @@
 #modal_container {
+    position:relative;
 	width:760px; 
 	margin-top:10px; 
 	margin-bottom:10px; 
