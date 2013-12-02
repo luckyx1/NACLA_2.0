@@ -173,6 +173,7 @@ app.factory('Form', function(){
                         data: data,
                         success: function(response) {
                             window.location = '/course_packs';
+                            return false;
                         }
                     });
                 }
@@ -197,13 +198,24 @@ function CreateCoursePackCtrl($scope,$resource, Form,Page){
 
 
     $scope.add_to_selected = function(article){
-        if($scope.selected_articles.indexOf(article) == -1)
+        if($scope.selected_articles.indexOf(article) == -1){
             $scope.selected_articles.push(article);
+            var new_height = parseInt($('#center_content').css('height')) + 20;
+            var new_scroll = $(document).scrollTop() + 20;
+            $(document).scrollTop(new_scroll);
+            $('#center_content').css('height',new_height);
+        }
+
 
     };
 
     $scope.remove_selected = function(article){
         $scope.selected_articles.splice($scope.selected_articles.indexOf(article),1);
+
+        var new_height = parseInt($('#center_content').css('height')) - 20;
+        $('#center_content').css('height',new_height);
+        var new_scroll = $(document).scrollTop() - 20;
+        $(document).scrollTop(new_scroll);
     };
 
 }
@@ -286,3 +298,13 @@ function CommentsCtrl($scope){
         };
 }
 
+
+
+$(document).ready(function(){
+    //Hover over show link to highlight the parent div
+    $(".show_link").hover(function(){
+        $(this).closest("div").css("background-color","rgba(255,165,0,.3)");
+    },function(){
+        $(this).closest("div").css("background-color","rgba(255,165,0,.2)");
+    });
+})

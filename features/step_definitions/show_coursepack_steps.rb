@@ -4,11 +4,11 @@ end
 
 
 When(/^I add article "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+ click_button('add_article')
 end
 
 When(/^I edit "(.*?)" with "(.*?)"$/) do |field, value|
-  fill_in  field.downcase.to_str, :with => nil
+  page.fill_in  field.downcase.to_str, :with => " "
 end
 
 When(/^I tap on "(.*?)"$/) do |val|

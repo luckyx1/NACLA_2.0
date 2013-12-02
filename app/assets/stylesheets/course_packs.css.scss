@@ -1,8 +1,131 @@
 // Place all the styles related to the CoursePacks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.course_pack_button{
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border:none;
+}
+.form_button{
+  margin-left:5px;
+}
+#remove_article{
+  margin-left: 5px;
+}
+#article_list{
+  width:95%;
+  margin:auto;
+  border:solid;
+  border-width:1px;
+  border-color:transparent;
+  border-bottom-color: dimgrey;
+  border-top-color: dimgrey;
+}
+#course_pack_header{
+  position:relative;
+  height:70px;
+}
+#course_pack_title{
+  padding-top: 2px;
+  text-align: center;
+  width:100%;
+  font-weight: bold;
+  font-size:large;
+}
+#new_course_pack{
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 8px;
+  border:none;
+}
+.course_pack_show{
+  position:relative;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color:rgba(255,165,0,.2);
+  padding-left: 15px;
+  padding-top:10px;
+  margin: 5px;
+}
+
+.course_pack_headers{
+  font-weight: bold;
+  font-size: medium;
+  max-width: 100%;
+}
+
+.course_pack_content{
+  margin-left:10px  ;
+  height: 55px;
+  overflow:hidden;
+}
+
+#course_pack_destroy{
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  margin-right:3px;
+  margin-bottom:3px;
+  border:none;
+  background-color: orange;
+}
+.show_link{
+  margin-left: -10px;
+  display:block;
+}
+a.show_link:hover{
+  outline:0;
+}
+
+#container {
+	width: 100%;
+}
+
 #header {
-	display: inline-block;
-	background-color: #015367;
-	overflow: hidden;
+	width: 100%;
+}
+
+#course_pack_error {
+    color:red;
+}
+
+#cancel_dialog{
+    display:none;
+}
+.textarea_input{
+  width:90%;
+}
+.form_input{
+  margin-left:10px
+}
+.form_headers{
+  margin-left: 5px;
+}
+
+#course_pack_search_div{
+  height:400px;
+}
+
+#user_comment_div{
+  width:90%;
+  margin:auto;
+}
+#comment_input{
+  width: 100%;
+  display:block;
+}
+#post_button{
+  margin-right:0;
+  margin-left:88%;
+}
+
+.comment_show{
+  width:95%;
+  margin:auto;
+  margin-top:20px;
 }
