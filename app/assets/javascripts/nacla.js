@@ -63,8 +63,9 @@ app.filter('input_filter', function()
             {
                 if (coursepacks_flag && ('summary' in e))
                 {
-                    if ( (title_flag && search_exp.test(e.title)) || 
-                         (summary_flag && search_exp.test(e.summary)) )
+                    if ( e.public && 
+                         ( (title_flag && search_exp.test(e.title)) || 
+                           (summary_flag && search_exp.test(e.summary)) ) )
                     {
                         filtered_result.push(e);
                     }
@@ -291,7 +292,6 @@ function SearchCtrl($scope, $resource){
             $scope.articles_radio = false;
         }
     }
-
 
 };
 
