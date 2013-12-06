@@ -21,6 +21,11 @@
     <input type='checkbox' ng-model='search_title' name='Title'>Title
     <input type='checkbox' ng-model='search_description' name='Description'>Description
     <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
+    <p>
+      Sort Results by:
+      <input type="radio" ng-model='sort_result' name="sortBy" value="sort_title"> Title 
+      <input type="radio" ng-model='sort_result' name="sortBy" value="sort_date"> Publication Date
+    </p>
 
 
     <%= render 'shared/search' %>

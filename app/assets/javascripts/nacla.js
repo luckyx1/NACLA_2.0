@@ -43,6 +43,7 @@ app.filter('input_filter', function()
         summary_flag, articles_flag, coursepacks_flag)
     {
         filtered_result = [];
+        var sort_category = $( "input:radio[name=sortBy]:checked" ).val();
 
         if (isNullOrUndefined(articles_flag))
         {
@@ -77,6 +78,14 @@ app.filter('input_filter', function()
                     }
                 }
             });
+        }
+        if (sort_category == 'sort_title')
+        {
+            filtered_result.sort(compareTitle);
+        }
+        if (sort_category == 'sort_date')
+        {
+            filtered_result.sort(compareDate);
         }
         return filtered_result;
     };
@@ -186,6 +195,24 @@ app.factory('Form', function(){
 function isNullOrUndefined(value)
 {
     return (typeof value === "undefined" || value === null);
+}
+
+function compareTitle(a,b)
+{
+    if (a.title < b.title)
+        return -1;
+    if (a.title > b.title)
+        return 1;
+    return 0;   
+}
+
+function compareDate(a,b)
+{
+    if (a.publication_date < b.publication_date)
+        return -1;
+    if (a.publication_date > b.publication_date)
+        return 1;
+    return 0;      
 }
 
 function CreateCoursePackCtrl($scope,$resource, Form,Page){
