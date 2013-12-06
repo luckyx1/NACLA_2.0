@@ -58,9 +58,21 @@ class UsersController < ApplicationController
 
   def destroy
     userid = current_user.id
+    coursepacks = current_user.course_packs
+    coursepacks.each do |coursepack|
+      comments = coursepack.comments
+      comments.each do |comment|
+        comment.destroy
+      end
+      coursepack.destroy
+    end
+    comments = current_user.comments
+    comments.each do |comment|
+      Comment.destroy(comment.id)
+    end
     session[:user_id] = nil
     User.destroy(userid)
     redirect_to '', :notice => "Your account was deleted"
   end
 
-end	
+end
