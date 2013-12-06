@@ -281,6 +281,7 @@ function SearchCtrl($scope, $resource){
     //$scope.course_pack_radio = false;
     $scope.search_coursepacks = true;
     $scope.search_articles = true;
+    $scope.sort_result = "sort_title";
 
     $scope.swap = function(swap){
         if(swap == 'articles'){

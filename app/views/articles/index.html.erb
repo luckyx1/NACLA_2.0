@@ -23,10 +23,9 @@
     <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
     <p>
       Sort Results by:
-      <input type="radio" ng-model='sort_result' name="sortBy" value="sort_title"> Title 
-      <input type="radio" ng-model='sort_result' name="sortBy" value="sort_date"> Publication Date
+      <input id="title_sort" type="radio" ng-model='sort_result' name="sortBy" value="sort_title"> Title 
+      <input id="date_sort" type="radio" ng-model='sort_result' name="sortBy" value="sort_date"> Publication Date
     </p>
-
 
     <%= render 'shared/search' %>
   <table id="coursepacks">
