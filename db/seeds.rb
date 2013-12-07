@@ -65,7 +65,38 @@ articles = [
 		:volume => 29,
 		:issue => 3,
 		:download_link => nil
+	},
+
+	{	:title => "The Other Super Power: The Soviet Union and Latin America",
+		:description => "NORTH AMERICANS MAY BE TAKEN BY surprise when Soviet leader Mikhail S. Gor- bachev visits Latin America later this year.",
+		:publication_date => '1-Jan-1987',
+		:tags => "Cold War",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/02903001.png",
+		:volume => 21,
+		:issue => 1,
+		:download_link => nil
+	},
+
+	{	:title => "D'Aubuisson's New ARENA",
+		:description => 'IN MARCH EL SALVADOR LEAPT BACK ONTO MARCH EL SALVADOR LEAPT BACK ONTO the front pages when Aifredo "Freddy" Cristiani of front pages when Alfredo "Freddy" Cristiani of the far Right Nationalist Republican Alliance swept to the far Right Nationalist Republican Alliance swept to the presidency, and the guerrillas of the Farabundothe presidency, and the guerrillas of the Farabundo MartI Marti National Liberation Front mounted their largest military National Liberation Front mounted their largest military offensive in over five years. For us the change was offensive in over five years.',
+		:publication_date => '1-Jul-1989',
+		:tags => "presidency, El Salvador",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/02302001.png",
+		:volume => 23,
+		:issue => 2,
+		:download_link => nil
+	},
+
+	{	:title => "Central America: Legacies of War",
+		:description => "In the 1980s, Central America sank deep into political turmoil amid civil wars, brutal military dictatorships, and U.S. intervention. Three decades later, for the first issue of NACLA's 45th anniversary volume, we look to the legacies of war in Central America. Honduras is reliving its history of military coups, repression, and impunity. In Guatemala, a former dictator is charged with genocide. Across the region, former guerrillas and generals are in power, the military is again taking a disturbingly prominent role in policing, and communities are defending their land from powerful interests.",
+		:publication_date => '1-Feb-2012',
+		:tags => "war, 1980s",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/451Cover_HI.jpg",
+		:volume => 45,
+		:issue => 1,
+		:download_link => nil
 	}
+
 ]
 
 articles.each do |article|
