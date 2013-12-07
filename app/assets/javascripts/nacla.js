@@ -43,6 +43,7 @@ app.filter('input_filter', function()
         summary_flag, articles_flag, coursepacks_flag)
     {
         filtered_result = [];
+        var sort_category = $( "input:radio[name=sortBy]:checked" ).val();
 
         if (isNullOrUndefined(articles_flag))
         {
@@ -62,8 +63,9 @@ app.filter('input_filter', function()
             {
                 if (coursepacks_flag && ('summary' in e))
                 {
-                    if ( (title_flag && search_exp.test(e.title)) || 
-                         (summary_flag && search_exp.test(e.summary)) )
+                    if ( e.public && 
+                         ( (title_flag && search_exp.test(e.title)) || 
+                           (summary_flag && search_exp.test(e.summary)) ) )
                     {
                         filtered_result.push(e);
                     }
@@ -77,6 +79,14 @@ app.filter('input_filter', function()
                     }
                 }
             });
+        }
+        if (sort_category == 'sort_title')
+        {
+            filtered_result.sort(compareTitle);
+        }
+        if (sort_category == 'sort_date')
+        {
+            filtered_result.sort(compareDate);
         }
         return filtered_result;
     };
@@ -190,6 +200,24 @@ function isNullOrUndefined(value)
     return (typeof value === "undefined" || value === null);
 }
 
+function compareTitle(a,b)
+{
+    if (a.title < b.title)
+        return -1;
+    if (a.title > b.title)
+        return 1;
+    return 0;   
+}
+
+function compareDate(a,b)
+{
+    if (a.publication_date < b.publication_date)
+        return -1;
+    if (a.publication_date > b.publication_date)
+        return 1;
+    return 0;      
+}
+
 function CreateCoursePackCtrl($scope,$resource, Form,Page){
     Page.init($scope,Page);
     Form.init($scope,Form);
@@ -256,6 +284,7 @@ function SearchCtrl($scope, $resource){
     //$scope.course_pack_radio = false;
     $scope.search_coursepacks = true;
     $scope.search_articles = true;
+    $scope.sort_result = "sort_title";
 
     $scope.swap = function(swap){
         if(swap == 'articles'){
@@ -265,7 +294,6 @@ function SearchCtrl($scope, $resource){
             $scope.articles_radio = false;
         }
     }
-
 
 };
 

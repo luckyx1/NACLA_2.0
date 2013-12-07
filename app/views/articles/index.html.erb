@@ -21,7 +21,11 @@
     <input type='checkbox' ng-model='search_title' name='Title'>Title
     <input type='checkbox' ng-model='search_description' name='Description'>Description
     <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
-
+    <p>
+      Sort Results by:
+      <input id="title_sort" type="radio" ng-model='sort_result' name="sortBy" value="sort_title"> Title 
+      <input id="date_sort" type="radio" ng-model='sort_result' name="sortBy" value="sort_date"> Publication Date
+    </p>
 
     <%= render 'shared/search' %>
   <table id="coursepacks">
@@ -32,7 +36,7 @@
     <tr>
     </thead>
     <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
-    <td> {{coursepack.title}} </td>
+    <td> <a href="course_packs/{{coursepack.id}}"> {{coursepack.title}} </a> </td>
     <td> {{coursepack.summary}} </td>
     </tbody>
   </table>
