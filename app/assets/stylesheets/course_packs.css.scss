@@ -102,8 +102,11 @@ a.show_link:hover{
 	width: 100%;
 }
 
-#course_pack_error {
+.course_pack_error {
     color:red;
+}
+.course_pack_success{
+  color:green;
 }
 
 #cancel_dialog{

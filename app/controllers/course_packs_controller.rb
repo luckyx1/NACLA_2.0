@@ -57,9 +57,11 @@ class CoursePacksController < ApplicationController
           @course_pack.articles = []
           add_articles(@course_pack)
           @course_pack.save
+          flash[:notice] = 'Update successful'
           redirect_to 'index', notice: 'Course pack was successfully updated.'
         }
       else
+        flash[:error] = 'Update successful'
         format.html { render action: "edit" }
       end
 

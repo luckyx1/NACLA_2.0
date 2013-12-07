@@ -175,6 +175,7 @@ app.factory('Form', function(){
                     if($scope.course_pack){
                         var url = '/course_packs/update';
                         var data = {"article_ids":article_ids,"id":$scope.course_pack["id"],"course_pack":{"title":$scope.title,'public':$scope.public, 'featured':$scope.featured, "summary":$scope.summary}};
+                        var redirect = '/course_packs/' + $scope.course_pack["id"];
                     }
                     else{
                         if($scope.featured == true)
@@ -182,6 +183,7 @@ app.factory('Form', function(){
 
                         var url = '/course_packs/create';
                         var data = {"title":$scope.title, "summary":$scope.summary, 'public':$scope.public, "article_ids":article_ids, 'user_id':user_id, 'featured':$scope.featured};
+                        var redirect = '/course_packs'
                     }
 
                     $.ajax({ url: url,
@@ -189,7 +191,7 @@ app.factory('Form', function(){
                         beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
                         data: data,
                         success: function(response) {
-                            window.location = '/course_packs';
+                            window.location = redirect;
                             return false;
                         }
                     });

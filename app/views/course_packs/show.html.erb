@@ -4,7 +4,7 @@
 
 <div id='course_pack_content' data-url="<%= @course_pack %>"></div>
 <div id='articles_content' data-url="<%= @articles %>"></div>
-
+  <span class='course_pack_success'><%=flash[:notice]%></span>
   <div class='header_filler'>
   <div class='content_bar'><div class='course_pack_headers form_headers'>Title:</div></div></div>
     <div class='form_input'>{{course_pack.title}}</div>

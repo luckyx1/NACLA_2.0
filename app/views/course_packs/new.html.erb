@@ -3,8 +3,8 @@
 <div id='course_pack_content' data-url="<%= @course_pack %>"></div>
 <div id='articles_content' data-url="<%= @articles %>"></div>
 <div ng-controller="CreateCoursePackCtrl">
-
-    <span id='course_pack_error'>{{error}}</span><br/>
+    <span class='course_pack_error'><%= flash[:error] %></span>
+    <span class='course_pack_error'>{{error}}</span><br/>
 
     <%= render 'course_pack_form' %>
 
