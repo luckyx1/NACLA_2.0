@@ -30,7 +30,7 @@ class CoursePacksController < ApplicationController
 
   def create
     if request.xhr?
-          @course_pack = CoursePack.new(title:params[:title],summary:params[:summary])
+          @course_pack = CoursePack.new(title:params[:title],summary:params[:summary], public:params[:public])
           @course_pack.user = User.find_by_id(params[:user_id])
           add_articles @course_pack
 
