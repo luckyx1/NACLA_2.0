@@ -64,6 +64,10 @@ class CoursePacksController < ApplicationController
 
   def destroy
     @course_pack = CoursePack.find(params[:id])
+    comments = @course_pack.comments
+    comments.each do |comment|
+      comment.destroy
+    end
     @course_pack.destroy
 
     respond_to do |format|

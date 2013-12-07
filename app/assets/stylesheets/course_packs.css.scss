@@ -12,15 +12,15 @@
 #remove_article{
   margin-left: 5px;
 }
-#article_list{
-  width:95%;
-  margin:auto;
-  border:solid;
-  border-width:1px;
-  border-color:transparent;
-  border-bottom-color: dimgrey;
-  border-top-color: dimgrey;
-}
+//#article_list{
+//  width:95%;
+//  margin:auto;
+//  border:solid;
+//  border-width:1px;
+//  border-color:transparent;
+//  border-bottom-color: dimgrey;
+//  border-top-color: dimgrey;
+//}
 #course_pack_header{
   position:relative;
   height:70px;
@@ -32,7 +32,7 @@
   font-weight: bold;
   font-size:large;
 }
-#new_course_pack{
+.new_course_pack{
   -webkit-border-radius: 5px;
   border-radius: 5px;
   position: absolute;
@@ -69,6 +69,18 @@
   position:absolute;
   bottom:0;
   right:0;
+  margin-right:3px;
+  margin-bottom:3px;
+  border:none;
+  background-color: orange;
+}
+
+#edit_course_pack{
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position:absolute;
+  bottom:0;
+  right:75px;
   margin-right:3px;
   margin-bottom:3px;
   border:none;
@@ -128,4 +140,8 @@ a.show_link:hover{
   width:95%;
   margin:auto;
   margin-top:20px;
+}
+
+.content_bar{
+  width:100%;
 }

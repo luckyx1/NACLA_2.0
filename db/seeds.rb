@@ -71,3 +71,7 @@ articles = [
 articles.each do |article|
   Article.create!(article)
 end
+
+u = User.create!( :username => "admin", :email => "admin", :password => "NACLAadmin")
+u.admin = true
+u.save

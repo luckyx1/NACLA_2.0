@@ -67,20 +67,21 @@ end
 
 When /I create a new course pack named "(.*)" with summary "(.*)"/ do |name, summary|
   click_on 'Click Here For More Course Packs'
-  click_on 'New Course pack'
+  click_on 'New Course Pack'
 	page.fill_in 'title', :with => name
 	page.fill_in 'summary', :with => summary
 	click_on 'Create'
 end
 
 Then /"(.*)" should be added to my account/ do |course_pack|
-  page.should have_content "Title: #{course_pack}"
+  page.should have_content "#{course_pack}"
 end
 
 When /I am on the "(.*)" course pack page/ do |name|
-	within_table name do
-	  click_on 'Show'
-	end
+  click_on 'show_link'
+	#within_table name do
+	#  click_on 'Show'
+	#end
 end
 
 Then /I should be able to write "(.*)" to "(.*)"/ do |comment, course_pack|

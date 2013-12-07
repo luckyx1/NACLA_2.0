@@ -20,17 +20,17 @@ Scenario: When you click on a course pack it shows it
   When I fill in 'Title' with 'Early Colombia'
   And I fill in 'Summary' with 'As early as 1392...'
   And I press the 'Create' button
-	When I select "Show" for coursepack "Early Colombia"
+	When I select the link "Show" for coursepack "Early Colombia"
 	And I should see "As early as 1392..."
 
 @javascript
 Scenario: When you create a course pack, then click show it should show the same info
-	When I tap on "New Course pack" 
+	When I tap on "New Course Pack"
 	And I fill in 'Title' with 'Early Mexico'
     And I fill in 'Summary' with 'In 1672...'
     And I press the 'Create' button
     Then I should be on the "course_packs" page
-    When I select "Show" for coursepack "Early Mexico"
+    When I select the link "Show" for coursepack "Early Mexico"
     Then I should see "In 1672..."
 
 
