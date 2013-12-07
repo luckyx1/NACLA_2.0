@@ -36,7 +36,7 @@
     <tr>
     </thead>
     <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
-    <td> {{coursepack.title}} </td>
+    <td> <a href="course_packs/{{coursepack.id}}"> {{coursepack.title}} </a> </td>
     <td> {{coursepack.summary}} </td>
     </tbody>
   </table>
