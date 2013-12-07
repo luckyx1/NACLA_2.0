@@ -144,7 +144,8 @@ app.factory('Form', function(){
             if($scope.course_pack){
                 $scope.title = $scope.course_pack['title'];
                 $scope.summary = $scope.course_pack['summary'];
-                $scope.public = $scope.course_pack['public']
+                $scope.public = $scope.course_pack['public'];
+                $scope.featured = $scope.course_pack['featured'];
                 $scope.form_button = 'Update'
                 $scope.selected_articles = $scope.articles;
             }
@@ -152,6 +153,7 @@ app.factory('Form', function(){
                 $scope.title = '';
                 $scope.summary = '';
                 $scope.public = false;
+                $scope.featured = false;
                 $scope.form_button = 'Create'
                 $scope.selected_articles = [];
             };
@@ -172,11 +174,14 @@ app.factory('Form', function(){
 
                     if($scope.course_pack){
                         var url = '/course_packs/update';
-                        var data = {"article_ids":article_ids,"id":$scope.course_pack["id"],"course_pack":{"title":$scope.title,'public':$scope.public, "summary":$scope.summary}};
+                        var data = {"article_ids":article_ids,"id":$scope.course_pack["id"],"course_pack":{"title":$scope.title,'public':$scope.public, 'featured':$scope.featured, "summary":$scope.summary}};
                     }
                     else{
+                        if($scope.featured == true)
+                            $scope.public = true;
+
                         var url = '/course_packs/create';
-                        var data = {"title":$scope.title, "summary":$scope.summary, 'public':$scope.public, "article_ids":article_ids, 'user_id':user_id};
+                        var data = {"title":$scope.title, "summary":$scope.summary, 'public':$scope.public, "article_ids":article_ids, 'user_id':user_id, 'featured':$scope.featured};
                     }
 
                     $.ajax({ url: url,

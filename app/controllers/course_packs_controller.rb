@@ -13,7 +13,12 @@ class CoursePacksController < ApplicationController
   end
 
   def show
-    show_or_edit('show')
+    coursePack = CoursePack.find(params[:id])
+    if coursePack.public or current_user.id == coursePack.user_id
+      show_or_edit('show')
+    else
+      redirect_to('/')
+    end
   end
 
   def new
@@ -30,7 +35,7 @@ class CoursePacksController < ApplicationController
 
   def create
     if request.xhr?
-          @course_pack = CoursePack.new(title:params[:title],summary:params[:summary], public:params[:public])
+          @course_pack = CoursePack.new(title:params[:title],summary:params[:summary], public:params[:public], featured:params[:featured])
           @course_pack.user = User.find_by_id(params[:user_id])
           add_articles @course_pack
 
