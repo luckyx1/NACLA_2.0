@@ -175,7 +175,7 @@ app.factory('Form', function(){
                     if($scope.course_pack){
                         var url = '/course_packs/update';
                         var data = {"article_ids":article_ids,"id":$scope.course_pack["id"],"course_pack":{"title":$scope.title,'public':$scope.public, 'featured':$scope.featured, "summary":$scope.summary}};
-                        var redirect = '/course_packs/' + $scope.course_pack["id"];
+                        var redirect = '/course_packs/' + $scope.course_pack["id"] + '?success=true';
                     }
                     else{
                         if($scope.featured == true)
