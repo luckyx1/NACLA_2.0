@@ -8,15 +8,17 @@
   overflow-y: scroll;
 }
 
+
 table.articles{
   width:100%;
 }
+
 table.articles th {
   //width: 200px;
   //height: 2px;
   border: 2px solid white;
   font-weight: bold;
-  background-color: wheat;
+  background-color: orange;
 }
 
 .title_column {
@@ -45,14 +47,19 @@ table.articles tbody {
   padding: 4px;
 }
 
+table#coursepacks{
+  width: 100%;
+}
+
+
 table#coursepacks th {
   border: 2px solid white;
   font-weight: bold;
-  background-color: wheat;
+  background-color: orange;
 }
 table#coursepacks th, table#coursepacks td {
   padding: 4px;
-  text-align: left;
+  text-align: center;
 }
 
 //Modal

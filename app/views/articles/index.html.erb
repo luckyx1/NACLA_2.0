@@ -1,46 +1,61 @@
 <div ng-controller="SearchCtrl">
-	<h1>Search for articles and course packs</h1>
-
-    <p>For Testing:</p>
-	<p> Articles in database: <%= @article_count %> </p>
-	<p> Coursepacks in database: <%= @pack_count %> </p>
 
 	Search for:
-  <input type='checkbox' ng-model='search_articles' id='articles_checkbox' name='Articles'>Articles
-  <input type='checkbox' ng-model='search_coursepacks' id='course_packs_checkbox' name='Course Packs'>Course Packs
-  <!--
-  <input type='radio' ng-model='radio' value='articles'>Articles
-  <input type='radio' ng-model='radio' value='course_packs'>Course Packs
-  {{radio}}
-  -->
-	<p> 
-    <input type='text' ng-model='search_input' id="search_input" onkeyup="expandArticles()">
-  </p>
-  <p>
-    Search by:
-    <input type='checkbox' ng-model='search_title' name='Title'>Title
-    <input type='checkbox' ng-model='search_description' name='Description'>Description
-    <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
-    <p>
-      Sort Results by:
-      <input id="title_sort" type="radio" ng-model='sort_result' name="sortBy" value="sort_title"> Title 
-      <input id="date_sort" type="radio" ng-model='sort_result' name="sortBy" value="sort_date"> Publication Date
+  <button ng-click="show_articles_table()" ng-model='search_articles' id='articles_checkbox' name='Articles'>Articles</button>
+  <button ng-click="show_coursepacks_table()" ng-model='search_coursepacks' id='course_packs_checkbox' name='Course Packs'>Course Packs</button>
+  
+  <div ng-app>
+  	<p> 
+      Keywords: <input type='text' ng-model='search_input' id="search_input" onkeyup="expandArticles()">
     </p>
 
-    <%= render 'shared/search' %>
-  <table id="coursepacks">
-    <thead>
-    <tr>
-      <th> Title </th>
-      <th> Summary </th>
-    <tr>
-    </thead>
-    <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks">
-    <td> <a href="course_packs/{{coursepack.id}}"> {{coursepack.title}} </a> </td>
-    <td> {{coursepack.summary}} </td>
-    </tbody>
-  </table>
+    <div ng-show="articles_table_show">
+      <p>
+        Search by:
+        <input type='checkbox' ng-model='search_title' name='Title'>Title
+        <input type='checkbox' ng-model='search_description' name='Description'>Description
+      </p>
+      <p>
+        Sort Results by:
+        <input id="title_sort_articles" type="radio" ng-model='sort_result_articles' name="sortByArticle" value="sort_title"> Title 
+        <input id="date_sort_articles" type="radio" ng-model='sort_result_articles' name="sortByArticle" value="sort_date"> Publication Date
+      </p>
+      <h3> Articles </h3> 
+      <p> <%= render 'shared/search' %> </p>
+    </div>
 
-	</p>
+    <div ng-show="coursepacks_table_show">
+      <p>
+        Search by:
+        <input type='checkbox' ng-model='search_title' name='Title'>Title
+        <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
+      </p>
+      <p>
+        Sort Results by:
+        <input id="title_sort_packs" type="radio" ng-model='sort_result_packs' name="sortByPack" value="sort_title"> Title 
+        <input id="user_sort_packs" type="radio" ng-model='sort_result_packs' name="sortByPack" value="sort_user"> User
+      </p>
+      <h3> Course Packs </h3> 
+      <p>
+        <table id="coursepacks">
+          <thead>
+          <tr>
+            <th> Title </th>
+            <th> Summary </th>
+            <th> User </th>
+          <tr>
+          </thead>
+        
+          <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks" >
+          <td> <a href="course_packs/{{coursepack.id}}"> {{coursepack.title}} </a> </td>
+          <td> {{coursepack.summary}} </td>
+          <td> {{coursepack.user_id}} </td>
+          </tbody>
+          
+        </table>
+    	</p>
+    </div>
+
+  </div>
 
 </div>  <!--SearchCtrl -->
