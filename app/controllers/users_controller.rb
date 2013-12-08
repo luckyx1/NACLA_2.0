@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_filter :require_login, except: [:new, :create]
+  set_tab :home, :edit
    
   def new
     @user = User.new
@@ -49,6 +50,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @coursepacks = CoursePack.find_all_by_user_id(@user[:id], :order => "created_at desc", :limit =>5) || []
+    @coursepacks.each do |coursepack|
+      coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
+    end
     @comments = Comment.find_all_by_user_id(@user.id, :order => "created_at desc", :limit => 10) || []
   end
   

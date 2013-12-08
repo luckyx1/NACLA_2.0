@@ -5,6 +5,9 @@ class CoursePacksController < ApplicationController
   def index
     @user = current_user
     @course_packs = CoursePack.find_all_by_user_id(current_user.id) || []
+    @course_packs.each do |coursepack|
+      coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
+    end
 
     respond_to do |format|
       format.html # index.html.erb

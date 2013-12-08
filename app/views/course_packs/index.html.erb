@@ -9,7 +9,7 @@
   <div class='course_pack_show'><a href="<%="/course_packs/#{course_pack.id}"%>" class='show_link' id='show_link'><div>
   <%# title = course_pack.title %>
   <div class='course_pack_headers'><%= course_pack.title %></div>
-  <div class='course_pack_content'><%= course_pack.summary.length > 300 ? (course_pack.summary[0...300] + "...") : course_pack.summary %></div>
+  <div class='course_pack_content'><%= course_pack.summary %></div>
   <table id = "<%= course_pack.title %>" style='display:none'>
   <tr>
     <!--<td><%#= link_to 'Show', course_pack %></td>  -->
