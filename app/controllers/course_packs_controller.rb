@@ -13,6 +13,7 @@ class CoursePacksController < ApplicationController
   end
 
   def show
+    flash[:notice] = params[:success] == 'true' ? 'Updated successful' : ''
     coursePack = CoursePack.find(params[:id])
     if coursePack.public or current_user.id == coursePack.user_id or current_user.admin
       show_or_edit('show')
@@ -35,7 +36,7 @@ class CoursePacksController < ApplicationController
 
   def create
     if request.xhr?
-          @course_pack = CoursePack.new(params[:course_pack])#title:params[:title],summary:params[:summary], public:params[:public], featured:params[:featured])
+          @course_pack = CoursePack.new(params[:course_pack])
           @course_pack.user = User.find_by_id(params[:user_id])
           add_articles @course_pack
 
@@ -100,9 +101,7 @@ class CoursePacksController < ApplicationController
 
   def show_or_edit(call_from)
     @user = current_user
-
     if call_from == 'show'
-      flash[:notice] = params[:success] == 'true' ? 'Updated successful' : ''
       @course_pack = CoursePack.find_by_id(params[:id])
     else
       @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first
@@ -110,12 +109,7 @@ class CoursePacksController < ApplicationController
 
     unless @course_pack.blank?
       @comments = create_comments(@course_pack).to_json
-      @articles = []
-      #create list of articles in json format
-      @course_pack.articles.each do |article|
-        @articles << article.to_json
-      end
-
+      @articles = setup_articles(@course_pack)
       @course_pack = @course_pack.to_json
 
       render call_from
@@ -125,8 +119,17 @@ class CoursePacksController < ApplicationController
 
   end
 
+  private
+
+  def setup_articles(course_pack)
+    articles = []
+    course_pack.articles.each do |article|
+      articles << article.to_json
+    end
+    return articles
+  end
+
   def add_articles(course_pack)
-    puts "add_articles"
      unless params[:article_ids].blank?
        params[:article_ids].each do |id|
          course_pack.articles << Article.find(id)
