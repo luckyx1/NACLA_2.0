@@ -4,10 +4,16 @@ class ArticlesController < ApplicationController
   end
 
   def download
-  	redirect_to Article.find(params[:id]).download_link
+  	if current_user
+      params[:id] = params[:id].to_i > 2 ? '1' : params[:id]
+      send_file "#{Rails.root}/files/#{params[:id]}.pdf", :type=>"application/pdf"
+    else
+      redirect_to '/'
+    end
   end
 
   def search
+    @user = current_user
     @article_count = Article.count
     @pack_count = CoursePack.count
     respond_to do |format|

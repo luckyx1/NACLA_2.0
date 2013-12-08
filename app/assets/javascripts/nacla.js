@@ -272,6 +272,15 @@ function SearchPartialCtrl($scope, $resource, Modal){
         return data;
     });
 
+    $scope.download = function(article){
+        window.open('/articles/' + article.id + '/download')
+//        $.ajax({
+//            url: '/articles/' + article.id + '/download',
+//            type:'GET'})
+            //beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+
+    }
+
     $scope.dateFormatting = function(date){
         var formatted_date =  new Date(date);
         return formatted_date.toLocaleDateString();

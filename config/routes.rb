@@ -11,8 +11,9 @@ NACLA::Application.routes.draw do
 
 
   match 'articles/search' => 'articles#search'
-  match 'articles/:id' => 'articles#show'
   match 'articles/:id/download' => 'articles#download'
+  match 'articles/:id' => 'articles#show'
+
 
 
   post 'new/list_all' => 'course_packs#list_all'
