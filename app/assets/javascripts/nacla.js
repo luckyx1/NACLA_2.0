@@ -289,7 +289,10 @@ function SearchCtrl($scope, $resource){
     //$scope.course_pack_radio = false;
     $scope.search_coursepacks = true;
     $scope.search_articles = true;
-    $scope.sort_result = "sort_title";
+    $scope.sort_result_articles = "sort_title";
+    $scope.sort_result_packs = "sort_title";
+    $scope.articles_table_show = true;
+    $scope.coursepacks_table_show = false;
 
     $scope.swap = function(swap){
         if(swap == 'articles'){
@@ -299,6 +302,19 @@ function SearchCtrl($scope, $resource){
             $scope.articles_radio = false;
         }
     }
+
+    $scope.show_articles_table = function()
+    {
+        $scope.coursepacks_table_show = false;
+        $scope.articles_table_show = true;
+    }
+
+    $scope.show_coursepacks_table = function()
+    {
+        $scope.coursepacks_table_show = true;
+        $scope.articles_table_show = false;
+    }
+
 
 };
 
@@ -332,7 +348,6 @@ function CommentsCtrl($scope){
             })
         };
 }
-
 
 
 $(document).ready(function(){
