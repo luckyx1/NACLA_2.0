@@ -293,6 +293,7 @@ function SearchPartialCtrl($scope, $resource, Modal){
 function SearchCtrl($scope, $resource){
 
     $scope.all_coursepacks = $resource('/course_packs/search').query();
+    $scope.usernames = {};
     //$scope.articles_radio = true;
     //$scope.search_coursepacks = true;
     $scope.search_title = true;
@@ -328,7 +329,24 @@ function SearchCtrl($scope, $resource){
         $scope.articles_table_show = false;
     }
 
+    $scope.get_user_names = function(){
+        var user_ids = [];
+        //$scope.usernames = 'ajax?'   ;
+        angular.forEach($scope.all_coursepacks,function(course_pack){
+            user_ids.push(course_pack.id);
+        });
 
+        $.ajax({
+            url:'/user/usernames',
+            type: 'GET',
+            data: {'user_ids':user_ids},
+            success:function(data){
+                $scope.$apply(function(){
+                    $scope.usernames = data;
+                })
+            }
+        })
+    }
 };
 
 function CoursePackShowCtrl($scope, $resource, Page, Modal){

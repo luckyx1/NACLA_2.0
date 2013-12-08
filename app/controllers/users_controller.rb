@@ -54,13 +54,7 @@ class UsersController < ApplicationController
       return
     end
     @coursepacks = CoursePack.find_all_by_user_id(@user[:id], :order => "created_at desc", :limit =>5) || []
-    @coursepacks.each do |coursepack|
-      coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
-    end
     @comments = Comment.find_all_by_user_id(@user.id, :order => "created_at desc", :limit => 10) || []
-    @comments.each do |comment|
-      comment.comment = comment.comment[0...140] + '...' if comment.comment.length > 140
-    end
   end
   
   def index
@@ -99,6 +93,21 @@ class UsersController < ApplicationController
         redirect_to user_path(current_user.id), :notice => "You don't have permission to do that"
       end
     end
+  end
+
+  def usernames
+    if request.xhr?
+
+
+      @usernames = User.get_names(params[:user_ids]).to_json
+      render json: @usernames, :status=>:ok
+      puts @usernames
+
+    else
+      puts'didnt work'
+      redirect_to '/'
+    end
+
   end
 
 end
