@@ -10,12 +10,12 @@ Scenario: logged in to visit profile page
   Given I am logged in
   When I visit the "PROFILE" page
   Then I should be logged in as "Alex"
-  And I should see "Profile"
+  And I should see "Welcome"
   
 Scenario: logged in to view own coursepacks
   Given I am logged in
-  When I visit the "Click Here For More Course Packs" page
-  Then I should see the button "New Course Pack"
+  When I visit the "COURSE PACKS" page
+  Then I should see "Course Packs"
   
 Scenario: not logged in while visiting profile page(sad path)
   Given I am not logged in 
@@ -23,4 +23,4 @@ Scenario: not logged in while visiting profile page(sad path)
   Then I should be asked to "Log in"
   When I login with username "Alex" and password "pass"
   Then I should be logged in as "Alex"
-  And I should see "Profile"
+  And I should see "Welcome"

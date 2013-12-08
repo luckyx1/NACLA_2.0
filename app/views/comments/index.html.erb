@@ -1,9 +1,21 @@
 <h1>Comments</h1>
-<div style="width:90%; margin-left:auto; margin-right:auto; margin-top:10px; background-color:#FFFFFF; border-radius:5px; border: black 1px solid;" >
-	<p style="text-align:center;">
-		This is just a placeholder page for comments. I assume that eventually there will be a place to add them when viewing an article.
-	</p>
+<div id = 'comments'>
+  <br>
+  <% @comments.each do |comment| %>
+    <div class='comment_show'>
+      <% commentPack = CoursePack.find(comment.course_pack_id) %>
+      <a href="<%="/course_packs/#{commentPack.id}"%>" class='show_link', id='show_link'>
+      <div>
+        <div class='comment_header'><%= commentPack.title %></b></div>
+        <div class='comment_content'><%= comment.comment %></div>
+      </div>
+      </a>
+    </div>
+  <% end %>
+  <br>
+
 </div>
+<!--
 <div style="width:90%; margin-left:auto; margin-right:auto; margin-top:20px;">
 	<table style="margin-left:auto; margin-right:auto">
 		<tr >
@@ -11,4 +23,4 @@
 			<td><%= button_to "Delete Comment", "comments/delete", :method => :get  %></td>
 		</tr>
 	</table>
-</div>
+</div>-->

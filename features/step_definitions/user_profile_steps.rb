@@ -38,6 +38,9 @@ end
 
 Then /I should be on my profile page/ do
   page.should_not have_content 'Edit Profile'
-  page.should have_content 'Click Here For More Course Packs'
+  page.should have_content 'Welcome, '
 end
   
+When /I am on "(.*)" course pack page/ do |name|
+  click_on name
+end

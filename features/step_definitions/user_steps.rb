@@ -22,7 +22,7 @@ When /I fill out invalid registration information/ do
 end
 
 Then /I should have my own account with username "(.*)"/ do |username|
-	page.should have_content "#{username}'s Profile"
+	page.should have_content "Welcome, #{username}!"
 end
 
 Then /I should not have my own account/ do
@@ -78,7 +78,7 @@ Then /"(.*)" should be added to my account/ do |course_pack|
 end
 
 When /I am on the "(.*)" course pack page/ do |name|
-  page.all("a")[10].click
+  click_on 'show_link'
 	#within_table name do
 	#  click_on 'Show'
 	#end
