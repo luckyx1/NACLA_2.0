@@ -70,6 +70,8 @@ class CommentsController < ApplicationController
   #end
 
   def index
+    @user = current_user
+    @comments = Comment.find_all_by_user_id(@user.id, :order => "created_at desc") || []
   end
 
 end

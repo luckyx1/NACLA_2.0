@@ -1,4 +1,60 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#profile{
+  margin: 10px;
+}
+#profile_header, .profile_course_pack_header{
+  float:left;
+}
+#edit_container{
+  float:right;
+  overflow:hidden;
+  display:inline;
+  padding: 10px;
+}
+.edit_profile_button, .more_button{
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 8px;
+  border:none;
+}
+.more_button{
+  float:right;
+}
+.edit_profile{
+  float:left;
+  padding-top: 10px;
+}
+#profile_course_packs{
+  clear:both;
+
+  height:300px;
+  overflow:auto;
+}
+#profile_course_packs_header, #profile_comments_header{
+  font-size:20px;
+  float:left;
+}
+.dotted{
+  border-top: 2px dotted #999999;
+}
+.profile_course_pack{
+  position:relative;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color:rgba(255,165,0,.2);
+  padding-left: 105px;
+  padding-top: 10px;
+  margin: 5px;
+}
+.profile_course_pack_title{
+  font-size:20px;
+  float:left;
+}
+#profile_comments{
+  height:350px;
+  overflow:auto;
+  text-align:left;
+}
+.empty{
+  font-size: 14px;
+}
 
