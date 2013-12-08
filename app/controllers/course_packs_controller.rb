@@ -35,17 +35,19 @@ class CoursePacksController < ApplicationController
 
   def create
     if request.xhr?
-          @course_pack = CoursePack.new(title:params[:title],summary:params[:summary], public:params[:public], featured:params[:featured])
+          @course_pack = CoursePack.new(params[:course_pack])#title:params[:title],summary:params[:summary], public:params[:public], featured:params[:featured])
           @course_pack.user = User.find_by_id(params[:user_id])
           add_articles @course_pack
 
           render :nothing => true, :status=>:ok
+
           unless @course_pack.save
               render :status => :conflict
           end
     else
       redirect_to '/'
     end
+
   end
 
   def update

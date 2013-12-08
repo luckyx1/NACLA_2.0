@@ -183,7 +183,7 @@ app.factory('Form', function(){
                     else{
 
                         var url = '/course_packs/create';
-                        var data = {"title":$scope.title, "summary":$scope.summary, 'public':$scope.public, "article_ids":article_ids, 'user_id':user_id, 'featured':$scope.featured};
+                        var data = {'course_pack':{"title":$scope.title, "summary":$scope.summary, 'public':$scope.public,'featured':$scope.featured},"article_ids":article_ids, 'user_id':user_id };
                         var redirect = '/course_packs'
                     }
 
