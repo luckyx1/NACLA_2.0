@@ -1,10 +1,5 @@
 
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash#{name}" %>
-<% end %>
-
 <div id='profile'>
-
 
   <div id = 'profile_header'>
     <h2>Welcome, <%=@user.username%>!</h2> 
