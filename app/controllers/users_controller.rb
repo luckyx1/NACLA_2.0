@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_filter :require_login, except: [:new, :create]
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
    
   def new
     @user = User.new
@@ -47,12 +48,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    begin
-      @user = User.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      redirect_to '', :notice => "That user does not exist"
-      return
-    end
+    @user = User.find(params[:id])
     @coursepacks = CoursePack.find_all_by_user_id(@user[:id], :order => "created_at desc", :limit =>5) || []
     @coursepacks.each do |coursepack|
       coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
@@ -73,19 +69,7 @@ class UsersController < ApplicationController
       redirect_to user_path(current_user.id), :notice => "You are the last admin. You can't delete your profile"
     else
       if userid == current_user.id.to_s or current_user.admin
-        user = User.find(userid)
-        coursepacks = user.course_packs
-        coursepacks.each do |coursepack|
-          comments = coursepack.comments
-          comments.each do |comment|
-            comment.destroy
-          end
-          coursepack.destroy
-        end
-        comments = user.comments
-        comments.each do |comment|
-          comment.destroy
-        end
+        destroy_user(userid)
         if current_user.id.to_s == userid
           session[:user_id] = nil
           user.destroy
@@ -98,6 +82,28 @@ class UsersController < ApplicationController
       else
         redirect_to user_path(current_user.id), :notice => "You don't have permission to do that"
       end
+    end
+  end
+  
+  private
+
+  def record_not_found
+    redirect_to '/log_out', :notice => "You were logged out for accessing a non-existant account"
+  end
+
+  def destroy_user(userid)
+    user = User.find(userid)
+    coursepacks = user.course_packs
+    coursepacks.each do |coursepack|
+      comments = coursepack.comments
+      comments.each do |comment|
+        comment.destroy
+      end
+      coursepack.destroy
+    end
+    comments = user.comments
+    comments.each do |comment|
+      comment.destroy
     end
   end
 
