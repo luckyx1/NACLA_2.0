@@ -1,14 +1,21 @@
 <h1>Comments</h1>
-<div class = 'comments'>
-   <b id = 'title'><%= @user.username %>'s Recent Comments </b>
-    <% @comments.each do |comment| %>
-      <p>
-        <% commentPack = CoursePack.find(comment.course_pack_id) %>
-        <b><%= link_to commentPack.title, course_pack_path(commentPack[:id]) %></b>
-        <%= comment.comment %>
-      </p>
-    <% end %>
-  </div>
+<div id = 'comments'>
+  <br>
+  <% @comments.each do |comment| %>
+    <div class='comment_show'>
+      <% commentPack = CoursePack.find(comment.course_pack_id) %>
+      <a href="<%="/course_packs/#{commentPack.id}"%>" class='show_link', id='show_link'>
+      <div>
+        <div class='comment_header'><%= commentPack.title %></b></div>
+        <div class='comment_content'><%= comment.comment %></div>
+      </div>
+      </a>
+    </div>
+  <% end %>
+  <br>
+
+</div>
+<!--
 <div style="width:90%; margin-left:auto; margin-right:auto; margin-top:20px;">
 	<table style="margin-left:auto; margin-right:auto">
 		<tr >
@@ -16,4 +23,4 @@
 			<td><%= button_to "Delete Comment", "comments/delete", :method => :get  %></td>
 		</tr>
 	</table>
-</div>
+</div>-->

@@ -11,53 +11,54 @@
         :confirm => "Are you sure you want to delete your profile?", class:'edit_button'%></div>
     <% end %>
   </div>
+  <br> <br> <br> 
+  <hr class='dotted'>
   
   <div id = 'profile_course_packs'>
-    <hr class='dotted'>
     <b id = 'profile_course_packs_header'><%= @user.username %>'s Recent Course Packs</b> 
-    <br>
-    <% @coursepacks.each do |course_pack| %>
-      <table class="profile_course_pack" id = "<%= course_pack[:title] %>" >
-      <tr>
-        <td>
-        <div class='profile_course_pack_title'><%= course_pack[:title] %></div>
-        <div id = 'profile_course_pack_buttons'>
-          <div class='edit_profile'><%= button_to 'Show', course_pack_path(course_pack[:id]), class:'edit_button' %></div>
-          <div class='edit_profile'><% if @user.username == current_user.username %>
-              <%= button_to 'Edit', edit_course_pack_path(course_pack[:id]), class:'edit_button' %></div>
-          <% end %>
-        </div>
-      </tr>
-      </table>
-        <br>
+    <%= button_to 'Click Here For More Course Packs', course_packs_path, method: :get, class:'more_button' %>
+    <br> <br>
+    <% if @coursepacks.empty? %>
+      <p class='empty'>You don't have any coursepacks yet! 
+        <!--<%= link_to "Why don't you click here to create one?", new_course_pack_path, id:'new_link' %></p>-->
+      
     <% end %>
-    <!--<% @coursepacks.each do |course_pack| %>
-      <div class='course_pack_show'><a href="<%="/course_packs/#{course_pack.id}"%>" class='show_link' id='show_link'>
-        <div class='course_pack_headers'><%= course_pack.title %></div>
-        <div class='course_pack_content'><%= course_pack.summary %></div>
-        <table id = "<%= course_pack.title %>" style='display:none'>
-          <%= button_to 'Edit', edit_course_pack_path(course_pack[:id]), class:'edit_button' %>
-          <%= button_to "Destroy", course_pack, method: :delete,data:{confirm: "Are you sure?"}, id:'course_pack_destroy'%>
-        </table>
-        <br>
-
+    <% @coursepacks.each do |course_pack| %>
+      <div class='course_pack_show'>
+        <a href="<%="/course_packs/#{course_pack.id}"%>" class='show_link' id='show_link'>
+        <div>
+          <div class='course_pack_headers'><%= course_pack.title %></div>
+          <div class='course_pack_content'><%= course_pack.summary %></div>
+          <br>  
+        </div>
+        </a>
+        <%= button_to "Edit", edit_course_pack_path(course_pack[:id]), method: :get, id:'edit_course_pack'%>
+        <%= button_to "Destroy", course_pack,method: :delete,data:{confirm: "Are you sure?"}, id:'course_pack_destroy'%>
       </div>
-    <% end %>-->
-    
-    
-    <p><%= link_to 'Click Here For More Course Packs', course_packs_path %> </p>
-  </div>
+    <% end %>  
+  </div>  
   <hr class='dotted'>
   <div id = 'profile_comments'>
-   <b id = 'profile_comments_header'><%= @user.username %>'s Recent Comments </b>
-    <% @comments.each do |comment| %>
-      <p>
-        <% commentPack = CoursePack.find(comment.course_pack_id) %>
-        <b><%= link_to commentPack.title, course_pack_path(commentPack[:id]) %></b>
-        <%= comment.comment %>
-      </p>
+
+    <b id = 'profile_comments_header'> <%= @user.username %>'s Recent Comments </b>
+    <%= button_to 'Click Here For More Comments', comments_path, method: :get, class:'more_button' %>
+    <br>
+    <% if @comments.empty? %>
+      <p class='empty'>You haven't written any comments yet! </p>      
     <% end %>
-    <%= link_to 'Click Here For More Comments', comments_path %>
+    <% @comments.each do |comment| %>
+      <div class='comment_show'>
+        <% commentPack = CoursePack.find(comment.course_pack_id) %>
+        <a href="<%="/course_packs/#{commentPack.id}"%>" class='show_link', id='show_link'>
+        <div>
+          <div class='comment_header'><%= commentPack.title %></b></div>
+          <div class='comment_content'><%= comment.comment %></div>
+        </div>
+        </a>
+      </div>
+    <% end %>
+    <br>
+
   </div>
   
 </div>
