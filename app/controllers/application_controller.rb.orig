@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
   end
 
   def back_url
+<<<<<<< HEAD
+    @back_url = respond.referrer
+=======
     @back_url = request.referer
+>>>>>>> dd1496cfa05410a5e02fb5a7dc00117b2b5a81da
   end
   
   protected 

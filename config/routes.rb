@@ -11,8 +11,9 @@ NACLA::Application.routes.draw do
 
 
   match 'articles/search' => 'articles#search'
-  match 'articles/:id' => 'articles#show'
   match 'articles/:id/download' => 'articles#download'
+  match 'articles/:id' => 'articles#show'
+
 
 
   post 'new/list_all' => 'course_packs#list_all'
@@ -29,7 +30,7 @@ NACLA::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   get "edit_user" => "users#edit", :as => "edit_user"
   post "edit_user" => "users#update"
-  get "destroy_user" => "users#destroy"
+  get "destroy_user/:id" => "users#destroy"
   match "user/profile" => "users#index"
   resources :users
 

@@ -60,6 +60,7 @@ class CoursePacksController < ApplicationController
           redirect_to 'index', notice: 'Course pack was successfully updated.'
         }
       else
+        flash[:error] = 'Update successful'
         format.html { render action: "edit" }
       end
 
@@ -99,6 +100,7 @@ class CoursePacksController < ApplicationController
     @user = current_user
 
     if call_from == 'show'
+      flash[:notice] = params[:success] == 'true' ? 'Updated successful' : ''
       @course_pack = CoursePack.find_by_id(params[:id])
     else
       @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first

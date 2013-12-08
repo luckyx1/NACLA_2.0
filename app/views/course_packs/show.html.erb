@@ -4,7 +4,6 @@
 
 <div id='course_pack_content' data-url="<%= @course_pack %>"></div>
 <div id='articles_content' data-url="<%= @articles %>"></div>
-
   <div class='header_filler'>
   <div class='content_bar'><div class='course_pack_headers form_headers'>Title:</div></div></div>
     <div class='form_input'>{{course_pack.title}}</div>
@@ -23,10 +22,11 @@
  Tags:{{course_pack.tags}}  <br/>
  Public: {{course_pack.public}}  <br/>
 
-
-
-<%= link_to 'Edit', "{{course_pack.id}}/edit" %> |
-<%= link_to 'Back', "/course_packs" %>
+ <% if current_user.id == JSON.parse(@course_pack)['user_id'] or current_user.admin%>
+    <%= button_to 'Edit', "{{course_pack.id}}/edit" %><%= button_to 'Back', @back_url, :method=>:get %>
+<% else %>
+    <%= button_to 'Back', @back_url, :method=>:get %>
+<% end %>
 
 <%= render 'shared/comments' %>
 

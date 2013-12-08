@@ -29,6 +29,10 @@
   </div>
   </div>
   </div>
-  <%= button_to "Download", {:action => :download},{:id=>'download_button'} %> <button type='button' ng-click='close_modal()' id='modal_close'>Close Article Viewer</button>
+  <% if @user %>
+      <button type='button' ng-click='download(modal)' id='download_button'>Download</button>
+    <%#= button_to "Download", {:action => "/articles/{{modal.id}}/download"},{:id=>'download_button'} %>
+  <% end %>
+  <button type='button' ng-click='close_modal()' id='modal_close'>Close Article Viewer</button>
 
 </div> <!-- Modal -->
