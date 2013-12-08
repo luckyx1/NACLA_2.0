@@ -8,6 +8,7 @@
 app = angular.module("NACLA", ["ngResource"])
 var articleIsExpanded = false;
 
+
 function expandArticles(){
     var input = document.getElementById("search_input");
     var length = input.value.length;
@@ -297,7 +298,7 @@ function SearchCtrl($scope, $resource){
     $scope.search_title = true;
     $scope.search_description = true;
     $scope.search_summary = true;
-    $scope.radio = 'articles';
+   
     //$scope.course_pack_radio = false;
     $scope.search_coursepacks = true;
     $scope.search_articles = true;
@@ -372,3 +373,5 @@ $(document).ready(function(){
         $(this).closest("div").css("background-color","rgba(255,165,0,.2)");
     });
 })
+
+
