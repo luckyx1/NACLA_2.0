@@ -1,12 +1,18 @@
-<div ng-controller="SearchCtrl">
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-	Search for:
-  <button ng-click="show_articles_table()" ng-model='search_articles' id='articles_checkbox' name='Articles'>Articles</button>
-  <button ng-click="show_coursepacks_table()" ng-model='search_coursepacks' id='course_packs_checkbox' name='Course Packs'>Course Packs</button>
+<div ng-controller="SearchCtrl">
   
   <div ng-app>
   	<p> 
-      Keywords: <input type='text' ng-model='search_input' id="search_input" onkeyup="expandArticles()">
+      <input type='text' ng-model='search_input' id="search_input" onkeyup="expandArticles()">
+      <div id="select_radios">
+        <input type="radio" id="radio_articles" ng-click="show_articles_table()" ng-model='search_radio' name='selectRadio' checked="checked"><label for="radio_articles">Articles</label>
+        <input type="radio" id="radio_packs" ng-click="show_coursepacks_table()" ng-model='search_radio' name='selectRadio'><label for="radio_packs">Course Packs</label>
+      </div>
+
+      <script>
+        $( "#select_radios" ).buttonset();
+      </script>
     </p>
 
     <div ng-show="articles_table_show">
@@ -55,7 +61,6 @@
         </table>
     	</p>
     </div>
-
   </div>
 
 </div>  <!--SearchCtrl -->
