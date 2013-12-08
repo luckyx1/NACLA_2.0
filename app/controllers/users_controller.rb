@@ -47,7 +47,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    begin
+      @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to '', :notice => "That user does not exist"
+      return
+    end
     @coursepacks = CoursePack.find_all_by_user_id(@user[:id], :order => "created_at desc", :limit =>5) || []
     @comments = Comment.find_all_by_user_id(@user.id, :order => "created_at desc", :limit => 10) || []
   end
@@ -57,22 +62,37 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    userid = current_user.id
-    coursepacks = current_user.course_packs
-    coursepacks.each do |coursepack|
-      comments = coursepack.comments
-      comments.each do |comment|
-        comment.destroy
+    userid = params[:id]
+    if current_user.admin and User.where(admin: true).size <= 1 and current_user.id.to_s == userid
+      redirect_to user_path(current_user.id), :notice => "You are the last admin. You can't delete your profile"
+    else
+      if userid == current_user.id.to_s or current_user.admin
+        user = User.find(userid)
+        coursepacks = user.course_packs
+        coursepacks.each do |coursepack|
+          comments = coursepack.comments
+          comments.each do |comment|
+            comment.destroy
+          end
+          coursepack.destroy
+        end
+        comments = user.comments
+        comments.each do |comment|
+          comment.destroy
+        end
+        if current_user.id.to_s == userid
+          session[:user_id] = nil
+          user.destroy
+          redirect_to '', :notice => "Your account was deleted"
+        else
+          message = user.username + "'s account was deleted"
+          user.destroy
+          redirect_to user_path(current_user.id), :notice => message
+        end
+      else
+        redirect_to user_path(current_user.id), :notice => "You don't have permission to do that"
       end
-      coursepack.destroy
     end
-    comments = current_user.comments
-    comments.each do |comment|
-      Comment.destroy(comment.id)
-    end
-    session[:user_id] = nil
-    User.destroy(userid)
-    redirect_to '', :notice => "Your account was deleted"
   end
 
 end

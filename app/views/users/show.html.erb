@@ -1,7 +1,12 @@
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash#{name}" %>
+<% end %>
 <h1><%=@user[:username]%>'s Profile</h1>
 <% if @user.username == current_user.username %>
   <p><%= link_to 'Change Password', edit_user_path %></p>
-  <p><%= link_to 'Delete Profile', destroy_user_path, :confirm => "Are you sure you want to delete your profile?" %></p>
+<% end %>
+<% if @user.username == current_user.username or current_user.admin == true %>
+  <p><%= link_to 'Delete Profile', '/destroy_user/'+@user.id.to_s, :confirm => "Are you sure you want to delete this profile?" %></p>
 <% end %>
 <div>
   <b>Recent Course Packs</b> 
