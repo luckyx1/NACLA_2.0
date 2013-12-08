@@ -1,17 +1,18 @@
-<div ng-controller='CoursePackShowCtrl'>
-
-<p id="notice"><%= notice %></p>
+<div class='content_bar gap'></div><div ng-controller='CoursePackShowCtrl'>
 
 <div id='course_pack_content' data-url="<%= @course_pack %>"></div>
 <div id='articles_content' data-url="<%= @articles %>"></div>
-  <div class='header_filler'>
-  <div class='content_bar'><div class='course_pack_headers form_headers'>Title:</div></div></div>
-    <div class='form_input'>{{course_pack.title}}</div>
-  <div class='content_bar'><div class='course_pack_headers form_headers'>Summary:</div> </div>
-    <div class='form_input'>{{course_pack.summary}}</div>
+
+
+
+  <div class='content_bar'><div class='course_pack_headers form_headers'>Title <span id='notice'><%= notice %></span> <div id='public_div'>{{public}}</div></div></div>
+    <div class='form_input'>{{course_pack.title}}</div><br/>
+
+  <div class='content_bar'><div class='course_pack_headers form_headers'>Summary</div> </div>
+    <div class='form_input'>{{course_pack.summary}}</div><br/>
    <br/>
 
-  <div class='content_bar'><div class='course_pack_headers form_headers'>Articles:</div> </div>
+  <div class='content_bar'><div class='course_pack_headers form_headers'>Articles</div> </div>
   <div id='article_list'>
      <ul>
         <li ng-repeat="article in articles">
@@ -19,11 +20,11 @@
         </li>
     </ul>
     </div>
- Tags:{{course_pack.tags}}  <br/>
- Public: {{course_pack.public}}  <br/>
 
  <% if current_user.id == JSON.parse(@course_pack)['user_id'] or current_user.admin%>
-    <%= button_to 'Edit', "{{course_pack.id}}/edit", :method=>:get, :id=>'edit_button' %><%= button_to 'Back', @back_url, :method=>:get, :id=>'back_button' %>
+    <div id='button_div'>
+        <%= button_to_function 'Edit', "window.location = '{{course_pack.id}}/edit'", :id=>'edit_button', class:'course_pack_button form_button edit_button' %><%= button_to_function 'Back', "history.back()", :id=>'back_button',class:'course_pack_button form_button back_button' %>
+    </div>
 <% else %>
     <%= button_to 'Back', @back_url, :method=>:get %>
 <% end %>

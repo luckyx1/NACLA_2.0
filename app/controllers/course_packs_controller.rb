@@ -14,7 +14,7 @@ class CoursePacksController < ApplicationController
 
   def show
     coursePack = CoursePack.find(params[:id])
-    if coursePack.public or current_user.id == coursePack.user_id
+    if coursePack.public or current_user.id == coursePack.user_id or current_user.admin
       show_or_edit('show')
     else
       redirect_to('/')

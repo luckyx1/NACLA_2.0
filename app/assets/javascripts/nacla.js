@@ -158,7 +158,7 @@ app.factory('Form', function(){
                 $scope.selected_articles = [];
             };
             $scope.cancel = function(url){
-                window.location = url || '/course_packs';
+                history.back();
             };
 
             $scope.submit = function(){
@@ -332,6 +332,8 @@ function SearchCtrl($scope, $resource){
 function CoursePackShowCtrl($scope, $resource, Page, Modal){
     Page.init($scope,Page);
     Modal.init($scope,Modal,"#show_article");
+
+    $scope.public = $scope.course_pack.public ? 'Public' : 'Private';
 
     $scope.dateFormatting = function(date){
         var formatted_date =  new Date(date);

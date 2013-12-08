@@ -21,6 +21,10 @@
 //  border-bottom-color: dimgrey;
 //  border-top-color: dimgrey;
 //}
+
+#article_list{
+  margin-bottom:50px;
+}
 #course_pack_header{
   position:relative;
   height:70px;
@@ -147,4 +151,34 @@ a.show_link:hover{
 
 .content_bar{
   width:100%;
+  background-color: darkkhaki;
+}
+.gap{
+  float:left;
+  height:10px;
+}
+
+.edit_button{
+  position:absolute;;
+  right:10px;
+  bottom:0;
+}
+
+.back_button{
+  position:absolute;
+  left:0px;
+  bottom:0;
+}
+
+#button_div{
+  position:relative;
+  margin-bottom:20px;
+}
+
+#public_div{
+  float:right;
+  margin-right:10px;
+}
+#notice{
+
 }
