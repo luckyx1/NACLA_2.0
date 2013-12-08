@@ -14,8 +14,8 @@ Scenario: logged in to visit profile page
   
 Scenario: logged in to view own coursepacks
   Given I am logged in
-  When I visit the "COURSE PACKS" page
-  Then I should see "New Course pack"
+  When I visit the "Click Here For More Course Packs" page
+  Then I should see the button "New Course Pack"
   
 Scenario: not logged in while visiting profile page(sad path)
   Given I am not logged in 

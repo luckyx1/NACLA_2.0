@@ -1,8 +1,20 @@
 
 <form name='course_pack_form'>
+
   <div class='course_pack_headers form_headers'> Title:</div><input type='text' ng-model='title' name='title' id='title' class='form_input' >
+
   <div class='course_pack_headers form_headers'>Summary:</div>
+
   <textarea ng-model='summary' cols='100' rows='5' name='summary' id='summary' class='textarea_input form_input'></textarea>
+
+  <% unless @user.admin %>
+     <div class='course_pack_headers form_headers checkbox'><label>Public<input type='checkbox' ng-model='public'></label></div>
+  <% end %>
+
+  <% if @user.admin %>
+      <div class='course_pack_headers form_headers checkbox'><label>Featured<input type='checkbox' ng-model='featured'></label></div>
+  <% end %>
+
   <br/>
   <button type='button' ng-click='submit()' id='submit' ng-bind='form_button' class='course_pack_button form_button'></button> <button type='button' ng-click='cancel()' id='cancel' class='course_pack_button form_button'> Cancel </button> <br/> <br/>
   <div class='course_pack_headers form_headers'>Articles:</div>

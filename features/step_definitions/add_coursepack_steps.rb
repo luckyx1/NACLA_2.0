@@ -10,13 +10,24 @@ When(/^I follow the "(.*?)" page$/) do |link|
  click_link(link)
 end
 
-Then(/^I should see "(.*?)"$/) do |text|
-  if page.respond_to? :should
-    page.should have_content(text)
-  else
-    assert page.has_content?(text)
-  end
+Then(/^I should see the button "(.*?)"$/) do |text|
+  #if page.respond_to? :should
+  #  #puts page.body
+  #  page.should have_content(text)
+  #else
+  #  #puts page.body
+  #  assert page.has_content?(text)
+  #end
+  page.should have_button("create")
 end
+
+ Then(/^I should see "(.*?)"$/) do |text|
+   if page.respond_to? :should
+     page.should have_content(text)
+   else
+     assert page.has_content?(text)
+   end
+  end
 
 #Then(/^I should see an option to feature prebundled coursepacks$/) do
 #  pending # express the regexp above with the code you wish you had

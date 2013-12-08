@@ -78,7 +78,7 @@ Then /"(.*)" should be added to my account/ do |course_pack|
 end
 
 When /I am on the "(.*)" course pack page/ do |name|
-  click_on 'show_link'
+  page.all("a")[10].click
 	#within_table name do
 	#  click_on 'Show'
 	#end
