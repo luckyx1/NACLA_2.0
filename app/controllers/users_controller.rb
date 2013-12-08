@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   before_filter :require_login, except: [:new, :create]
-  set_tab :home, :edit
    
   def new
     @user = User.new

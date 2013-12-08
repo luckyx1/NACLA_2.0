@@ -31,7 +31,7 @@ Scenario: change password correctly (happy path)
 @javascript
 Scenario: show a coursepack
   Then I should see coursepacks "Brazil", "Chile", "Current"
-  When I am on the "Brazil" course pack page
+  When I am on "Brazil" course pack page
   Then I should see title "Brazil"
   And I should see article "Brazilian Colonialism"
   But I should not see title "Chile"

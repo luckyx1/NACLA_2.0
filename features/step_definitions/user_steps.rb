@@ -22,7 +22,7 @@ When /I fill out invalid registration information/ do
 end
 
 Then /I should have my own account with username "(.*)"/ do |username|
-	page.should have_content "#{username}'s Profile"
+	page.should have_content "Welcome, #{username}!"
 end
 
 Then /I should not have my own account/ do
