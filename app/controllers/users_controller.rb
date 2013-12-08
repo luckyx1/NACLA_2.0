@@ -69,7 +69,8 @@ class UsersController < ApplicationController
       redirect_to user_path(current_user.id), :notice => "You are the last admin. You can't delete your profile"
     else
       if userid == current_user.id.to_s or current_user.admin
-        destroy_user(userid)
+        user = User.find(userid)
+        delete_user(user)
         if current_user.id.to_s == userid
           session[:user_id] = nil
           user.destroy
@@ -91,8 +92,7 @@ class UsersController < ApplicationController
     redirect_to '/log_out', :notice => "You were logged out for accessing a non-existant account"
   end
 
-  def destroy_user(userid)
-    user = User.find(userid)
+  def delete_user(user)
     coursepacks = user.course_packs
     coursepacks.each do |coursepack|
       comments = coursepack.comments
