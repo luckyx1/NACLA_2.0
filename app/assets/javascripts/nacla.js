@@ -157,8 +157,8 @@ app.factory('Form', function(){
                 $scope.form_button = 'Create'
                 $scope.selected_articles = [];
             };
-            $scope.cancel = function(){
-                window.location = '/course_packs';
+            $scope.cancel = function(url){
+                window.location = url || '/course_packs';
             };
 
             $scope.submit = function(){
