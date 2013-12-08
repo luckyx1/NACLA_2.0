@@ -16,11 +16,13 @@
   <% end %>
 
   <br/>
-  <button type='button' ng-click='submit()' id='submit' ng-bind='form_button' class='course_pack_button form_button'></button> <button type='button' ng-click='cancel()' id='cancel' class='course_pack_button form_button'> Cancel </button> <br/> <br/>
+  <button type='button' ng-click='submit()' id='submit' ng-bind='form_button' class='course_pack_button form_button'></button>
+  </form>
+  <%= button_to 'Cancel', @back_url, :method=>:get, :class=>'course_pack_button form_button' %>
+
   <div class='course_pack_headers form_headers'>Articles:</div>
   <div id='article_list'>
   <ul>
     <li ng-repeat="selected in selected_articles">{{selected.title}} <a href="" ng-click="remove_selected(selected)" id='remove_article'>Remove</a></li>
   </ul>
   </div>
-</form>

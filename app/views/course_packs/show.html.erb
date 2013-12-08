@@ -23,7 +23,7 @@
  Public: {{course_pack.public}}  <br/>
 
  <% if current_user.id == JSON.parse(@course_pack)['user_id'] or current_user.admin%>
-    <%= button_to 'Edit', "{{course_pack.id}}/edit" %><%= button_to 'Back', @back_url, :method=>:get %>
+    <%= button_to 'Edit', "{{course_pack.id}}/edit", :method=>:get, :id=>'edit_button' %><%= button_to 'Back', @back_url, :method=>:get, :id=>'back_button' %>
 <% else %>
     <%= button_to 'Back', @back_url, :method=>:get %>
 <% end %>

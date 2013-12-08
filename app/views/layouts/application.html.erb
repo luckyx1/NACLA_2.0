@@ -130,7 +130,11 @@
                     <p style="text-align:center; font-size:15px; font-weight: bold; line-height:15px;">FEATURED COURSE PACKS</p>
                   </div>
                   <div id="ads_container" class="left_container_div" style="background-color:white; border-style: solid; border-width:1px; border-color:#EEEEEE;">
-                    <p style="text-align:center; font-size:15px; font-weight: bold; line-height:15px;"></p>
+                    <p style="text-align:center; font-size:15px; font-weight: bold; line-height:15px;">
+                      <% @featured_course_packs.each do |featured| %>
+                        <%= link_to "#{featured.title}","/course_packs/#{featured.id}" %><br/><br/>
+                      <% end %>
+                    </p>
                   </div>
 
 					<div id="ads_container_header" class="left_container_div" style="background-color:#EEEEEE; border-style: solid; border-width:1px; border-color:#EEEEEE;">
