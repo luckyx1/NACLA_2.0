@@ -427,3 +427,9 @@ html, body{
 #left_signin_submit{
     margin:auto;
 }
+#flash_notice{
+  font-size: 20px;
+  text-align:center;
+  padding-top: 10px;
+  color: #14C345;
+}

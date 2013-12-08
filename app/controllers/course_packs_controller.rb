@@ -16,7 +16,7 @@ class CoursePacksController < ApplicationController
   end
 
   def show
-    flash[:notice] = params[:success] == 'true' ? 'Updated successful' : ''
+    #flash[:notice] = params[:success] == 'true' ? 'Update successful' : ''
     coursePack = CoursePack.find(params[:id])
     if coursePack.public or current_user.id == coursePack.user_id or current_user.admin
       show_or_edit('show')
@@ -66,7 +66,7 @@ class CoursePacksController < ApplicationController
           render :nothing=>true, :status=>:ok
         }
       else
-        flash[:error] = 'Update successful'
+        flash[:error] = 'Update unsuccessful'
         format.html { render action: "edit" }
       end
 
@@ -106,6 +106,7 @@ class CoursePacksController < ApplicationController
     @user = current_user
     if call_from == 'show'
       @course_pack = CoursePack.find_by_id(params[:id])
+      flash[:notice] = params[:success] == 'true' ? 'Update successful' : ''
     else
       @course_pack = CoursePack.where(id:params[:id],user_id:current_user.id).first
     end

@@ -1,9 +1,5 @@
 <h1>Edit Profile</h1>
-<div>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash#{name}" %>
-  <% end %>
-</div>
+
 <%= form_tag "edit_user" do |f| %>
   <p>
     <%= label_tag :old_password %>
