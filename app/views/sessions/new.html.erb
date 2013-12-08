@@ -1,17 +1,23 @@
-<h1>Log in</h1>
+<div class='title'><h1>Log in</h1></div>
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash#{name}" %>
 <% end %>
 <%= form_tag "log_in" do |f| %>
-  <p>
-    <%= label_tag :username %>
-    <%= text_field_tag :username %>
-  </p>
-  <p>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </p>
-  <%= submit_tag "Log in" %> 
+   <div id='login_form'>
+       <table>
+         <tr>
+            <td><%= label_tag :username,"Username: ", :class=>"label_tag" %></td>
+            <td><%= text_field_tag :username,nil,class:"text_field_tag" %></td>
+         </tr>
+       </table>
+        <table>
+          <tr>
+            <td><%= label_tag :password, "Password: ", :class=>'label_tag'%></td>
+            <td><%= password_field_tag :password,nil,class:'text_field_tag' %></td>
+          </tr>
+        </table>
+    </div>
+    <div id='login_buttons'>
+      <%= submit_tag "Log in", :class=>'course_pack_button form_button' %> or<%= button_to_function "Sign Up","window.location = '#{new_user_path}' ", :class=>'course_pack_button form_button' %>
+ </div>
 <% end %>
-<p> or </p>
-<%= button_to "Sign Up", new_user_path %> 
