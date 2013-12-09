@@ -79,6 +79,15 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def usernames
+    if request.xhr?
+      render json: User.get_names.to_json, :status=>:ok
+    else
+      redirect_to '/'
+    end
+
+  end
   
   private
 
@@ -101,19 +110,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def usernames
-    if request.xhr?
 
-
-      @usernames = User.get_names(params[:user_ids]).to_json
-      render json: @usernames, :status=>:ok
-      puts @usernames
-
-    else
-      puts'didnt work'
-      redirect_to '/'
-    end
-
-  end
 
 end

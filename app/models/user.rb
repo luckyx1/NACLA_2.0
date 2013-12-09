@@ -30,12 +30,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.get_names(ids)
+  def self.get_names
 
     user_names = {}
 
-    ids.each do |id|
-      user_names[id] = User.find(id).username
+    User.all.each do |user|
+      user_names[user.id] = user.username
     end
 
     return user_names

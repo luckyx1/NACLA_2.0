@@ -292,6 +292,16 @@ function SearchPartialCtrl($scope, $resource, Modal){
 
 function SearchCtrl($scope, $resource){
 
+    $.ajax({
+        url:'/user/usernames',
+        type: 'GET',
+        success:function(data){
+            $scope.$apply(function(){
+                $scope.usernames = data;
+            })
+        }
+    })
+
     $scope.all_coursepacks = $resource('/course_packs/search').query();
     $scope.usernames = {};
     //$scope.articles_radio = true;
@@ -336,16 +346,7 @@ function SearchCtrl($scope, $resource){
             user_ids.push(course_pack.id);
         });
 
-        $.ajax({
-            url:'/user/usernames',
-            type: 'GET',
-            data: {'user_ids':user_ids},
-            success:function(data){
-                $scope.$apply(function(){
-                    $scope.usernames = data;
-                })
-            }
-        })
+
     }
 };
 
