@@ -59,21 +59,11 @@ class UsersController < ApplicationController
 
   def destroy
     userid = params[:id]
-    if current_user.admin and User.where(admin: true).size <= 1 and current_user.id.to_s == userid
-      redirect_to user_path(current_user.id), :notice => "You are the last admin. You can't delete your profile"
-    else
+    if !prevent_admin_delete(userid)
       if userid == current_user.id.to_s or current_user.admin
         user = User.find(userid)
         delete_user(user)
-        if current_user.id.to_s == userid
-          session[:user_id] = nil
-          user.destroy
-          redirect_to '', :notice => "Your account was deleted"
-        else
-          message = user.username + "'s account was deleted"
-          user.destroy
-          redirect_to user_path(current_user.id), :notice => message
-        end
+        redirect_after_user_delete(user)
       else
         redirect_to user_path(current_user.id), :notice => "You don't have permission to do that"
       end
@@ -110,6 +100,25 @@ class UsersController < ApplicationController
     end
   end
 
-
+  def prevent_admin_delete(userid)
+    if current_user.admin and User.where(admin: true).size <= 1 and current_user.id.to_s == userid
+      redirect_to user_path(current_user.id), :notice => "You are the last admin. You can't delete your profile"
+      return true
+    else
+      return false
+    end
+  end
+  
+  def redirect_after_user_delete(user)
+    if current_user.id.to_s == user.id
+      session[:user_id] = nil
+      user.destroy
+      redirect_to '', :notice => "Your account was deleted"
+    else
+      message = user.username + "'s account was deleted"
+      user.destroy
+      redirect_to user_path(current_user.id), :notice => message
+    end
+  end
 
 end
