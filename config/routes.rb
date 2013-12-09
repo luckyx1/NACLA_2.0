@@ -25,7 +25,7 @@ NACLA::Application.routes.draw do
 
 
   resources :course_packs
-
+  get 'user/usernames'=>'users#usernames'
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
   post "log_in" => "sessions#create" 

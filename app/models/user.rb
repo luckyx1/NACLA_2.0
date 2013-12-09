@@ -29,4 +29,16 @@ class User < ActiveRecord::Base
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
+
+  def self.get_names
+
+    user_names = {}
+
+    User.all.each do |user|
+      user_names[user.id] = user.username
+    end
+
+    return user_names
+
+  end
 end
