@@ -41,10 +41,11 @@ function expandArticles(){
 app.filter('input_filter', function()
 {
     return function(input, search_term, title_flag, description_flag, 
-        summary_flag, articles_flag, coursepacks_flag)
+        summary_flag, articles_flag, coursepacks_flag, username_flag, usernames)
     {
         filtered_result = [];
-        var sort_category = $( "input:radio[name=sortBy]:checked" ).val();
+        var sort_category_articles = $( "input:radio[name=sortByArticle]:checked" ).val();
+        var sort_category_packs = $( "input:radio[name=sortByPack]:checked" ).val();
 
         if (isNullOrUndefined(articles_flag))
         {
@@ -55,7 +56,7 @@ app.filter('input_filter', function()
         {
             coursepacks_flag = false;
         }
-        
+
         if (!isNullOrUndefined(search_term) && search_term.length > 0)
         { 
             var search_exp = new RegExp(search_term, "i");
@@ -66,9 +67,11 @@ app.filter('input_filter', function()
                 {
                     if ( e.public && 
                          ( (title_flag && search_exp.test(e.title)) || 
-                           (summary_flag && search_exp.test(e.summary)) ) )
+                           (summary_flag && search_exp.test(e.summary)) ||
+                           (username_flag && search_exp.test(usernames[e.user_id])) ) )
                     {
-                        filtered_result.push(e);
+                        var e2 = {id: e.id, title: e.title, summary: e.summary, username: usernames[e.user_id].toString()};
+                        filtered_result.push(e2);
                     }
                 }
                 else if (articles_flag && ("description" in e))
@@ -81,14 +84,20 @@ app.filter('input_filter', function()
                 }
             });
         }
-        if (sort_category == 'sort_title')
+        if ( (articles_flag && sort_category_articles == 'sort_title') || 
+             (coursepacks_flag && sort_category_packs == 'sort_title') )
         {
             filtered_result.sort(compareTitle);
         }
-        if (sort_category == 'sort_date')
+        if (articles_flag && sort_category_articles == 'sort_date')
         {
             filtered_result.sort(compareDate);
         }
+        if (coursepacks_flag && sort_category_packs == 'sort_username')
+        {
+            filtered_result.sort(compareUsername);
+        }
+        
         return filtered_result;
     };
 });
@@ -227,6 +236,15 @@ function compareDate(a,b)
     return 0;      
 }
 
+function compareUsername(a,b)
+{
+    if (a.username.toLowerCase() < b.username.toLowerCase())
+        return -1;
+    if (a.username.toLowerCase() > b.username.toLowerCase())
+        return 1;
+    return 0;      
+}
+
 function CreateCoursePackCtrl($scope,$resource, Form,Page){
     Page.init($scope,Page);
     Form.init($scope,Form);
@@ -309,6 +327,7 @@ function SearchCtrl($scope, $resource){
     $scope.search_title = true;
     $scope.search_description = true;
     $scope.search_summary = true;
+    $scope.search_username = true;
    
     //$scope.course_pack_radio = false;
     $scope.search_coursepacks = true;
@@ -339,15 +358,7 @@ function SearchCtrl($scope, $resource){
         $scope.articles_table_show = false;
     }
 
-    $scope.get_user_names = function(){
-        var user_ids = [];
-        //$scope.usernames = 'ajax?'   ;
-        angular.forEach($scope.all_coursepacks,function(course_pack){
-            user_ids.push(course_pack.id);
-        });
-
-
-    }
+    
 };
 
 function CoursePackShowCtrl($scope, $resource, Page, Modal){

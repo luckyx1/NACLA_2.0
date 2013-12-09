@@ -1,7 +1,6 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 <div ng-controller="SearchCtrl">
-   <button type='button' ng-click='get_user_names()'>TEST</button> ::::{{usernames}}
   <div ng-app>
   	<p> 
       <input type='text' ng-model='search_input' id="search_input" onkeyup="expandArticles()">
@@ -35,11 +34,12 @@
         Search by:
         <input type='checkbox' ng-model='search_title' name='Title'>Title
         <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
+        <input type='checkbox' ng-model='search_username' name='Username'>Username
       </p>
       <p>
         Sort Results by:
         <input id="title_sort_packs" type="radio" ng-model='sort_result_packs' name="sortByPack" value="sort_title"> Title 
-        <input id="user_sort_packs" type="radio" ng-model='sort_result_packs' name="sortByPack" value="sort_user"> User
+        <input id="user_sort_packs" type="radio" ng-model='sort_result_packs' name="sortByPack" value="sort_username"> Username
       </p>
       <h3> Course Packs </h3> 
       <p>
@@ -48,14 +48,14 @@
           <tr>
             <th> Title </th>
             <th> Summary </th>
-            <th> User </th>
+            <th> Username </th>
           <tr>
           </thead>
         
-          <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks" >
+          <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:articles_table_show:coursepacks_table_show:search_username:usernames" >
           <td> <a href="course_packs/{{coursepack.id}}"> {{coursepack.title}} </a> </td>
           <td> {{coursepack.summary}} </td>
-          <td> {{coursepack.user_id}} </td>
+          <td> {{coursepack.username}} </td>
           </tbody>
           
         </table>
