@@ -44,8 +44,7 @@ app.filter('input_filter', function()
         summary_flag, articles_flag, coursepacks_flag, username_flag, usernames)
     {
         filtered_result = [];
-        var sort_category_articles = $( "input:radio[name=sortByArticle]:checked" ).val();
-        var sort_category_packs = $( "input:radio[name=sortByPack]:checked" ).val();
+        var sort_category = $( "input:radio[name=sortBy]:checked" ).val();
 
         if (isNullOrUndefined(articles_flag))
         {
@@ -70,8 +69,7 @@ app.filter('input_filter', function()
                            (summary_flag && search_exp.test(e.summary)) ||
                            (username_flag && search_exp.test(usernames[e.user_id])) ) )
                     {
-                        var e2 = {id: e.id, title: e.title, summary: e.summary, username: usernames[e.user_id].toString()};
-                        filtered_result.push(e2);
+                        filtered_result.push(e);
                     }
                 }
                 else if (articles_flag && ("description" in e))
@@ -84,20 +82,14 @@ app.filter('input_filter', function()
                 }
             });
         }
-        if ( (articles_flag && sort_category_articles == 'sort_title') || 
-             (coursepacks_flag && sort_category_packs == 'sort_title') )
+        if (sort_category == 'sort_title')
         {
             filtered_result.sort(compareTitle);
         }
-        if (articles_flag && sort_category_articles == 'sort_date')
+        if (sort_category == 'sort_date')
         {
             filtered_result.sort(compareDate);
         }
-        if (coursepacks_flag && sort_category_packs == 'sort_username')
-        {
-            filtered_result.sort(compareUsername);
-        }
-        
         return filtered_result;
     };
 });
@@ -236,14 +228,6 @@ function compareDate(a,b)
     return 0;      
 }
 
-function compareUsername(a,b)
-{
-    if (a.username.toLowerCase() < b.username.toLowerCase())
-        return -1;
-    if (a.username.toLowerCase() > b.username.toLowerCase())
-        return 1;
-    return 0;      
-}
 
 function CreateCoursePackCtrl($scope,$resource, Form,Page){
     Page.init($scope,Page);

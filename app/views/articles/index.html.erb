@@ -22,8 +22,8 @@
       </p>
       <p>
         Sort Results by:
-        <input id="title_sort_articles" type="radio" ng-model='sort_result_articles' name="sortByArticle" value="sort_title"> Title 
-        <input id="date_sort_articles" type="radio" ng-model='sort_result_articles' name="sortByArticle" value="sort_date"> Publication Date
+        <input id="title_sort_articles" type="radio" ng-model='sort_result_articles' name="sortBy" value="sort_title"> Title 
+        <input id="date_sort_articles" type="radio" ng-model='sort_result_articles' name="sortBy" value="sort_date"> Publication Date
       </p>
       <h3> Articles </h3> 
       <p> <%= render 'shared/search' %> </p>
@@ -36,11 +36,7 @@
         <input type='checkbox' ng-model='search_summary' name='Summary'>Summary
         <input type='checkbox' ng-model='search_username' name='Username'>Username
       </p>
-      <p>
-        Sort Results by:
-        <input id="title_sort_packs" type="radio" ng-model='sort_result_packs' name="sortByPack" value="sort_title"> Title 
-        <input id="user_sort_packs" type="radio" ng-model='sort_result_packs' name="sortByPack" value="sort_username"> Username
-      </p>
+      
       <h3> Course Packs </h3> 
       <p>
         <table id="coursepacks">
@@ -52,10 +48,10 @@
           <tr>
           </thead>
         
-          <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:articles_table_show:coursepacks_table_show:search_username:usernames" >
+          <tbody ng-repeat="coursepack in all_coursepacks | input_filter:search_input:search_title:search_description:search_summary:search_articles:search_coursepacks:search_username:usernames" >
           <td> <a href="course_packs/{{coursepack.id}}"> {{coursepack.title}} </a> </td>
           <td> {{coursepack.summary}} </td>
-          <td> {{coursepack.username}} </td>
+          <td> {{usernames[coursepack.user_id]}} </td>
           </tbody>
           
         </table>
