@@ -10,7 +10,8 @@ end
 Given(/^the user "(.*?)" has an empty coursepack with title "(.*?)"$/) do |username, title|
   CoursePack.create(:title => title,
   									:summary => "Empty course pack.",
-  									:user_id => User.find_by_username(username).id )
+  									:user_id => User.find_by_username(username).id,
+                    :public=>true )
 end
 
 Given(/^the user "(.*?)" has a test comment on the coursepack "(.*?)"$/) do |username, title|

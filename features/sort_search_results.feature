@@ -15,7 +15,7 @@ Background:
 
 Scenario: Sort search results alphabetically by title
 	When I click on Articles Radio
-	Annd I click on Title sort
+	And I click on Title sort
 	And I enter 'names'
 	Then I should see 'A' before 'B'
 
