@@ -7,6 +7,7 @@ class CoursePack < ActiveRecord::Base
   validates :title, presence:true
   validates :summary, presence:true
 
+=begin
   def self.search(id_list)
     @course_packs = []
     if not id_list.nil?
@@ -17,6 +18,6 @@ class CoursePack < ActiveRecord::Base
       @course_packs = CoursePack.all
     end
   end
-
+=end
 
 end

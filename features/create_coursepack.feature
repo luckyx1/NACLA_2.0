@@ -26,7 +26,7 @@ Scenario: create an coursepack with no articles
 
 Scenario: start creating a coursepack but cancel before saving
   When I fill in 'Title' with 'Latino subcultures in California'
-  And I press the 'cancel' button
+  And I press the 'Cancel' button
   Then I should not see a new coursepack with the 'title' 'Latino Subcultures in California'
 
   @javascript
