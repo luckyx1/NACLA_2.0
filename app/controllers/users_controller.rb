@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :require_login, except: [:new, :create]
+  before_filter :require_login, except: [:new, :create, :usernames]
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
    
   def new
