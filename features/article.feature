@@ -13,8 +13,8 @@ Background: I'm on the article search page
   | Modern Politics of Chile | The political climate of modern day Chile| 2-Apr-2011     | republic, election    | 3 | 2 |
   | Chavismo After Chavez    | Information about movement based on Chavez| 28-June-2013  | Chavez, Chavismo      | 9 | 2 |
   And I am on the article search page
-  And I follow "Course Packs"
-  And I follow "Articles"
+  And I choose option "Course Packs"
+  And I choose option "Articles"
   #And I follow "Course Packs"
 
   
@@ -22,21 +22,19 @@ Background: I'm on the article search page
  # When I have not entered a search query
   #Then I should see the issues "Chile 40 Years Later" and "Chavismo After Chavez"
  
- @javascript
- Scenario: Search by title
+@javascript
+Scenario: Search by title
   When I fill in "search_input" with "ch"
-  And I follow "Title"
-  And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
   And I should see the issue "Chavismo After Chavez"
   But I should not see the issue "Brazilian Colonialism"
   And I should not see the issue "Drug Cartels, Mexico" 
 
- @javascript
+@javascript
 Scenario: Search by description
   When I fill in "search_input" with "chile"
-  And I follow "Description"
+  And I uncheck "Title"
   And I wait for 2 seconds
   Then I should see the issue "Chile 40 Years Later"
   And I should see the issue "Modern Politics of Chile"
@@ -64,13 +62,24 @@ Scenario: Search by description
   #And I should not see the issue "Brazilian Colonialism"
   #And I should not see the issue "Chavismo After Chavez"
   
-#Scenario: show an article
- # Given I choose volume "6"
-  #When I click "Show" for article "Drug Cartels, Mexico"
-  #Then I should be on the "Drug Cartels, Mexico" information page
-  #And I should see a "Download" button for "Drug Cartels, Mexico"
-  #And I should see a preview image for "Drug Cartels, Mexico"
-  #And I should see a summary for "Drug Cartels, Mexico"
+@javascript
+Scenario: show an article while logged in
+	Given I have an account
+	When I am logged in
+	And I am on the article search page
+  When I fill in "search_input" with "Mexico"
+  When I click "Drug Cartels, Mexico"
+  Then I should be on the "Drug Cartels, Mexico" information page
+  And I should see a "Download" button for "Drug Cartels, Mexico"
+  And I should see a summary for "Drug Cartels, Mexico"
+  
+@javascript
+Scenario: show an article while not logged in (sad path)
+  When I fill in "search_input" with "Mexico"
+  When I click "Drug Cartels, Mexico"
+  Then I should be on the "Drug Cartels, Mexico" information page
+  And I should not see a "Download" button for "Drug Cartels, Mexico"
+  And I should see a summary for "Drug Cartels, Mexico"
 
 
   
