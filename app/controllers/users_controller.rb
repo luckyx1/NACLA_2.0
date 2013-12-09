@@ -24,18 +24,7 @@ class UsersController < ApplicationController
       user = User.authenticate(current_user.username, params[:old_password])
       if user != nil
         if params[:password] == params[:password_confirmation]
-          if user.id == current_user.id 
-            user.password = params[:password]
-            if user.save
-              redirect_to '', :notice=>"Your password has been changed."
-            else
-              flash[:notice] = "Your new password is not valid. Please enter another"
-              render "edit"
-            end
-          else
-            flash[:notice] = "You shouldn't be here..."
-            render "edit"
-          end
+          change_user_password(user)
         else
           flash[:notice] = "Password doesn't match confirmation"
           render "edit"
@@ -121,4 +110,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def change_user_password(user)
+    if user.id == current_user.id 
+      user.password = params[:password]
+      if user.save
+        redirect_to '', :notice=>"Your password has been changed."
+      else
+        flash[:notice] = "Your new password is not valid. Please enter another"
+        render "edit"
+      end
+    else
+      flash[:notice] = "You shouldn't be here..."
+      render "edit"
+    end
+  end
 end
