@@ -1,3 +1,4 @@
+=begin
 Given(/^the following exists in the database:$/) do |table|
   # table is a Cucumber::Ast::Table
   table.hashes.each do |article|
@@ -16,3 +17,4 @@ end
 When /^(?:|I )press "([^\"]*)"$/ do |button|
   click_button(button)
 end
+=end
