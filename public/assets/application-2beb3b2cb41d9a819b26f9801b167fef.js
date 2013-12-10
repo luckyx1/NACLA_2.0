@@ -26355,6 +26355,29 @@ $(document).ready(function(){
     });
 })
 
+function save_back(return_url,to_url){
+    $.ajax({
+        url:'/back_url',
+        data:{'to':'set','return_url':return_url},
+        type:'POST',
+        success:function(){
+            window.location = to_url;
+        }
+    })
+}
+function go_back(){
+    $.ajax({
+        url:'/back_url',
+        data:{'to':'dont_set'},
+        type:'GET',
+        success:function(return_url){
+            window.location = return_url;
+        }
+    })
+
+}
+
+
 
 ;
 // This is a manifest file that'll be compiled into application.js, which will include all the files

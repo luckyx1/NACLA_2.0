@@ -1,6 +1,7 @@
 NACLA::Application.routes.draw do
   get "articles/show"
 
+  match "back_url" => 'application#back_url'
   get "comments/show"
   get "comments/add"
   get "comments/delete"
