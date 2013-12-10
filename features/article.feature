@@ -38,7 +38,6 @@ Scenario: Search by description
 @javascript
 Scenario: show an article while logged in
 	Given I have an account
-	When I am logged in
 	And I am on the article search page
   When I fill in "search_input" with "Mexico"
   When I click "Drug Cartels, Mexico"

@@ -1,3 +1,4 @@
+=begin
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
@@ -13,3 +14,4 @@ World(WithinHelpers)
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field.to_sym, :with => value)
 end
+=end

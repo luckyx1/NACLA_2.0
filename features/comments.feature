@@ -17,8 +17,7 @@ Scenario: Viewing comments of a coursepack while not logged in.
 
 @javascript
 Scenario: Viewing comments of a coursepack while logged in.
-	Given I am logged in
-	And I go to the test coursepack show page
+	When I go to the test coursepack show page
 	Then I should see "Test comment for test course pack."
 
 @javascript
@@ -29,9 +28,14 @@ Scenario: Commenting on a coursepack while not logged in.
 
 @javascript
 Scenario: Commenting on a coursepack while logged in.
-	Given I am logged in
-	And I go to the test coursepack show page
+	When I go to the test coursepack show page
 	And I type "Blah Blah Blah" into "comment"
 	And I click on "Post"
 	Then I should see "Blah Blah Blah"
 
+@javascript
+Scenario: viewing all my comments
+  When I go to the comments page
+  Then I should see "Comment Test"
+  
+  

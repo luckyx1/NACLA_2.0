@@ -1,12 +1,3 @@
-Given(/^the following comments exits:$/) do |table|
-  # table is a Cucumber::Ast::Table
-
-  table.hashes.each do |comment|
-  	Comment.create(comment)
-  end
-  
-end
-
 Given(/^the user "(.*?)" has an empty coursepack with title "(.*?)"$/) do |username, title|
   CoursePack.create(:title => title,
   									:summary => "Empty course pack.",
@@ -36,8 +27,9 @@ Then(/^I should not see "(.*?)"$/) do |text|
   page.should_not have_content(text)
 end
 
-
-
+When /I go to the comments page/ do
+  click_on "COMMENTS"
+end
 
 
 
