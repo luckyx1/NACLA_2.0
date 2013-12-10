@@ -28,7 +28,7 @@
     <% end %>
     <% @coursepacks.each do |course_pack| %>
       <div class='course_pack_show'>
-        <a href="<%="/course_packs/#{course_pack.id}"%>" class="<%=course_pack.title%>" id='show_link'>
+        <a class="<%=course_pack.title%>" id='show_link' href="javascript:save_back('<%="/users/#{@user.id}"%>','<%="/course_packs/#{course_pack.id}"%>')">
         <div>
           <div class='course_pack_headers'><%= course_pack.title %></div>
           <div class='course_pack_content'><%= course_pack.summary %></div>
