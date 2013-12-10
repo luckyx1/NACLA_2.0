@@ -18,6 +18,7 @@
   padding-left: 15px;
   padding-top:10px;
   margin: 5px;
+
 }
 .comment_header{
   font-weight: bold;
@@ -26,7 +27,8 @@
 }
 .comment_content{
   margin-left:10px;
-  height: 25px;
+  display:table;
+  padding-bottom:10px;
   overflow:hidden;
 }
 
