@@ -98,7 +98,7 @@ articles = [
 	},
 
 	{	:title => "Debt: Latin America Hangs in The Balance",
-		:description => "FOLLOWING THE FINANCIAL PRESS THE LAST few months one is reminded of Mark Twain's famous rebuttal: 'reports of my death are greatly exagger-ated.' Third World debt seems to have become an on- again, off-again crisis.",
+		:description => "FOLLOWING THE FINANCIAL PRESS THE LAST few months one is reminded of Mark Twain's famous rebuttal: 'reports of my death are greatly exaggerated.' Third World debt seems to have become an on-again, off-again crisis.",
 		:publication_date => '1-Mar-1985',
 		:tags => "Third World, debt",
 		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/01902001.png",
@@ -128,7 +128,7 @@ articles = [
 	},
 
 	{	:title => "Global Finance In The America's Wealth And Hunger Revisited",
-		:description => "Over the course of the 1980s, following Mexico's 1982 debt moratorium and the subsequent inability of many other Southern nations to service their foreign debts, U.S. policy makers and multilateral lenders—mostly based in Washington—imposed a series of market-oriented reforms and 'adjustments' upon the debtor countries in the interest of making them once again 'creditworthy.'",
+		:description => "Over the course of the 1980s, following Mexico's 1982 debt moratorium and the subsequent inability of many other Southern nations to service their foreign debts, U.S. policy makers and multilateral lenders-mostly based in Washington-imposed a series of market-oriented reforms and 'adjustments' upon the debtor countries in the interest of making them once again 'creditworthy.'",
 		:publication_date => '1-Aug-1999',
 		:tags => "hunger, poverty",
 		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/03301001.png",
