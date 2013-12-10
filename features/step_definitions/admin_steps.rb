@@ -35,10 +35,6 @@ Then /the coursepack should be featured on the home page/ do
   end
 end
 
-When /I log out as admin/ do
-  click_on 'Log out'
-end
-
 Then /I should not see an option to feature the coursepack/ do
   click_on "COURSE PACKS"
   click_on "Test"

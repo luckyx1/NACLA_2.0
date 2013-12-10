@@ -21,7 +21,6 @@ Scenario: login to the account
 @javascript
 Scenario: delete account
   Given I have an account
-  When I am logged in 
   And I click "Delete Profile"
   And I confirm
   Then I should no longer have an account
@@ -29,14 +28,12 @@ Scenario: delete account
 @javascript
 Scenario: add a course pack to my account
 	Given I have an account
-	When I am logged in 
 	And I create a new course pack named "Test" with summary "Test Summary"
 	Then "Test" should be added to my account
 	
 @javascript	
 Scenario: write comments
 	Given I have an account
-	When I am logged in
 	And I create a new course pack named "Test" with summary "Test Summary"
 	And I am on the "Test" course pack page
 	Then I should be able to write "Great course pack!" to "Test"

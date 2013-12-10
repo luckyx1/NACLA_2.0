@@ -28,7 +28,14 @@ Scenario: When you edit a course pack the information is changed
 
 @javascript
 Scenario: When you edit a course pack but don't include title or summary it should give you an error
-	When I select the button "Edit" for coursepack "Early colombia"
+	When I select the button "Edit" for coursepack "Early Colombia"
 	And I edit "Title" with ""
 	And I press the 'Update' button
 	Then I should see 'You must assign a title and summary' on the page
+	
+@javascript
+Scenario: delete course pack
+  When I select the button "Destroy" for coursepack "Early Colombia"
+  And I confirm
+  Then "Early Colombia" should be deleted
+  

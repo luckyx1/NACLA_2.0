@@ -6,36 +6,16 @@ Given(/^I click "(.*?)"$/) do |button|
 	click_on button
 end
 
-When(/^I have not entered a search query$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-#Then(/^I should see the issues "(.*?)" and "(.*?)"$/) do |arg1, arg2|
-#  pending # express the regexp above with the code you wish you had
-#end
-
-When(/^I choose option "(.*?)"$/) do |link|
-  choose link
-end
-
 When /I uncheck "(.*)"/ do |box|
   uncheck box
 end
 
 Then(/^I should see the issue "(.*?)"$/) do |text|
- if page.respond_to? :should
     page.should have_content(text)
-  else
-    assert page.has_content?(text)
-  end
 end
 
 Then(/^I should not see the issue "(.*)"$/) do |text|
-  if page.respond_to? :should
     page.should_not have_content(text)
-  else
-    assert page.has_no_content?(text)
-  end
 end
 
 Given(/^the following articles exist:$/) do |table|
@@ -64,4 +44,8 @@ end
 
 When /I should see a summary for "(.*)"/ do |title|
   page.should have_content Article.find_by_title(title).description
+end
+
+When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  fill_in(field.to_sym, :with => value)
 end

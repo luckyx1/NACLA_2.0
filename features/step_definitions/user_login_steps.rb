@@ -8,13 +8,6 @@ Given /I have a user account with username "(.*)", password "(.*)", and email "(
 	click_on 'Create new account'
 end
 
-Given /I am logged in/ do
-  if page.has_no_content? 'Log out'
-    page.fill_in 'username', :with => 'Alex'
-    page.fill_in 'password', :with => 'pass'
-  end
-end
-
 Given /I am not logged in/ do
   if page.has_content? 'Log out'
     click_on 'Log out'
