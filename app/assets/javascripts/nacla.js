@@ -388,4 +388,15 @@ $(document).ready(function(){
     });
 })
 
+function go_back(){
+    console.log(document.referrer)
+     if(document.referrer.indexOf('edit') != -1){
+        history.go(-3);
+     }
+    else{
+         history.back();
+     }
+}
+
+
 
