@@ -24,15 +24,22 @@ class ApplicationController < ActionController::Base
 
   def trim(items)
     unless items.nil?
-      if items.first.is_a? CoursePack
-        items.each do |coursepack|
-          coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
-        end
-      else
-        items.each do |comment|
-          comment.comment = comment.comment[0...140] + '...' if comment.comment.length > 140
+      items.each do |item|
+        if item.is_a? CoursePack
+          item.summary = item.summary[0...300] + '...' if item.summary.length > 300
+        else
+          item.comment = item.comment[0...140] + '...' if item.comment.length > 140
         end
       end
+#      if items.first.is_a? CoursePack
+#        items.each do |coursepack|
+#          coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
+#        end
+#      else
+#        items.each do |comment|
+#          comment.comment = comment.comment[0...140] + '...' if comment.comment.length > 140
+#        end
+#      end
 
       return items
     end
