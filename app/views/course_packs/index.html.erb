@@ -10,16 +10,16 @@
   <%# title = course_pack.title %>
   <div class='course_pack_headers'><%= course_pack.title %></div>
   <div class='course_pack_content'><%= course_pack.summary %></div>
-  <table id = "<%= course_pack.title %>" style='display:none'>
-  <tr>
-    <!--<td><%#= link_to 'Show', course_pack %></td>  -->
-    <td><%= link_to 'Edit', edit_course_pack_path(course_pack) %></td>
-    <td><%= link_to 'Destroy', course_pack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-  </table>
+  <!--<table id = "<%#= course_pack.title %>" style='display:none'>-->
+  <!--<tr>-->
+    <!--&lt;!&ndash;<td><%#= link_to 'Show', course_pack %></td>  &ndash;&gt;-->
+    <!--<td><%#= link_to 'Edit', edit_course_pack_path(course_pack) %></td>-->
+    <!--<td><%#= link_to 'Destroy', course_pack, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+  <!--</tr>-->
+  <!--</table>-->
     <br>
     </div></a>
-    <%= button_to "Edit", {action:"#{course_pack.id}/edit"},method: :get, id:'edit_course_pack'%>
+    <%= button_to_function 'Edit', "save_back('/course_packs/','course_packs/#{course_pack.id}/edit' )", :id=>'edit_course_pack' %>
     <%= button_to "Destroy", course_pack,method: :delete,data:{confirm: "Are you sure?"}, id:'course_pack_destroy'%>
       </div>
 <% end %>
