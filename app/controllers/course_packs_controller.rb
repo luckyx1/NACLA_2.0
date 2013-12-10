@@ -110,11 +110,7 @@ class CoursePacksController < ApplicationController
     end
 
     unless @course_pack.blank?
-      @comments = create_comments(@course_pack).to_json
-      @articles = setup_articles(@course_pack)
-      @course_pack = @course_pack.to_json
-
-      render call_from
+      blank_course_pack
     else
       redirect_to '/course_packs'
     end
@@ -122,6 +118,13 @@ class CoursePacksController < ApplicationController
   end
 
   private
+  
+  def blank_course_pack 
+    @comments = create_comments(@course_pack).to_json
+    @articles = setup_articles(@course_pack)
+    @course_pack = @course_pack.to_json
+    render call_from
+  end
 
   def setup_articles(course_pack)
     articles = []

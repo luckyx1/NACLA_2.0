@@ -7,13 +7,11 @@ Background: I have an account
   Given I have a user account with username "Alex", password "pass", and email "alex@test.com"
   
 Scenario: logged in to visit profile page
-  Given I am logged in
   When I visit the "PROFILE" page
   Then I should be logged in as "Alex"
   And I should see "Welcome"
   
 Scenario: logged in to view own coursepacks
-  Given I am logged in
   When I visit the "COURSE PACKS" page
   Then I should see "Course Packs"
   
