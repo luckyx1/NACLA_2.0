@@ -20,7 +20,25 @@ class ApplicationController < ActionController::Base
   def featured_course_packs
     @featured_course_packs = CoursePack.where(:featured=>true).limit(5)
   end
-  
+
+
+  def trim(items)
+    unless items.nil?
+      if items.first.is_a? CoursePack
+        items.each do |coursepack|
+          coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
+        end
+      else
+        items.each do |comment|
+          comment.comment = comment.comment[0...300] + '...' if comment.comment.length > 300
+        end
+      end
+
+      return items
+    end
+  end
+
+
   protected 
   def require_login
     if current_user.nil?

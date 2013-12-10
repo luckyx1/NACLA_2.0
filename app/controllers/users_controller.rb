@@ -40,13 +40,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @coursepacks = CoursePack.find_all_by_user_id(@user[:id], :order => "created_at desc", :limit =>5) || []
     @comments = Comment.find_all_by_user_id(@user.id, :order => "created_at desc", :limit => 10) || []
-    @coursepacks.each do |coursepack|
-      coursepack.summary = coursepack.summary[0...300] + '...' if coursepack.summary.length > 300
-    end
-    @comments.each do |comment|
-      comment.comment = comment.comment[0...140] + '...' if comment.comment.length > 140
-    end
-
+    @course_packs = trim(@course_packs)
+    @comments = trim(@comments)
   end
   
   def index
