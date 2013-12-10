@@ -19,6 +19,14 @@ Scenario: login to the account
 	Then I should be logged in as "Alex"
 
 @javascript
+Scenario: delete account
+  Given I have an account
+  When I am logged in 
+  And I click "Delete Profile"
+  And I confirm
+  Then I should no longer have an account
+
+@javascript
 Scenario: add a course pack to my account
 	Given I have an account
 	When I am logged in 

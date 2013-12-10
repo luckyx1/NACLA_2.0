@@ -58,3 +58,7 @@ Then (/^I should not see a new coursepack with the 'title' '([^"]*)'$/) do |text
     assert page.has_no_content?(text)
   end
 end
+
+
+#cucumber features/edit_coursepack.feature:21 # Scenario: When you edit a course pack the information is changed
+#cucumber features/show_coursepack.feature:13

@@ -30,8 +30,8 @@ Then /I should not have my own account/ do
 end
 
 Given /I have an account/ do
-	visit "/sign_up"
-  	click_on 'Register for an account'
+  visit('/')
+  click_on 'Register for an account'
 	page.fill_in 'user_username', :with => 'Alex'
 	page.fill_in 'user_email', :with => 'test@test.com'
 	page.fill_in 'user_password', :with => 'password'
@@ -90,4 +90,10 @@ Then /I should be able to write "(.*)" to "(.*)"/ do |comment, course_pack|
 	page.should have_content "#{comment}"	
 end
 
+Then /I should no longer have an account/ do
+  page.fill_in 'username', :with => 'Alex'
+  page.fill_in 'password', :with => 'password'
+  click_on 'Sign In'
+  page.should have_content 'Invalid username or password'
+end
 

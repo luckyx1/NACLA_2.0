@@ -15,10 +15,39 @@ When /the admin account has a coursepack with title "(.*)" and summary "(.*)"/ d
   CoursePack.create(title: title, summary: summary, user_id: User.find_by_username('admin').id)
 end
    
-When /I visit the coursepack "(.*)"/ do |title|
+When /I edit the "(.*)" course pack/ do |title|
   click_on title
+  click_on 'Edit'
 end
    
 Then /I should see extra admin functionality/ do
-
+  page.should have_unchecked_field 'Featured'
 end
+
+When /I mark the coursepack to be featured/ do
+  check 'Featured'
+  click_on 'Update'
+end
+
+Then /the coursepack should be featured on the home page/ do
+  within 'div#featured_container' do
+    page.should have_content 'Test'
+  end
+end
+
+When /I log out as admin/ do
+  click_on 'Log out'
+end
+
+Then /I should not see an option to feature the coursepack/ do
+  click_on "COURSE PACKS"
+  click_on "Test"
+  click_on "Edit"
+  page.should_not have_unchecked_field 'Featured' and page.should_not have_checked_field 'Featured'
+  page.should have_unchecked_field 'Public'
+end
+
+When /I confirm/ do
+  page.driver.browser.switch_to.alert.accept
+end
+  
