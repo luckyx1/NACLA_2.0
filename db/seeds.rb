@@ -163,6 +163,66 @@ articles.each do |article|
   Article.create!(article)
 end
 
-u = User.create!( :username => "admin", :email => "admin", :password => "NACLAadmin")
-u.admin = true
-u.save
+admin = User.create!( :username => "admin", :email => "admin", :password => "NACLAadmin")
+admin.admin = true
+admin.save
+
+
+
+cp1 = CoursePack.new(title:'Drug Cartels of Mexico',
+                    summary:"The history of drugs and cartel in Mexico. Their rising political influences and violence",
+                    public:true, featured:true)
+cp1.user_id = admin.id
+cp1.save!
+
+cp1 = CoursePack.new(title:'Falkland Wars',
+                          summary:"Detailed look at the conflict between the UK and Argentina",
+                                 public:true, featured:true)
+cp1.articles = [Article.find(11),Article.find(12),Article.find(14)]
+
+cp1.user_id = admin.id
+cp1.save!
+
+cp1 = CoursePack.new(title:'Brazil and the Olympics',
+                          summary:"The economic impact of the 2016 Olympics on Brazil",
+                                 public:true, featured:true)
+cp1.articles = [Article.find(1),Article.find(3),Article.find(5)]
+cp1.user_id = admin.id
+cp1.save!
+
+cp1 = CoursePack.new(title:'Bogota: 100 years',
+                          summary:"Need to finish!",
+                                 public:false, featured:false)
+cp1.user_id = admin.id
+cp1.save!
+
+
+user1 = User.create!( :username => "Andrew", :email => "awdorsett@berkeley.edu", :password => "andrew")
+
+cp1 = CoursePack.new(title:"Global Warming and Chile",
+                          summary:"The effects of global warming on Chile.",
+                                 public:true, featured:false)
+
+cp1.articles = [Article.find(1),Article.find(3),Article.find(5)]
+cp1.user_id = user1.id
+cp1.save!
+
+
+user1 = User.create!( :username => "Charlie", :email => "charlie@berkeley.edu", :password => "charlie")
+
+cp1 = CoursePack.new(title:"The International Importance of Central America",
+                          summary:"Central America's influence on the global economy and what to expect in the years to come.",
+                                 public:false, featured:false)
+
+cp1.articles = [Article.find(4),Article.find(6),Article.find(8)]
+cp1.user_id = user1.id
+cp1.save!
+
+cp1 = CoursePack.new(title:"Latin Americans in the Pop Culture",
+                          summary:"The rising Latin American stars in today's media and the influence on kids",
+                                 public:true, featured:false)
+
+cp1.articles = [Article.find(10),Article.find(11),Article.find(12)]
+cp1.user_id = user1.id
+cp1.save!
+
