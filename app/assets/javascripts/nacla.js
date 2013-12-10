@@ -389,7 +389,6 @@ $(document).ready(function(){
 })
 
 function save_back(return_url,to_url){
-    console.log("Return: " + return_url + ", To: " + to_url);
     $.ajax({
         url:'/back_url',
         data:{'to':'set','return_url':return_url},

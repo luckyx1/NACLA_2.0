@@ -5,12 +5,9 @@ class ApplicationController < ActionController::Base
 
   def back_url
     if params[:to] == 'set'
-      puts "Set to: "  + params[:return_url]
       session[:return_url] = params[:return_url]
-      puts "Session is: " + session[:return_url]
       render :nothing=>true,:status=>:ok
     else
-      puts "Returning: " + session[:return_url]
       render text:session[:return_url], :status=>:ok
     end
   end
