@@ -276,14 +276,14 @@ function SearchPartialCtrl($scope, $resource, Modal){
         return data;
     });
 
+    
     $scope.trim = function(description){
         if(description.length > 140){
             return description.substr(0,140)  + "...";
         }
         else
-            return description
+            return description;
     }
-
 
 
     $scope.download = function(article){
@@ -350,6 +350,14 @@ function SearchCtrl($scope, $resource){
     {
         $scope.coursepacks_table_show = true;
         $scope.articles_table_show = false;
+    }
+
+    $scope.trim = function(s){
+        if(s.length > 140){
+            return s.substr(0,140)  + "...";
+        }
+        else
+            return s;
     }
 
     
