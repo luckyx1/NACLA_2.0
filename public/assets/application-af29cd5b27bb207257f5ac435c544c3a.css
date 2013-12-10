@@ -110,17 +110,18 @@ h1 {
   margin: 5px;
 }
 
-/* line 22, ../../app/assets/stylesheets/comments.css.scss */
+/* line 23, ../../app/assets/stylesheets/comments.css.scss */
 .comment_header {
   font-weight: bold;
   font-size: medium;
   max-width: 100%;
 }
 
-/* line 27, ../../app/assets/stylesheets/comments.css.scss */
+/* line 28, ../../app/assets/stylesheets/comments.css.scss */
 .comment_content {
   margin-left: 10px;
-  height: 25px;
+  display: table;
+  padding-bottom: 10px;
   overflow: hidden;
 }
 /* line 4, ../../app/assets/stylesheets/course_packs.css.scss */
@@ -194,10 +195,9 @@ h1 {
 .course_pack_content {
   margin-left: 10px;
   height: 55px;
-  overflow: hidden;
 }
 
-/* line 71, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 70, ../../app/assets/stylesheets/course_packs.css.scss */
 #course_pack_destroy {
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -210,7 +210,7 @@ h1 {
   background-color: orange;
 }
 
-/* line 83, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 82, ../../app/assets/stylesheets/course_packs.css.scss */
 #edit_course_pack {
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -223,120 +223,120 @@ h1 {
   background-color: orange;
 }
 
-/* line 94, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 93, ../../app/assets/stylesheets/course_packs.css.scss */
 .show_link {
   margin-left: -10px;
   display: block;
 }
 
-/* line 98, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 97, ../../app/assets/stylesheets/course_packs.css.scss */
 a.show_link:hover {
   outline: 0;
 }
 
-/* line 102, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 101, ../../app/assets/stylesheets/course_packs.css.scss */
 #container {
   width: 100%;
 }
 
-/* line 106, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 105, ../../app/assets/stylesheets/course_packs.css.scss */
 #header {
   width: 100%;
 }
 
-/* line 110, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 109, ../../app/assets/stylesheets/course_packs.css.scss */
 .course_pack_error {
   color: red;
 }
 
-/* line 113, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 112, ../../app/assets/stylesheets/course_packs.css.scss */
 .course_pack_success {
   color: green;
 }
 
-/* line 117, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 116, ../../app/assets/stylesheets/course_packs.css.scss */
 #cancel_dialog {
   display: none;
 }
 
-/* line 120, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 119, ../../app/assets/stylesheets/course_packs.css.scss */
 .textarea_input {
   width: 90%;
 }
 
-/* line 123, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 122, ../../app/assets/stylesheets/course_packs.css.scss */
 .form_input {
   margin-left: 10px;
 }
 
-/* line 126, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 125, ../../app/assets/stylesheets/course_packs.css.scss */
 .form_headers {
   margin-left: 5px;
 }
 
-/* line 130, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 129, ../../app/assets/stylesheets/course_packs.css.scss */
 #course_pack_search_div {
   height: 400px;
 }
 
-/* line 134, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 133, ../../app/assets/stylesheets/course_packs.css.scss */
 #user_comment_div {
   width: 90%;
   margin: auto;
 }
 
-/* line 138, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 137, ../../app/assets/stylesheets/course_packs.css.scss */
 #comment_input {
   width: 100%;
   display: block;
 }
 
-/* line 142, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 141, ../../app/assets/stylesheets/course_packs.css.scss */
 #post_button {
   margin-right: 0;
   margin-left: 88%;
 }
 
-/* line 147, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 146, ../../app/assets/stylesheets/course_packs.css.scss */
 .comment_show {
   width: 95%;
   margin: auto;
   margin-top: 20px;
 }
 
-/* line 153, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 152, ../../app/assets/stylesheets/course_packs.css.scss */
 .content_bar {
   width: 100%;
   background-color: darkkhaki;
 }
 
-/* line 157, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 156, ../../app/assets/stylesheets/course_packs.css.scss */
 .gap {
   float: left;
   height: 10px;
 }
 
-/* line 162, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 161, ../../app/assets/stylesheets/course_packs.css.scss */
 .edit_button {
   position: absolute;
   right: 10px;
   bottom: 0;
 }
 
-/* line 168, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 167, ../../app/assets/stylesheets/course_packs.css.scss */
 .back_button {
   position: absolute;
   left: 0px;
   bottom: 0;
 }
 
-/* line 174, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 173, ../../app/assets/stylesheets/course_packs.css.scss */
 #button_div {
   position: relative;
   margin-bottom: 20px;
 }
 
-/* line 179, ../../app/assets/stylesheets/course_packs.css.scss */
+/* line 178, ../../app/assets/stylesheets/course_packs.css.scss */
 #public_div {
   float: right;
   margin-right: 10px;

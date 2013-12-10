@@ -95,6 +95,66 @@ articles = [
 		:volume => 45,
 		:issue => 1,
 		:download_link => nil
+	},
+
+	{	:title => "Debt: Latin America Hangs in The Balance",
+		:description => "FOLLOWING THE FINANCIAL PRESS THE LAST few months one is reminded of Mark Twain's famous rebuttal: 'reports of my death are greatly exagger-ated.' Third World debt seems to have become an on- again, off-again crisis.",
+		:publication_date => '1-Mar-1985',
+		:tags => "Third World, debt",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/01902001.png",
+		:volume => 19,
+		:issue => 2,
+		:download_link => nil
+	},
+
+	{	:title => "Garcia's Peru: One Last Chance",
+		:description => "IN 1963, FERNANDO BELAUNDE TERRY WAS elected president of Peru. The country was the play-thing of an intransigent oligarchy; Beladnde promised reforms.",
+		:publication_date => '1-Jun-1986',
+		:tags => "Peru, reform",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/02003001.png",
+		:volume => 20,
+		:issue => 3,
+		:download_link => nil
+	},
+
+	{	:title => "The New Gospel: North American Free Trade",
+		:description => "The North American Free Trade Agreement, NAFTA, which promises to unite Mexico, Canada and the United States in an economic union nearly as ambitious as Europe 1992, will permanently alter the face of the continent. Beyond transforming where and how goods are produced, it will set a pattern for a new relationship among the peoples of the three nations and define a new vision for our collective future.",
+		:publication_date => '1-May-1991',
+		:tags => "NAFTA",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/02406001.png",
+		:volume => 24,
+		:issue => 6,
+		:download_link => nil
+	},
+
+	{	:title => "Global Finance In The America's Wealth And Hunger Revisited",
+		:description => "Over the course of the 1980s, following Mexico's 1982 debt moratorium and the subsequent inability of many other Southern nations to service their foreign debts, U.S. policy makers and multilateral lenders—mostly based in Washington—imposed a series of market-oriented reforms and 'adjustments' upon the debtor countries in the interest of making them once again 'creditworthy.'",
+		:publication_date => '1-Aug-1999',
+		:tags => "hunger, poverty",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/03301001.png",
+		:volume => 33,
+		:issue => 1,
+		:download_link => nil
+	},
+
+	{	:title => "Natural Rights: People and Environment in Latin America",
+		:description => "In this NACLA Report we look at both growing cooperation and continuing conflict in the name of protecting Latin America's tropical forests and wetlands.",
+		:publication_date => '1-Jun-2003',
+		:tags => "rights, environment",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/03606001.png",
+		:volume => 36,
+		:issue => 6,
+		:download_link => nil
+	},
+
+	{	:title => 'A Cautious Hope: HIV/AIDS in Latin America',
+		:description => "As the HIV/AIDS pandemic enters its third decade in Latin America, not all the news is bad. Large public investments in the treatment and prevention of the disease offer some cautious hopethat the pandemic can be slowed, contained, and made more bearable for those who suffer its effects. Even more important, as Shawn Smallman suggests herein, 'the political victory that Brazil and other developing nations won, by asserting their right to produce generic drugs against HIV,' has improved the life chances of the region's AIDS patients.",
+		:publication_date => '1-Aug-2008',
+		:tags => "disease, treatment",
+		:thumbnail_link => "https://nacla.org/sites/default/files/imagecache/cover_thumbnail/covers/414.jpg",
+		:volume => 41,
+		:issue => 4,
+		:download_link => nil
 	}
 
 ]

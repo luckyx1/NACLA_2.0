@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
         end
       else
         items.each do |comment|
-          comment.comment = comment.comment[0...300] + '...' if comment.comment.length > 300
+          comment.comment = comment.comment[0...140] + '...' if comment.comment.length > 140
         end
       end
 

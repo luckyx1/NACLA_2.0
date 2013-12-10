@@ -110,17 +110,18 @@ h1 {
   margin: 5px;
 }
 
-/* line 22, ../../app/assets/stylesheets/comments.css.scss */
+/* line 23, ../../app/assets/stylesheets/comments.css.scss */
 .comment_header {
   font-weight: bold;
   font-size: medium;
   max-width: 100%;
 }
 
-/* line 27, ../../app/assets/stylesheets/comments.css.scss */
+/* line 28, ../../app/assets/stylesheets/comments.css.scss */
 .comment_content {
   margin-left: 10px;
-  height: 25px;
+  display: table;
+  padding-bottom: 10px;
   overflow: hidden;
 }
 /* line 4, ../../app/assets/stylesheets/course_packs.css.scss */

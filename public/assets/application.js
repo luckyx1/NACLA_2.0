@@ -26243,6 +26243,16 @@ function SearchPartialCtrl($scope, $resource, Modal){
         return data;
     });
 
+    $scope.trim = function(description){
+        if(description.length > 140){
+            return description.substr(0,140)  + "...";
+        }
+        else
+            return description
+    }
+
+
+
     $scope.download = function(article){
         window.open('/articles/' + article.id + '/download')
 //        $.ajax({
