@@ -1,15 +1,23 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_user
-  before_filter :back_url, :featured_course_packs
+  before_filter  :featured_course_packs
+
+  def back_url
+    if params[:to] == 'set'
+      puts "Set to: "  + params[:return_url]
+      session[:return_url] = params[:return_url]
+      puts "Session is: " + session[:return_url]
+      render :nothing=>true,:status=>:ok
+    else
+      puts "Returning: " + session[:return_url]
+      render text:session[:return_url], :status=>:ok
+    end
+  end
 
   private
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-
-  def back_url
-    @back_url = request.referer
   end
 
   def featured_course_packs

@@ -23,7 +23,7 @@
 
  <% if current_user and (current_user.id == JSON.parse(@course_pack)['user_id'] or current_user.admin)%>
     <div id='button_div'>
-        <%= button_to_function 'Edit', "window.location = '{{course_pack.id}}/edit'", :id=>'edit_button', class:'course_pack_button form_button edit_button' %><%= button_to_function 'Back', "go_back()", :id=>'back_button',class:'course_pack_button form_button back_button' %>
+        <%= button_to_function 'Edit', "save_back('#{request.referrer}','{{course_pack.id}}/edit' )", :id=>'edit_button', class:'course_pack_button form_button edit_button' %><%= button_to_function 'Back', "go_back()", :id=>'back_button',class:'course_pack_button form_button back_button' %>
     </div>
 <% else %>
     <%= button_to 'Back', @back_url, :method=>:get %>

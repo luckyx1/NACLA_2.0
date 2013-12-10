@@ -388,14 +388,27 @@ $(document).ready(function(){
     });
 })
 
+function save_back(return_url,to_url){
+    console.log("Return: " + return_url + ", To: " + to_url);
+    $.ajax({
+        url:'/back_url',
+        data:{'to':'set','return_url':return_url},
+        type:'POST',
+        success:function(){
+            window.location = to_url;
+        }
+    })
+}
 function go_back(){
-    console.log(document.referrer)
-     if(document.referrer.indexOf('edit') != -1){
-        history.go(-3);
-     }
-    else{
-         history.back();
-     }
+    $.ajax({
+        url:'/back_url',
+        data:{'to':'dont_set'},
+        type:'GET',
+        success:function(return_url){
+            window.location = return_url;
+        }
+    })
+
 }
 
 
